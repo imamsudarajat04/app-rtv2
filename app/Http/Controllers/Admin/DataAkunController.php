@@ -98,7 +98,8 @@ class DataAkunController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('admin.user.edit', compact('user'));
     }
 
     /**

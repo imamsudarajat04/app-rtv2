@@ -60,8 +60,7 @@
             processing: true,
             serverSide: true,
             ordering: true,
-            // ajax: '{!! url()->current() !!}',
-            ajax: '{!! route('DataAkun.index') !!}',
+            ajax: '{!! url()->current() !!}',
             order: [
                 [1, 'asc']
             ],
