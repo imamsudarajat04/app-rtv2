@@ -19,6 +19,7 @@ class CekRole
         {
             return $next($request);
         }
-        return redirect('/');
+        // return redirect('/');
+        return redirect()->route('login');
     }
 }

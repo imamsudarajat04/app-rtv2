@@ -25,12 +25,14 @@ class LoginController extends Controller
             // return('Login Success');
             return redirect()->route('dashboard.index'); //redirect ke halaman dashboard
         }
-        return redirect('/')->with('error', 'Username atau Password anda salah!');
+        // return redirect('/')->with('error', 'Username atau Password anda salah!');
+        return redirect()->route('login')->with('error', 'Username atau Password anda salah!');
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
+        // return redirect('/');
+        return redirect()->route('login');
     }
 }

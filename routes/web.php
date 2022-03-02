@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 
-
-Route::get('/', "LoginController@index")->name('login');
+// Route::get('/', "User\IndexController@index");
+Route::get('/login', "LoginController@index")->name('login');
 Route::post('/postLogin', "LoginController@postLogin")->name('postLogin.store');
 Route::get('/logout', "LoginController@logout")->name('logout.destroy');
 
