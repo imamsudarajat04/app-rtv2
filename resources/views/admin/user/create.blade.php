@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-12">
                         <label for="alamatLengkap" class="form-label">Alamat Lengkap</label>
-                        <input type="text" class="form-control" name="address" id="address" placeholder="Masukkan Alamat Lengkap.." required>
+                        <input type="text" class="form-control" name="address" id="address" placeholder="Masukkan Alamat Lengkap.." value="{{ old('address') }}" required>
                     </div>
                     <div class="col-12">
                       <label for="Password" class="form-label">Password</label>
@@ -82,7 +82,6 @@
                     </div>
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Simpan</button>
-                      {{-- <button type="reset" class="btn btn-danger">Kembali</button> --}}
                       <a href="{{ route('DataAkun.index') }}" class="btn btn-danger">Kembali</a>
                     </div>
                   </form>
