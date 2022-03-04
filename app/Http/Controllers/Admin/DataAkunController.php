@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\EditAkunRequest;
+use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\SettingProfileRequest;
 
@@ -69,7 +73,8 @@ class DataAkunController extends Controller
     public function store(SettingProfileRequest $request)
     {
         $data = $request->all();
-        $data['password'] = bcrypt($request->password);
+        // $data['password'] = bcrypt($request->password);
+        $data['password'] = Hash::make($request->password);
         
         if($request->hasFile('avatar')){
             $data['avatar'] = $request->file('avatar')->store('profile/avatars', 'public');
@@ -109,9 +114,24 @@ class DataAkunController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(EditAkunRequest $request, $id)
+    {   
+        $item = User::findOrFail($id);
+        $data = $request->all();
+
+        if($request->hasFile('avatar')){
+            Storage::delete('public/' . $item->avatar);
+            $data['avatar'] = $request->file('avatar')->store('profile/avatars', 'public');
+        }
+        
+        if(!empty($data['password'])){
+            $data['password'] = Hash::make($data['password']);
+        }else{
+            $data = Arr::except($data, ['password']);
+        }
+        
+        $item->update($data);
+        return redirect()->route('DataAkun.index')->with('success', 'Data berhasil diubah');
     }
 
     /**

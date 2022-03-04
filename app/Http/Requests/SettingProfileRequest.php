@@ -43,8 +43,8 @@ class SettingProfileRequest extends FormRequest
                 'rt'                    => 'required|string',
                 'rw'                    => 'required|string',
                 'address'               => 'required|string',
-                'role'                  => 'required|string',
                 'avatar'                => 'file|image|mimes:jpeg,png,jpg|max:5120',
+                'role'                  => 'required|string',
             ];
         }
 

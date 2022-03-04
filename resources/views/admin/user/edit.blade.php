@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-12">
                       <label for="username" class="form-label">Username</label>
-                      <input type="text" class="form-control" name="username" id="username" placeholder="Masukkan Username.." value="{{ old('username', $user->username) }}" required>
+                      <input type="text" class="form-control" name="username" id="username" placeholder="Masukkan Username.." value="{{ old('username', $user->username) }}" readonly>
                     </div>
                     <div class="col-12">
                       <label for="username" class="form-label">Nomor Handphone</label>

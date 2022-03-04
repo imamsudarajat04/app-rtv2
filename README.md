@@ -4,12 +4,7 @@
 
 ## Untuk Pendataan Data Menggunakan Plugin DataTables Yang Dapat Memudahkan Pendataan Data, Seperti Short Data, Pagination Data, dll.
 
-
-
-
-
-
-
+## Regex password ('Testing123')
 
 
 
