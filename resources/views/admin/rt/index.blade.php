@@ -39,7 +39,6 @@
                         <tr>
                             <th width="70px">No</th>
                             <th>Nama Lengkap</th>
-                            <th>Username</th>
                             <th>RT</th>
                             <th>RW</th>
                             <th>Role</th>

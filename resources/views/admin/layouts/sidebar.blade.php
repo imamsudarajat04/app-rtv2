@@ -17,7 +17,7 @@
       </li><!-- Data Akun  -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link {{ (request()->routeIs('DataRT.index')) ? '' : 'collapsed' }}" href="{{ route('DataRT.index') }}">
           <i class="bi bi-person-badge-fill"></i>
           <span>Data RT</span>
         </a>

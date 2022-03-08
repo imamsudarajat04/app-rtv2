@@ -17,4 +17,7 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
 
     //Khusus tujuan Data Akun
     Route::resource('/DataAkun', 'Admin\DataAkunController');
+
+    //Khusu tujuan Data RT
+    Route::resource('/DataRT', 'Admin\DataRtController');
 });
