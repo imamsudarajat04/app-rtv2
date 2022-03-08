@@ -30,7 +30,7 @@ class DataAkunController extends Controller
                         <a class="btn btn-primary" href="' . route('DataAkun.edit', $item->id) . '">
                             Ubah
                         </a>
-                        <button class="btn btn-danger delete_modal" type="button" data-id="' . $item->id . '" data-toggle="modal" data-target="#exampleModal">
+                        <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
                             Hapus
                         </button>
                     ';
@@ -51,6 +51,12 @@ class DataAkunController extends Controller
                 ->addIndexColumn()
                 ->make();
         }
+
+        // <a class="btn btn-danger" href="' . route('DataAkun.destroy', $item->id) . '">
+        //                     Hapus
+        //                 </a>  
+
+        
         return view('admin.user.index');
     }
 
@@ -129,7 +135,7 @@ class DataAkunController extends Controller
         }else{
             $data = Arr::except($data, ['password']);
         }
-        
+
         $item->update($data);
         return redirect()->route('DataAkun.index')->with('success', 'Data berhasil diubah');
     }
@@ -141,7 +147,16 @@ class DataAkunController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
-    }
+    {   
+        $item = User::findOrFail($id);
+        Storage::delete('public/' . $item->avatar);
+        $item->delete();    
+
+        // return redirect()->route('DataAkun.index')->with('success', 'Data berhasil dihapus');
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Data berhasil dihapus'
+        ]);
+    }   
 }

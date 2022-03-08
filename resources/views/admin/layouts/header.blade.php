@@ -5,6 +5,9 @@
 <meta content="Website RTV2" name="description">
 <meta content="Website RTV2" name="keywords">
 
+<!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <!-- Google Fonts -->
 <link href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -22,5 +25,7 @@
 
 <!-- CustomCSS -->
 <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
+
+<script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
 @stack('customcss')

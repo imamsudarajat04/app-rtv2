@@ -26,6 +26,10 @@
             </div>
         @endif
 
+        <div class="delete-response">
+
+        </div>
+
         <div class="card">
           <div class="card-body">
               <a href="{{ route('DataAkun.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Akun</a>
@@ -51,6 +55,7 @@
 
       </div>
     </div>
+
 </section>
 @endsection
 
@@ -99,11 +104,36 @@
                     width: '1%'
                 }
             ],
-            sDom: '<"secondBar d-flex flex-wrap justify-content-between mb-2"lf>rt<"bottom"p>',
+            sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2"lf>rt<"bottom"p>',
 
             "fnCreatedRow": function(nRow, data) {
                 $(nRow).attr('id', 'user' + data.id);
             },
+        });
+
+        $(document).on("click", ".delete_akun", function() {
+            var id = $(this).data('id');
+            var token = $("meta[name='csrf-token']").attr("content");
+
+            $.ajax({
+                url: "DataAkun/" + id,
+                type: "DELETE",
+                data: {
+                    "id": id,
+                    "_token": token,
+                },
+                success: function(data) {
+                    $('#user' + id).remove();
+                    $('#tableUser').DataTable().ajax.reload();
+                    $('#tableUser').DataTable().draw();
+                    $(".delete-response").append(
+                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data Akun<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
+                    );
+                },
+                error: function(data) {
+                    console.log('Error:', data);
+                }
+            });
         });
     </script>
 @endpush
