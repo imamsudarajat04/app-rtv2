@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title', 'Admin | Halaman Data Akun')
+@section('title', 'Admin | Halaman Data RT')
 
 @section('content')
 <div class="pagetitle">
@@ -32,7 +32,7 @@
 
         <div class="card">
           <div class="card-body">
-              <a href="{{ route('DataAkun.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Akun</a>
+              <a href="{{ route('DataRT.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Akun</a>
               <h5 class="card-title">Data Akun</h5>
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableRT">
                     <thead>

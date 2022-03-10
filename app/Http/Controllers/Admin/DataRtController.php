@@ -30,19 +30,7 @@ class DataRtController extends Controller
                         </button>
                     ';
                 })
-                ->editColumn('role', function($item) {
-                    if($item->role == 'superadmin')
-                    {
-                        return '
-                            <label class="badge badge-success mr-2">' . $item->role . '</label>
-                        ';
-                    }else{
-                        return '
-                            <label class="badge badge-primary mr-2">' . $item->role . '</label>
-                        ';
-                    }
-                })
-                ->rawColumns(['action', 'role'])
+                ->rawColumns(['action'])
                 ->addIndexColumn()
                 ->make();
         }
@@ -57,7 +45,7 @@ class DataRtController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.rt.create');
     }
 
     /**

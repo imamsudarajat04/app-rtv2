@@ -15,6 +15,7 @@ class CreateDataRtsTable extends Migration
     {
         Schema::create('data_rts', function (Blueprint $table) {
             $table->id();
+            $table->string('nik', 16);
             $table->string('name');
             $table->string('rt');
             $table->string('rw');

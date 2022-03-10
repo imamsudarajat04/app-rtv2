@@ -29,8 +29,8 @@ class CreateDataWargasTable extends Migration
             $table->string('kelurahan');
             $table->string('kode_pos');
             $table->longText('alamat');
-            $table->string('rw');
             $table->string('rt');
+            $table->string('rw');
             $table->string('pendidikan');
             $table->string('jenis_pekerjaan');
             $table->string('status_perkawinan');
