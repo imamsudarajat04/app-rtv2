@@ -5,7 +5,9 @@
 - [x] Untuk Pendataan Data Menggunakan Plugin DataTables Yang Dapat Memudahkan Pendataan Data, Seperti Short Data, Pagination Data, dll.
 - [x] Regex password ('Testing123').
 - [ ] Pendataan Warga Pindahan
+- [ ] Template Landing Page User Friendly
+- [ ] Formulir Pendataan Warga User Friendly
 
 <b>Note<b/> : Masih dalam tahap pengembangan dan uji coba !
 
-# Pembuat : Imam Sudarajat
+### Pembuat : Imam Sudarajat
