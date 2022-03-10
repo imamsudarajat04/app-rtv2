@@ -34,14 +34,17 @@
           <div class="card-body">
               <a href="{{ route('DataAkun.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Akun</a>
               <h5 class="card-title">Data Akun</h5>
-                <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableUser">
+                <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableRT">
                     <thead>
                         <tr>
                             <th width="70px">No</th>
                             <th>Nama Lengkap</th>
                             <th>RT</th>
                             <th>RW</th>
-                            <th>Role</th>
+                            <th>Alamat</th>
+                            <th>No HP</th>
+                            <th>Kelurahan</th>
+                            <th>Kecamatan</th>
                             <th width="150px">Action</th>
                         </tr>
                     </thead>
@@ -60,7 +63,7 @@
 
 @push('customjs')
     <script>
-        var datatable = $('#tableUser').DataTable({
+        var datatable = $('#tableRT').DataTable({
             processing: true,
             serverSide: true,
             ordering: true,
@@ -80,10 +83,6 @@
                     name: 'name'
                 },
                 {
-                    data: 'username',
-                    name: 'username',
-                },
-                {
                     data: 'rt',
                     name: 'rt',
                 },
@@ -92,8 +91,20 @@
                     name: 'rw',
                 },
                 {
-                    data: 'role',
-                    name: 'role',
+                    data: 'address',
+                    name: 'address',
+                },
+                {
+                    data: 'phone',
+                    name: 'phone',
+                },
+                {
+                    data: 'village',
+                    name: 'village',
+                },
+                {
+                    data: 'district',
+                    name: 'district',
                 },
                 {
                     data: 'action',
@@ -106,7 +117,7 @@
             sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2"lf>rt<"bottom"p>',
 
             "fnCreatedRow": function(nRow, data) {
-                $(nRow).attr('id', 'user' + data.id);
+                $(nRow).attr('id', 'rt' + data.id);
             },
         });
 

@@ -16,6 +16,37 @@ class DataRtController extends Controller
      */
     public function index(Request $request)
     {
+        if (request()->ajax()) {
+            $query = Data_rt::all();
+
+            return DataTables::of($query)
+                ->addColumn('action', function ($item) {
+                    return '
+                        <a class="btn btn-primary" href="' . route('DataAkun.edit', $item->id) . '">
+                            Ubah
+                        </a>
+                        <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
+                            Hapus
+                        </button>
+                    ';
+                })
+                ->editColumn('role', function($item) {
+                    if($item->role == 'superadmin')
+                    {
+                        return '
+                            <label class="badge badge-success mr-2">' . $item->role . '</label>
+                        ';
+                    }else{
+                        return '
+                            <label class="badge badge-primary mr-2">' . $item->role . '</label>
+                        ';
+                    }
+                })
+                ->rawColumns(['action', 'role'])
+                ->addIndexColumn()
+                ->make();
+        }
+
         return view('admin.rt.index');
     }
 

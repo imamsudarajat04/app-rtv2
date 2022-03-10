@@ -51,11 +51,6 @@ class DataAkunController extends Controller
                 ->addIndexColumn()
                 ->make();
         }
-
-        // <a class="btn btn-danger" href="' . route('DataAkun.destroy', $item->id) . '">
-        //                     Hapus
-        //                 </a>  
-
         
         return view('admin.user.index');
     }
