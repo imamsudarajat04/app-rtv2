@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Data_rt;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DataRTRequest;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataRtController extends Controller
@@ -54,9 +55,12 @@ class DataRtController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DataRTRequest $request)
     {
-        //
+        $data = $request->all();
+        Data_rt::create($data);
+
+        return redirect()->route('DataRT.index')->with('success', 'Data RT berhasil ditambahkan');
     }
 
     /**

@@ -33,7 +33,7 @@
                     
                   <h5 class="card-title">Pengisian Data</h5>
     
-                  <form class="row g-3" action="{{ route('DataAkun.store') }}" method="POST" enctype="multipart/form-data">
+                  <form class="row g-3" action="{{ route('DataRT.store') }}" method="POST">
                     @csrf
 
                     <div class="col-12">
@@ -70,7 +70,7 @@
                     </div>
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Simpan</button>
-                      <a href="{{ route('DataAkun.index') }}" class="btn btn-danger">Kembali</a>
+                      <a href="{{ route('DataRT.index') }}" class="btn btn-danger">Kembali</a>
                     </div>
                   </form>
     

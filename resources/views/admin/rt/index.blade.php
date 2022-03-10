@@ -4,12 +4,12 @@
 
 @section('content')
 <div class="pagetitle">
-    <h1>Pengelolaan Data Akun</h1>
+    <h1>Pengelolaan Data RT</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
         <li class="breadcrumb-item">Table</li>
-        <li class="breadcrumb-item active">Data Akun</li>
+        <li class="breadcrumb-item active">Data RT</li>
       </ol>
     </nav>
 </div><!-- End Page Title -->
@@ -20,7 +20,7 @@
 
         <!-- Alert -->
         @if($message = Session::get('success'))
-            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ $message }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -33,11 +33,12 @@
         <div class="card">
           <div class="card-body">
               <a href="{{ route('DataRT.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Akun</a>
-              <h5 class="card-title">Data Akun</h5>
+              <h5 class="card-title">Data RT</h5>
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableRT">
                     <thead>
                         <tr>
                             <th width="70px">No</th>
+                            <th>NIK</th>
                             <th>Nama Lengkap</th>
                             <th>RT</th>
                             <th>RW</th>
@@ -79,6 +80,10 @@
                     searchable: false
                 },
                 {
+                    data: 'nik',
+                    name: 'nik'
+                },
+                {
                     data: 'name',
                     name: 'name'
                 },
@@ -103,8 +108,8 @@
                     name: 'village',
                 },
                 {
-                    data: 'district',
-                    name: 'district',
+                    data: 'districts',
+                    name: 'districts',
                 },
                 {
                     data: 'action',

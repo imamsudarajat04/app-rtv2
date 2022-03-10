@@ -8,6 +8,13 @@ class Data_rt extends Model
 {
     protected $table = 'data_rts';
     protected $fillable = [
-        'name', 'address', 'phone', 'village', 'districts'
+        'nik',
+        'name', 
+        'rt',
+        'rw',
+        'address', 
+        'phone', 
+        'village', 
+        'districts'
     ];
 }
