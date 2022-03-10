@@ -131,18 +131,18 @@
             var token = $("meta[name='csrf-token']").attr("content");
 
             $.ajax({
-                url: "DataAkun/" + id,
+                url: "DataRT/" + id,
                 type: "DELETE",
                 data: {
                     "id": id,
                     "_token": token,
                 },
                 success: function(data) {
-                    $('#user' + id).remove();
-                    $('#tableUser').DataTable().ajax.reload();
-                    $('#tableUser').DataTable().draw();
+                    $('#rt' + id).remove();
+                    $('#tableRT').DataTable().ajax.reload();
+                    $('#tableRT').DataTable().draw();
                     $(".delete-response").append(
-                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data Akun<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
+                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data RT<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
                     );
                 },
                 error: function(data) {

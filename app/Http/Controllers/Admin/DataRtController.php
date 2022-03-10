@@ -23,7 +23,7 @@ class DataRtController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="btn btn-primary" href="' . route('DataAkun.edit', $item->id) . '">
+                        <a class="btn btn-primary" href="' . route('DataRT.edit', $item->id) . '">
                             Ubah
                         </a>
                         <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
@@ -82,7 +82,8 @@ class DataRtController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Data_rt::findOrFail($id);
+        return view('admin.rt.edit', compact('data'));
     }
 
     /**
@@ -92,9 +93,12 @@ class DataRtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(DataRTRequest $request, $id)
     {
-        //
+        $data = Data_rt::findOrFail($id);
+        $data->update($request->all());
+
+        return redirect()->route('DataRT.index')->with('success', 'Data RT berhasil diubah');
     }
 
     /**
