@@ -5,6 +5,9 @@
 - [x] Untuk Pendataan Data Menggunakan Plugin DataTables Yang Dapat Memudahkan Pendataan Data, Seperti Short Data, Pagination Data, dll.
 - [x] Regex password ('Testing123').
 - [ ] Pendataan Warga Pindahan
+- [ ] Grafik Charts Warga Pindahan
+- [ ] Grafik Charts Warga Setiap Bulan & Pertahun
+- [ ] Recent Activity / Log Superadmin & RT
 - [ ] Template Landing Page User Friendly
 - [ ] Formulir Pendataan Warga User Friendly
 
