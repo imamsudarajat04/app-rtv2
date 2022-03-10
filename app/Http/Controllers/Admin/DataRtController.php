@@ -109,6 +109,12 @@ class DataRtController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Data_rt::findOrFail($id);
+        $item->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Data RT Berhasil Dihapus'
+        ]);
     }
 }

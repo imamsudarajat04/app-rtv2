@@ -147,8 +147,6 @@ class DataAkunController extends Controller
         Storage::delete('public/' . $item->avatar);
         $item->delete();    
 
-        // return redirect()->route('DataAkun.index')->with('success', 'Data berhasil dihapus');
-
         return response()->json([
             'success' => true,
             'message' => 'Data berhasil dihapus'
