@@ -26,6 +26,18 @@ class Data_warga extends Model
         'rw',
         'pendidikan',
         'jenis_pekerjaan',
-        
+        'status_perkawinan',
+        'status_dalam_keluarga',
+        'kewarganegaraan',
+        'foto_kk',
+        'no_paspor',
+        'no_kitas_kitap',
+        'foto_paspor',
+        'nama_ayah',
+        'pekerjaan_ayah',
+        'nama_ibu',
+        'pekerjaan_ibu',
+        'bantuan_pemerintah',
+        'disabilitas',
     ];
 }
