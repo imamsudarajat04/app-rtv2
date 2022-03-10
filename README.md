@@ -9,5 +9,6 @@
 ## Regex password ('Testing123')
 
 
+## Note : Masih dalam tahap pengembangan dan uji coba !
 
 ## Pembuat : Imam Sudarajat
