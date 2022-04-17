@@ -5,6 +5,8 @@
 - [x] Untuk Pendataan Data Menggunakan Plugin DataTables Yang Dapat Memudahkan Pendataan Data, Seperti Short Data, Pagination Data, dll.
 - [x] Regex password ('Testing123').
 - [x] Pendataan sudah menggunakan serverside processing jadi aman dan tidak lelet saat mengecek data.
+- [x] Table Agama
+- [ ] Pendataan Warga 
 - [ ] Pendataan Warga Pindahan
 - [ ] Grafik Charts Warga Pindahan
 - [ ] Grafik Charts Warga Setiap Bulan & Pertahun

@@ -1,15 +1,15 @@
 @extends('admin.layouts.master')
 
-@section('title', 'Admin | Halaman Data RT')
+@section('title', 'Admin | Halaman Data Warga')
 
 @section('content')
 <div class="pagetitle">
-    <h1>Pengelolaan Data RT</h1>
+    <h1>Pengelolaan Data Warga</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
         <li class="breadcrumb-item">Table</li>
-        <li class="breadcrumb-item active">Data RT</li>
+        <li class="breadcrumb-item active">Data Warga</li>
       </ol>
     </nav>
 </div><!-- End Page Title -->
@@ -33,7 +33,7 @@
         <div class="card">
           <div class="card-body">
               <a href="{{ route('DataWarga.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Warga</a>
-              <h5 class="card-title">Data RT</h5>
+              <h5 class="card-title">Data Warga</h5>
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableWarga">
                     <thead>
                         <tr>
