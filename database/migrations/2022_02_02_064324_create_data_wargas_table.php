@@ -34,8 +34,8 @@ class CreateDataWargasTable extends Migration
             $table->string('rw');
             $table->string('pendidikan');
             $table->string('jenis_pekerjaan')->nullable();
-            $table->enum('status_perkawinan', ['Belum Menikah', 'Menikah', 'Cerai Hidup', 'Cerai Mati']);
-            $table->enum('status_dalam_keluarga', ['Kepala Keluarga', 'Istri', 'Anak', 'Menantu', 'Cucu', 'Orang Tua', 'Mertua', 'Keluarga Lain', 'Pembantu', 'Lainnya']);
+            $table->enum('status_perkawinan', ['0', '1', '2', '3']);
+            $table->enum('status_dalam_keluarga', ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
             $table->enum('kewarganegaraan', ['WNI', 'WNA']);
             $table->string('foto_kk');
             //Dokumentasi Imigrasi
