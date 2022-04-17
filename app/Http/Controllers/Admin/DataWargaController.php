@@ -14,9 +14,28 @@ class DataWargaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if (request()->ajax()) {
+            $query = Data_warga::all();
+
+            return DataTables::of($query)
+                ->addColumn('action', function ($item) {
+                    return '
+                        <a class="btn btn-success" href="">Detail</a>
+                        <a class="btn btn-primary" href="' . route('DataRT.edit', $item->id) . '">
+                            <i class="fas fa-pen"></i> Ubah
+                        </a>
+                        <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
+                            <i class="fas fa-trash"></i> Hapus
+                        </button>
+                    ';
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make();
+        }
+        return view('admin.warga.index');
     }
 
     /**
