@@ -68,8 +68,9 @@
                         <label for="agama" class="form-label">Agama</label>
                         <select class="form-control" name="agama" id="agama" required>
                             <option value="" selected disabled>Pilih Agama</option>
-                            <option value="Laki-Laki">Laki-Laki</option>
-                            <option value="Perempuan">Perempuan</option>
+                            @foreach ($religions as $religion)
+                                <option value="{{ $religion->id }}">{{ $religion->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="col-6">

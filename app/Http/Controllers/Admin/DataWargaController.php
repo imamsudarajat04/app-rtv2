@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Data_warga;
+use App\Religions;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
@@ -47,7 +48,8 @@ class DataWargaController extends Controller
      */
     public function create()
     {
-        return view('admin.warga.create');
+        $religions = Religions::all();
+        return view('admin.warga.create', compact('religions'));
     }
 
     /**
