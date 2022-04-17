@@ -32,7 +32,7 @@
 
         <div class="card">
           <div class="card-body">
-              <a href="{{ route('DataRT.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Akun</a>
+              <a href="{{ route('DataRT.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah RT</a>
               <h5 class="card-title">Data RT</h5>
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableRT">
                     <thead>

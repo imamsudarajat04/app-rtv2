@@ -22,7 +22,9 @@ class DataWargaController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="btn btn-success" href="">Detail</a>
+                        <a class="btn btn-success" href="">
+                            <i class="far fa-eye"></i> Detail
+                        </a>
                         <a class="btn btn-primary" href="' . route('DataRT.edit', $item->id) . '">
                             <i class="fas fa-pen"></i> Ubah
                         </a>

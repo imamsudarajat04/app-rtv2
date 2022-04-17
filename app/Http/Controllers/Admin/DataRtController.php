@@ -24,10 +24,10 @@ class DataRtController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <a class="btn btn-primary" href="' . route('DataRT.edit', $item->id) . '">
-                            Ubah
+                            <i class="fas fa-pen"></i> Ubah
                         </a>
                         <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
-                            Hapus
+                            <i class="fas fa-trash"></i> Hapus
                         </button>
                     ';
                 })
