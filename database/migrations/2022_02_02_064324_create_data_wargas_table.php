@@ -21,7 +21,9 @@ class CreateDataWargasTable extends Migration
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->string('jenis_kelamin');
-            $table->string('agama');
+            // $table->string('agama');
+            $table->unsignedBigInteger('religions_id');
+            $table->foreign('religions_id')->references('id')->on('religions')->onUpdate('cascade')->onDelete('cascade');
             $table->string('provinsi');
             $table->string('kabupaten');
             $table->string('kecamatan');
