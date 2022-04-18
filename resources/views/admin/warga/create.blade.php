@@ -84,27 +84,30 @@
                         <label for="provinsi" class="form-label">Provinsi</label>
                         <select class="form-control" name="provinsi" id="provinsi" required>
                             <option value="" selected disabled>Pilih Provinsi</option>
+                            @foreach ($provinces as $province)
+                                <option value="{{ $province->id }}">{{ $province->nama_bps }}</option>
+                            @endforeach
                         </select>
                     </div>
 
                     <div class="col-12">
                         <label for="kabupaten" class="form-label">Kabupaten</label>
                         <select class="form-control" name="kabupaten" id="kabupaten" required>
-                            <option value="" selected disabled>Pilih Kabupaten</option>
+                            <option value="0" selected disabled>Pilih Kabupaten / Kota</option>
                         </select>
                     </div>
 
                     <div class="col-12">
                         <label for="kecamatan" class="form-label">Kecamatan</label>
                         <select class="form-control" name="kecamatan" id="kecamatan" required>
-                            <option value="" selected disabled>Pilih Kecamatan</option>
+                            <option value="0" selected disabled>Pilih Kecamatan</option>
                         </select>
                     </div>
 
                     <div class="col-12">
                         <label for="kelurahan" class="form-label">Kelurahan</label>
                         <select class="form-control" name="kelurahan" id="kelurahan" required>
-                            <option value="" selected disabled>Pilih Kelurahan</option>
+                            <option value="0" selected disabled>Pilih Kelurahan</option>
                         </select>
                     </div>
 
@@ -180,18 +183,54 @@
                     </div>
 
                     <div class="col-6">
-                        <label for="noKK" class="form-label">Nomor Paspor</label>
+                        <label for="noPaspor" class="form-label">Nomor Paspor</label>
                         <input type="text" class="form-control" name="no_paspor" id="no_paspor" placeholder="Masukkan Nomor Paspor (Jika Ada) .." value="{{ old('no_paspor') }}">
                     </div>
 
                     <div class="col-6">
-                        <label for="NIK" class="form-label">Nomor Kitas Kitap</label>
+                        <label for="noKitasKitap" class="form-label">Nomor Kitas Kitap</label>
                         <input type="text" class="form-control" name="no_kitas_kitap" id="no_kitas_kitap" placeholder="Masukkan Nomor Kitas Kitap (Jika Ada) .." value="{{ old('no_kitas_kitap') }}">
                     </div>
 
                     <div class="col-12">
-                        <label for="fotoKK" class="form-label">Foto Paspor*</label>
+                        <label for="fotoPaspor" class="form-label">Foto Paspor*</label>
                         <input type="file" class="form-control" name="foto_paspor" id="customFile2">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="namaAyah" class="form-label">Nama Ayah</label>
+                        <input type="text" class="form-control" name="nama_ayah" id="nama_ayah" placeholder="Masukkan Nama Ayah.." value="{{ old('nama_ayah') }}" required>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="pekerjaanAyah" class="form-label">Pekerjaan Ayah</label>
+                        <input type="text" class="form-control" name="pekerjaan_ayah" id="pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah.." value="{{ old('pekerjaan_ayah') }}" required>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="namaIbu" class="form-label">Nama Ibu</label>
+                        <input type="text" class="form-control" name="nama_ibu" id="nama_ibu" placeholder="Masukkan Nama Ibu.." value="{{ old('nama_ibu') }}" required>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="pekerjaanIbu" class="form-label">Pekerjaan Ibu</label>
+                        <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaan_ibu" placeholder="Masukkan Pekerjaan Ibu.." value="{{ old('pekerjaan_ibu') }}" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="bantuanPemerintah" class="form-label">Bantuan Pemerintah</label></br>
+                        <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="1">
+                        <label for="Ya">Ya</label>
+                        <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="0">
+                        <label for="Tidak">Tidak</label><br>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="disabilitas" class="form-label">Disabilitas</label></br>
+                        <input type="radio" id="disabilitas" name="disabilitas" value="1">
+                        <label for="Ya">Ya</label>
+                        <input type="radio" id="disabilitas" name="disabilitas" value="0">
+                        <label for="Tidak">Tidak</label><br>
                     </div>
 
                     <div class="text-center">
@@ -225,6 +264,68 @@
         var cleanFileName = fileName.replace('C:\\fakepath\\', " ");
         //replace the "Choose a file" label
         $(this).next('.custom-file-label').html(cleanFileName);
+    });
+
+    $(document).ready(function() {
+        $('select[name="provinsi"]').on('change', function() {
+            var ProvinceID = $(this).val();
+            if(ProvinceID) {
+                $.ajax({
+                    url: '/getKabupaten/' + ProvinceID,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {         
+                        $('select[name="kabupaten"]').empty();
+						$('select[name="kabupaten"]').append('<option value="0">Pilih Kabupaten / Kota</option>');
+                        $.each(data, function(key, value) {
+                            $('select[name="kabupaten"]').append('<option value="'+ key +'">'+ value +'</option>');
+                        });
+                    }
+                });
+            }else{
+                $('select[name="kabupaten"]').empty();
+            }
+        });
+
+        $('select[name="kabupaten"]').on('change', function() {
+            var CitiesID = $(this).val();
+            if(CitiesID) {
+                $.ajax({
+                    url: '/getKecamatan/' + CitiesID,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {         
+                        $('select[name="kecamatan"]').empty();
+						$('select[name="kecamatan"]').append('<option value="0">Pilih Kecamatan</option>');
+                        $.each(data, function(key, value) {
+                            $('select[name="kecamatan"]').append('<option value="'+ key +'">'+ value +'</option>');
+                        });
+                    }
+                });
+            }else{
+                $('select[name="kecamatan"]').empty();
+            }
+        });
+
+        $('select[name="kecamatan"]').on('change', function() {
+            var WardID = $(this).val();
+            if(WardID) {
+                $.ajax({
+                    url: '/getKelurahan/' + WardID,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {         
+                        $('select[name="kelurahan"]').empty();
+						$('select[name="kelurahan"]').append('<option value="0">Pilih Kelurahan</option>');
+                        $.each(data, function(key, value) {
+                            $('select[name="kelurahan"]').append('<option value="'+ key +'">'+ value +'</option>');
+                        });
+                    }
+                });
+            }else{
+                $('select[name="kelurahan"]').empty();
+            }
+        });
     });
 </script>
 @endpush

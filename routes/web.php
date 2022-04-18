@@ -21,6 +21,15 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
     //Khusus tujuan Data RT
     Route::resource('/DataRT', 'Admin\DataRtController');
 
-    //Khusus tujuan Data Warga Bukit Cermin
+    //Khusus tujuan Data Warga
     Route::resource('/DataWarga', 'Admin\DataWargaController');
+
+    //Kabupaten get id provinsi
+    Route::get('getKabupaten/{id}', 'Admin\DataWargaController@getKabupaten');
+
+    //Kecamatan get id kabupaten
+    Route::get('getKecamatan/{id}', 'Admin\DataWargaController@getKecamatan');
+
+    //Kelurahan get id kecamatan
+    Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
 });

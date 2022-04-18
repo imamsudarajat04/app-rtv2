@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Data_warga;
+use App\Provinsi;
+use App\Kabupaten;
+use App\Kecamatan;
+use App\Kelurahan;
 use App\Religions;
+use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
@@ -49,7 +53,12 @@ class DataWargaController extends Controller
     public function create()
     {
         $religions = Religions::all();
-        return view('admin.warga.create', compact('religions'));
+        $provinces = Provinsi::all();
+
+        return view('admin.warga.create', [
+            'religions' => $religions, 
+            'provinces'  => $provinces
+        ]);
     }
 
     /**
@@ -106,5 +115,20 @@ class DataWargaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getKabupaten($id) {
+        $kabupaten = Kabupaten::where('id_prov', $id)->pluck('nama_dagri', 'id');
+        return response()->json($kabupaten);
+    }
+
+    public function getKecamatan($id) {
+        $kecamatan = Kecamatan::where('id_kab', $id)->pluck('nama_bps', 'id');
+        return response()->json($kecamatan);
+    }
+
+    public function getKelurahan($id) {
+        $kelurahan = Kelurahan::where('id_kec', $id)->pluck('nama_bps', 'id');
+        return response()->json($kelurahan);
     }
 }
