@@ -152,7 +152,7 @@ class DataWargaRequest extends FormRequest
             'bantuan_pemerintah.required'   => 'Bantuan pemerintah tidak boleh kosong',
             'bantuan_pemerintah.numeric'    => 'Bantuan pemerintah harus berupa angka',
             'disabilitas.required'          => 'Disabilitas tidak boleh kosong',
-            'disabilitas.numeric'           => 'Disabilitas harus berupa angka',
+            'disabilitas.numeric'           => 'Disabilitas harus berupa angka!',
         ];
     }
 }
