@@ -38,17 +38,17 @@
 
                     <div class="col-6">
                       <label for="noKK" class="form-label">Nomor KK</label>
-                      <input type="number" class="form-control" name="no_kk" id="no_kk" placeholder="Masukkan Nomor KK.." value="{{ old('no_kk') }}" required>
+                      <input type="text" class="form-control" name="no_kk" id="no_kk" placeholder="Masukkan Nomor KK.." value="{{ old('no_kk') }}" required>
                     </div>
 
                     <div class="col-6">
                       <label for="NIK" class="form-label">NIK</label>
-                      <input type="number" class="form-control" name="nik" id="nik" placeholder="Masukkan NIK Sesuai KTP.." value="{{ old('nik') }}" required>
+                      <input type="text" class="form-control" name="nik" id="nik" placeholder="Masukkan NIK Sesuai KTP.." value="{{ old('nik') }}" required>
                     </div>
 
                     <div class="col-12">
                       <label for="namaLengkap" class="form-label">Nama Lengkap</label>
-                      <input type="text" class="form-control" name="name" id="name" placeholder="Masukkan Nama Lengkap.." value="{{ old('name') }}" required>
+                      <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap" placeholder="Masukkan Nama Lengkap.." value="{{ old('nama_lengkap') }}" required>
                     </div>
 
                     <div class="col-6">
@@ -72,7 +72,7 @@
 
                     <div class="col-12">
                         <label for="agama" class="form-label">Agama</label>
-                        <select class="form-control" name="agama" id="agama" required>
+                        <select class="form-control" name="religions_id" id="religions_id" required>
                             <option value="" selected disabled>Pilih Agama</option>
                             @foreach ($religions as $religion)
                                 <option value="{{ $religion->id }}">{{ $religion->name }}</option>

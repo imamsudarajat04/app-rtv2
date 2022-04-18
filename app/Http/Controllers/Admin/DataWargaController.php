@@ -10,6 +10,7 @@ use App\Religions;
 use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DataWargaRequest;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataWargaController extends Controller
@@ -67,9 +68,14 @@ class DataWargaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DataWargaRequest $request)
     {
-        // dd($request->all());
+        $data = $request->all();
+        $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
+        $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+
+        Data_warga::create($data);
+        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
     }
 
     /**
