@@ -6,7 +6,7 @@
 - [x] Regex password ('Testing123').
 - [x] Pendataan sudah menggunakan serverside processing jadi aman dan tidak lelet saat mengecek data.
 - [x] Table Agama
-- [ ] Pendataan Warga 
+- [x] Pendataan Warga 
 - [ ] Pendataan Warga Pindahan
 - [ ] Grafik Charts Warga Pindahan
 - [ ] Grafik Charts Warga Setiap Bulan & Pertahun
