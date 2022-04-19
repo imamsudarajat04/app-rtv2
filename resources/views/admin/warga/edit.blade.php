@@ -182,7 +182,7 @@
                             <option value="" selected disabled>Pilih Status Perkawinan</option>
                             <option value="0" @if($data->status_perkawinan == 0) selected @endif>Belum Menikah</option>
                             <option value="1" @if($data->status_perkawinan == 1) selected @endif>Kawin</option>
-                            <option value="2" @if($data->status_perkawinan == 2) selected @endif>Belum Kawin</option>
+                            <option value="2" @if($data->status_perkawinan == 2) selected @endif>Cerai Hidup</option>
                             <option value="3" @if($data->status_perkawinan == 3) selected @endif>Cerai Mati</option>
                         </select>
                     </div>
@@ -214,7 +214,7 @@
 
                     <div class="col-12">
                         <label for="fotoKK" class="form-label">Foto Kartu Keluarga</label>
-                        <input type="file" class="form-control" name="foto_kk" id="customFile1" placeholder="Masukkan Foto KK.." required>
+                        <input type="file" class="form-control" name="foto_kk" id="customFile1" placeholder="Masukkan Foto KK..">
                     </div>
 
                     <div class="col-6">
