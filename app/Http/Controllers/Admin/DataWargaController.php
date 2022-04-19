@@ -31,7 +31,7 @@ class DataWargaController extends Controller
                         <a class="btn btn-success" href="">
                             <i class="far fa-eye"></i> Detail
                         </a>
-                        <a class="btn btn-primary" href="' . route('DataRT.edit', $item->id) . '">
+                        <a class="btn btn-primary" href="' . route('DataWarga.edit', $item->id) . '">
                             <i class="fas fa-pen"></i> Ubah
                         </a>
                         <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
@@ -97,7 +97,18 @@ class DataWargaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Data_warga::findOrFail($id);
+        $regencies = Kabupaten::where('id', $data->kabupaten)->get();
+        $districts = Kecamatan::where('id', $data->kecamatan)->get();
+        $villages = Kelurahan::where('id', $data->kelurahan)->get();
+        return view('admin.warga.edit', [
+            'data'      => $data,
+            'religions' => Religions::all(),
+            'provinces' => Provinsi::all(),
+            'regencies' => $regencies,
+            'districts' => $districts,
+            'villages'  => $villages
+        ]);
     }
 
     /**
