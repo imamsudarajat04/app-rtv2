@@ -123,17 +123,17 @@ class DataWargaController extends Controller
     {
         $cek = Data_warga::findOrFail($id);
         $data = $request->all();
-        // if($request->hasFile('foto_kk')){
-        //     Storage::delete('public/' . $cek->foto_kk);
-        //     $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
-        // }
-        // if($request->hasFile('foto_paspor')){
-        //     Storage::delete('public/' . $cek->foto_paspor);
-        //     $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
-        // }
-        dd($data);
-        //$cek->update($data);
-        //return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil diubah');
+        if($request->hasFile('foto_kk')){
+            Storage::delete('public/' . $cek->foto_kk);
+            $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
+        }
+        if($request->hasFile('foto_paspor')){
+            Storage::delete('public/' . $cek->foto_paspor);
+            $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+        }
+        
+        $cek->update($data);
+        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil diubah');
     }
 
     /**

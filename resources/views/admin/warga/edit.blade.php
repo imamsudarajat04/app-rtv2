@@ -74,7 +74,7 @@
                     <div class="col-12">
                         <label for="agama" class="form-label">Agama</label>
                         <select class="form-control" name="religions_id" id="religions_id" required>
-                            <option value="" selected disabled>Pilih Agama</option>
+                            <option value="0" selected disabled>Pilih Agama</option>
                             @foreach ($religions as $religion)
                                 <option value="{{ $religion->id }}">{{ $religion->name }}</option>
                                 @if($religion->id == $data->religions_id)
@@ -89,7 +89,7 @@
                     <div class="col-12">
                         <label for="provinsi" class="form-label">Provinsi</label>
                         <select class="form-control" name="provinsi" id="provinsi" required>
-                            <option value="" selected disabled>Pilih Provinsi</option>
+                            <option value="0" selected disabled>Pilih Provinsi</option>
                             @foreach ($provinces as $province)
                                 <option value="{{ $province->id }}">{{ $province->nama_bps }}</option>
                                 @if($province->id == $data->provinsi)
