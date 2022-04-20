@@ -29,7 +29,7 @@ class DataWargaController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="btn btn-success" href="">
+                        <a class="btn btn-success" href="' . route('DataWarga.show', $item->id) . '">
                             <i class="far fa-eye"></i> Detail
                         </a>
                         <a class="btn btn-primary" href="' . route('DataWarga.edit', $item->id) . '">
@@ -73,7 +73,7 @@ class DataWargaController extends Controller
     {
         $data = $request->all();
         $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
-        
+
         if($request->hasFile('foto_paspor')){
             $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
         }
@@ -90,7 +90,21 @@ class DataWargaController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Data_warga::findOrFail($id);
+        $religions = Religions::where('id', $data->religions_id)->first();
+        $provinces = Provinsi::where('id', $data->provinsi)->first();
+        $regencies = Kabupaten::where('id', $data->kabupaten)->first();
+        $districts = Kecamatan::where('id', $data->kecamatan)->first();
+        $villages = Kelurahan::where('id', $data->kelurahan)->first();
+
+        return view('admin.warga.show', [
+            'data'      => $data,
+            'provinces' => $provinces,
+            'regencies' => $regencies,
+            'districts' => $districts,
+            'villages'  => $villages,
+            'religions' => $religions
+        ]);
     }
 
     /**
