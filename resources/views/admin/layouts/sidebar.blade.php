@@ -37,6 +37,13 @@
         </a>
       </li><!-- Data Warga Pindahan-->
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-gear"></i>
+          <span>Setting</span>
+        </a>
+      </li><!-- Data Warga Pindahan-->
+
     </ul>
 
 </aside>
