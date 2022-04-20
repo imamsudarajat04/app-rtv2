@@ -1,4 +1,4 @@
-## Aplikasi Pendataan Warga Bukit Cermin / Apk Website RT
+## Aplikasi Website Pendataan Warga Bukit Cermin 
 
 - [x] Untuk Wilayah indonesia get dari https://github.com/mocfaisal/wilayah_indonesia
 - [x] Get Data Prov, Kecamatan, Kabupaten menggunakan dependent dropdown with jquery and ajax
