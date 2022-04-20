@@ -1,3 +1,82 @@
+.image-wrapper {
+  height: 120px;
+  width: 200px;
+}
+
+.image-wrapper .image {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner-image-wrapper {
+  height: 350px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-image-wrapper {
+      height: 200px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .banner-image-wrapper {
+      height: 150px;
+  }
+}
+
+.banner-image-wrapper .image {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.details-pendaftaran .image-wrapper {
+  height: 320px;
+  width: 200px;
+}
+
+.details-pendaftaran .image-wrapper .image {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.details-pendaftaran .title {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #4e73df;
+}
+
+.details-pendaftaran .subtitle {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 37px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.line-clamp {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 500px;
+}
+
 .badge {
     display: inline-block;
     padding: 0.25em 0.4em;
