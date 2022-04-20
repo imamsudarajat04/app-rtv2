@@ -35,7 +35,7 @@ class DataWargaController extends Controller
                         <a class="btn btn-primary" href="' . route('DataWarga.edit', $item->id) . '">
                             <i class="fas fa-pen"></i> Ubah
                         </a>
-                        <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
+                        <button class="btn btn-danger delete_warga" data-id="' . $item->id . '">
                             <i class="fas fa-trash"></i> Hapus
                         </button>
                     ';
@@ -73,7 +73,10 @@ class DataWargaController extends Controller
     {
         $data = $request->all();
         $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
-        $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+        
+        if($request->hasFile('foto_paspor')){
+            $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+        }
 
         Data_warga::create($data);
         return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
@@ -144,7 +147,11 @@ class DataWargaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cek = Data_warga::findOrFail($id);
+        Storage::delete('public/' . $cek->foto_kk);
+        Storage::delete('public/' . $cek->foto_paspor);
+        $cek->delete();
+        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil dihapus');
     }
 
     public function getKabupaten($id) {

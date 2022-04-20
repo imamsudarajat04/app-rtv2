@@ -1,15 +1,15 @@
 @extends('admin.layouts.master')
 
-@section('title', 'Admin | Halaman Tambah Warga')
+@section('title', 'Admin | Halaman Edit Data Warga')
 
 @section('content')
 <div class="pagetitle">
-    <h1>Formulir Warga Baru</h1>
+    <h1>Formulir Edit Data Warga</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
         <li class="breadcrumb-item">Form</li>
-        <li class="breadcrumb-item active">Warga Baru</li>
+        <li class="breadcrumb-item active">Edit Data Warga</li>
       </ol>
     </nav>
 </div><!-- End Page Title -->

@@ -111,29 +111,29 @@
             },
         });
 
-        // $(document).on("click", ".delete_akun", function() {
-        //     var id = $(this).data('id');
-        //     var token = $("meta[name='csrf-token']").attr("content");
+        $(document).on("click", ".delete_warga", function() {
+            var id = $(this).data('id');
+            var token = $("meta[name='csrf-token']").attr("content");
 
-        //     $.ajax({
-        //         url: "DataRT/" + id,
-        //         type: "DELETE",
-        //         data: {
-        //             "id": id,
-        //             "_token": token,
-        //         },
-        //         success: function(data) {
-        //             $('#rt' + id).remove();
-        //             $('#tableRT').DataTable().ajax.reload();
-        //             $('#tableRT').DataTable().draw();
-        //             $(".delete-response").append(
-        //                 '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data RT<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
-        //             );
-        //         },
-        //         error: function(data) {
-        //             console.log('Error:', data);
-        //         }
-        //     });
-        // });
+            $.ajax({
+                url: "DataWarga/" + id,
+                type: "DELETE",
+                data: {
+                    "id": id,
+                    "_token": token,
+                },
+                success: function(data) {
+                    $('#warga' + id).remove();
+                    $('#tableWarga').DataTable().ajax.reload();
+                    $('#tableWarga').DataTable().draw();
+                    $(".delete-response").append(
+                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data Warga<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
+                    );
+                },
+                error: function(data) {
+                    console.log('Error:', data);
+                }
+            });
+        });
     </script>
 @endpush
