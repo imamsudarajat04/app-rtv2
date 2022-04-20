@@ -97,13 +97,38 @@ class DataWargaController extends Controller
         $districts = Kecamatan::where('id', $data->kecamatan)->first();
         $villages = Kelurahan::where('id', $data->kelurahan)->first();
 
+        if($data->status_dalam_keluarga == 0) {
+            $sdk = 'Kepala Keluarga';
+        }else if($data->status_dalam_keluarga == 1) {
+            $sdk = 'Istri';
+        }else if($data->status_dalam_keluarga == 2) {
+            $sdk = 'Anak';
+        }else if($data->status_dalam_keluarga == 3) {
+            $sdk = 'Menantu';
+        }else if($data->status_dalam_keluarga == 4) {
+            $sdk = 'Cucu';
+        }else if($data->status_dalam_keluarga == 5) {
+            $sdk = 'Orang Tua';
+        }else if($data->status_dalam_keluarga == 6) {
+            $sdk = 'Mertua';
+        }else if($data->status_dalam_keluarga == 7) {
+            $sdk = 'Keluarga Lain';
+        }else if($data->status_dalam_keluarga == 8) {
+            $sdk = 'Pembantu';
+        }else if($data->status_dalam_keluarga == 9) {
+            $sdk = 'Lainnya';
+        }else{
+            $sdk = 'Tidak Ada';
+        }
+
         return view('admin.warga.show', [
             'data'      => $data,
             'provinces' => $provinces,
             'regencies' => $regencies,
             'districts' => $districts,
             'villages'  => $villages,
-            'religions' => $religions
+            'religions' => $religions,
+            'sdk'       => $sdk,
         ]);
     }
 
@@ -165,7 +190,8 @@ class DataWargaController extends Controller
         Storage::delete('public/' . $cek->foto_kk);
         Storage::delete('public/' . $cek->foto_paspor);
         $cek->delete();
-        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil dihapus');
+        
+        return response()->json($cek);
     }
 
     public function getKabupaten($id) {
