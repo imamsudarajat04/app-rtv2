@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use DateTime;
 use App\Provinsi;
 use App\Kabupaten;
 use App\Kecamatan;
@@ -78,8 +79,20 @@ class DataWargaController extends Controller
             $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
         }
 
-        Data_warga::create($data);
-        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
+        $tanggal = new DateTime($request->tanggal_lahir);
+        $today = new DateTime('today');
+        $y = $today->diff($tanggal)->y;
+
+        if($y < 18){
+            $data['kategori_usia'] = 'anak';
+        }else{
+            $data['kategori_usia'] = 'dewasa';
+        }
+
+        dd($y);
+
+        //Data_warga::create($data);
+        //return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
     }
 
     /**

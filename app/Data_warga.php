@@ -15,6 +15,7 @@ class Data_warga extends Model
         'tempat_lahir',
         'tanggal_lahir',
         'jenis_kelamin',
+        'kategori_usia',
         'religions_id',
         'provinsi',
         'kabupaten',
