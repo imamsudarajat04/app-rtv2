@@ -53,6 +53,7 @@ class DataWargaRequest extends FormRequest
                 'pekerjaan_ayah'            => 'required',
                 'nama_ibu'                  => 'required|regex:/^[\pL\s\-]+$/u',
                 'pekerjaan_ibu'             => 'required',
+                'warga_pindahan'            => 'required|numeric',
                 'bantuan_pemerintah'        => 'required|numeric',
                 'disabilitas'               => 'required|numeric',  
             ];
@@ -86,6 +87,7 @@ class DataWargaRequest extends FormRequest
                 'pekerjaan_ayah'            => 'required',
                 'nama_ibu'                  => 'required|regex:/^[\pL\s\-]+$/u',
                 'pekerjaan_ibu'             => 'required',
+                'warga_pindahan'            => 'required|numeric',
                 'bantuan_pemerintah'        => 'required|numeric',
                 'disabilitas'               => 'required|numeric',
             ];
@@ -129,9 +131,7 @@ class DataWargaRequest extends FormRequest
             'pendidikan.required'           => 'Pendidikan tidak boleh kosong',
             'jenis_pekerjaan.required'      => 'Jenis pekerjaan tidak boleh kosong',
             'status_perkawinan.required'    => 'Status perkawinan tidak boleh kosong',
-            'status_perkawinan.numeric'     => 'Status perkawinan harus berupa angka',
             'status_dalam_keluarga.required'=> 'Status dalam keluarga tidak boleh kosong',
-            'status_dalam_keluarga.numeric' => 'Status dalam keluarga harus berupa angka',
             'kewarganegaraan.required'      => 'Kewarganegaraan tidak boleh kosong',
             'foto_kk.required'              => 'Foto KK tidak boleh kosong',
             'foto_kk.file'                  => 'Foto KK harus berupa file',
@@ -146,10 +146,9 @@ class DataWargaRequest extends FormRequest
             'nama_ibu.required'             => 'Nama ibu tidak boleh kosong',
             'nama_ibu.regex'                => 'Nama ibu hanya boleh berisi huruf dan spasi',
             'pekerjaan_ibu.required'        => 'Pekerjaan ibu tidak boleh kosong',
+            'warga_pindahan.required'       => 'Warga pindahan tidak boleh kosong',
             'bantuan_pemerintah.required'   => 'Bantuan pemerintah tidak boleh kosong',
-            'bantuan_pemerintah.numeric'    => 'Bantuan pemerintah harus berupa angka',
             'disabilitas.required'          => 'Disabilitas tidak boleh kosong',
-            'disabilitas.numeric'           => 'Disabilitas harus berupa angka!',
         ];
     }
 }

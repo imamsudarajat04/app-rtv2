@@ -218,6 +218,14 @@
                     </div>
 
                     <div class="col-12">
+                        <label for="wargaPindahan" class="form-label">Warga Pindahan</label></br>
+                        <input type="radio" id="warga_pindahan" name="warga_pindahan" value="1">
+                        <label for="Ya">Ya</label>
+                        <input type="radio" id="warga_pindahan" name="warga_pindahan" value="0">
+                        <label for="Tidak">Tidak</label><br>
+                    </div>
+
+                    <div class="col-12">
                         <label for="bantuanPemerintah" class="form-label">Bantuan Pemerintah</label></br>
                         <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="1">
                         <label for="Ya">Ya</label>

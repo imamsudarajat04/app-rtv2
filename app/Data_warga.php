@@ -37,6 +37,7 @@ class Data_warga extends Model
         'pekerjaan_ayah',
         'nama_ibu',
         'pekerjaan_ibu',
+        'warga_pindahan',
         'bantuan_pemerintah',
         'disabilitas',
     ];
