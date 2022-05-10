@@ -22,22 +22,6 @@
             <!-- Card Body -->
             <div class="card-body">
                 <div class="row details-pendaftaran">
-                    {{-- <div class="col-12 col-md-2">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="title mb-2">Foto</div>
-                            </div>
-                            <div class="col-12 image-wrapper mb-3">
-                                <div class="image" style="background-image : url('{{ Storage::exists('public/' . $data->foto) && $data->foto ? Storage::url($data->foto) : asset('images/user.png') }}')"></div>
-                            </div>
-                            <div class="col-12">
-                                <div class="title mb-2">Swafoto</div>
-                            </div>
-                            <div class="col-12 image-wrapper">
-                                <div class="image" style="background-image : url('{{ Storage::exists('public/' . $data->swafoto) && $data->swafoto ? Storage::url($data->swafoto) : asset('images/user.png') }}')"></div>
-                            </div>
-                        </div>
-                    </div> --}}
                     <div class="col-12 col-md-10">
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -54,15 +38,19 @@
                                 <div class="title">Nama Lengkap</div>
                                 <div class="subtitle">{{ $data->nama_lengkap }}</div>
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="title">Tempat Lahir</div>
                                 <div class="subtitle">{{ $data->tempat_lahir }}</div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="title">Tanggal Lahir</div>
                                 <div class="subtitle">{{ \Carbon\Carbon::parse($data->tanggal_lahir)->format('d/m/Y') }}</div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="title">Kategori Usia</div>
+                                <div class="subtitle">{{ $data->kategori_usia }}</div>
                             </div>
                         </div>
                         <div class="row">
@@ -198,6 +186,34 @@
                             <div class="col-12 col-md-6">
                                 <div class="title">Pekerjaan Ibu</div>
                                 <div class="subtitle">{{ $data->pekerjaan_ibu }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="title">Warga Pindahan</div>
+                                @if($data->warga_pindahan == 1)
+                                    <div class="subtitle">Ya</div>
+                                @else
+                                    <div class="subtitle">Tidak</div>
+                                @endif
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="title">Bantuan Pemerintah</div>
+                                @if($data->bantuan_pemerintah == 1)
+                                    <div class="subtitle">Ya</div>
+                                @else
+                                    <div class="subtitle">Tidak</div>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="title">Disabilitas</div>
+                                @if($data->disabilitas == 1)
+                                    <div class="subtitle">Ya</div>
+                                @else
+                                    <div class="subtitle">Tidak</div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">

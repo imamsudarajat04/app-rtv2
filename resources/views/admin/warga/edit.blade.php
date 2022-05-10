@@ -253,6 +253,14 @@
                     </div>
 
                     <div class="col-12">
+                        <label for="bantuanPemerintah" class="form-label">Warga Pindahan</label></br>
+                        <input type="radio" id="warga_pindahan" name="warga_pindahan" value="1" @if($data->warga_pindahan == 1) checked @endif>
+                        <label for="Ya">Ya</label>
+                        <input type="radio" id="warga_pindahan" name="warga_pindahan" value="0" @if($data->warga_pindahan == 0) checked @endif>
+                        <label for="Tidak">Tidak</label><br> 
+                    </div>
+
+                    <div class="col-12">
                         <label for="bantuanPemerintah" class="form-label">Bantuan Pemerintah</label></br>
                         <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="1" @if($data->bantuan_pemerintah == 1) checked @endif>
                         <label for="Ya">Ya</label>

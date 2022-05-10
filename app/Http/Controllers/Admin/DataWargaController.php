@@ -83,16 +83,20 @@ class DataWargaController extends Controller
         $today = new DateTime('today');
         $y = $today->diff($tanggal)->y;
 
-        if($y < 18){
-            $data['kategori_usia'] = 'anak';
-        }else{
-            $data['kategori_usia'] = 'dewasa';
+        if($y >= 5 && $y <= 11){
+            $data['kategori_usia'] = 'Anak-anak';
+        }elseif($y >= 12 && $y <= 25){
+            $data['kategori_usia'] = 'Remaja';
+        }elseif($y >= 26 && $y <= 45){
+            $data['kategori_usia'] = 'Dewasa';
+        }elseif($y >= 46 && $y <= 65){
+            $data['kategori_usia'] = 'Lansia';
+        }elseif($y >= 66 && $y <= 100){
+            $data['kategori_usia'] = 'Manula';
         }
 
-        dd($y);
-
-        //Data_warga::create($data);
-        //return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
+        Data_warga::create($data);
+        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
     }
 
     /**
@@ -185,6 +189,22 @@ class DataWargaController extends Controller
         if($request->hasFile('foto_paspor')){
             Storage::delete('public/' . $cek->foto_paspor);
             $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+        }
+
+        $tanggal = new DateTime($request->tanggal_lahir);
+        $today = new DateTime('today');
+        $y = $today->diff($tanggal)->y;
+
+        if($y >= 5 && $y <= 11){
+            $data['kategori_usia'] = 'Anak-anak';
+        }elseif($y >= 12 && $y <= 25){
+            $data['kategori_usia'] = 'Remaja';
+        }elseif($y >= 26 && $y <= 45){
+            $data['kategori_usia'] = 'Dewasa';
+        }elseif($y >= 46 && $y <= 65){
+            $data['kategori_usia'] = 'Lansia';
+        }elseif($y >= 66 && $y <= 100){
+            $data['kategori_usia'] = 'Manula';
         }
         
         $cek->update($data);
