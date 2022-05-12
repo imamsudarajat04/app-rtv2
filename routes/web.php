@@ -35,4 +35,11 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
 
     //Khusus tujuan Data Warga Pindahan
     Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
+
+    //Setting
+    // Route::prefix('settings')->group(function() {
+    //     Route::resource('header-setting', "Admin\Settings\HeaderSettingController");
+    //     Route::resource('global-setting', "Admin\Settings\GlobalSettingController");
+    //     Route::resource('footer-setting', "Admin\Settings\FooterSettingController");
+    // });
 });

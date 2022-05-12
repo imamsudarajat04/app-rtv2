@@ -2,17 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use DateTime;
-use App\Provinsi;
-use App\Kabupaten;
-use App\Kecamatan;
-use App\Kelurahan;
-use App\Religions;
 use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\DataWargaRequest;
-use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataWargaPindahanController extends Controller
