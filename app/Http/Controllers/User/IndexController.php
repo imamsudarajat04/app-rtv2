@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+use App\FooterSettings;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $footerSettings = FooterSettings::first();
+        return view('welcome', [
+            'footerSettings' => $footerSettings
+        ]);
     }
 }
