@@ -31,7 +31,7 @@
       </li><!-- Data Warga -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link {{ (request()->routeIs('DataWargaPindahan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahan.index') }}">
           <i class="bi bi-house-door"></i>
           <span>Data Warga Pindahan</span>
         </a>

@@ -32,4 +32,7 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
 
     //Kelurahan get id kecamatan
     Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
+
+    //Khusus tujuan Data Warga Pindahan
+    Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
 });
