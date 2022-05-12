@@ -7,7 +7,7 @@
 - [x] Pendataan sudah menggunakan serverside processing jadi aman dan tidak lelet saat mengecek data.
 - [x] Table Agama
 - [x] Pendataan Warga 
-- [x] Kategor Usia
+- [x] Kategori Usia untuk pendataan warga
 - [ ] Pendataan Warga Pindahan
 - [ ] Grafik Charts Warga Setiap Bulan & Pertahun
 - [ ] Recent Activity / Log Superadmin & RT
