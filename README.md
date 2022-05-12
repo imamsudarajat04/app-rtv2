@@ -8,7 +8,7 @@
 - [x] Table Agama
 - [x] Pendataan Warga 
 - [x] Kategori Usia untuk pendataan warga
-- [ ] Pendataan Warga Pindahan
+- [x] Pendataan Warga Pindahan
 - [ ] Grafik Charts Warga Setiap Bulan & Pertahun
 - [ ] Recent Activity / Log Superadmin & RT
 - [ ] Template Landing Page User Friendly
