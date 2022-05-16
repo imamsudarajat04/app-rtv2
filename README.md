@@ -1,4 +1,4 @@
-## Aplikasi Website Pendataan Warga Bukit Cermin 
+## Sistem Informasi Lurah (SILUR)
 
 - [x] Untuk Wilayah indonesia get dari https://github.com/mocfaisal/wilayah_indonesia
 - [x] Get Data Prov, Kecamatan, Kabupaten menggunakan dependent dropdown with jquery and ajax
