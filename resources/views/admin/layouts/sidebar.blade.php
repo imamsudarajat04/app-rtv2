@@ -53,7 +53,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('footer-setting.index') }}">
               <i class="bi bi-circle"></i><span>Pengaturan Footer</span>
             </a>
           </li>
