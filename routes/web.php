@@ -36,7 +36,8 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
     //Khusus tujuan Data Warga Pindahan
     Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
 
-    // Route::get('/');
+    // Setting Layouts Admin
+    // Route::get('/setting/layouts', "Admin\Settings\SettingsController@index")->name('setting.layouts.index');
 
     //Setting
     Route::prefix('settings')->group(function() {

@@ -38,11 +38,27 @@
       </li><!-- Data Warga Pindahan-->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <i class="bi bi-gear"></i>
-          <span>Setting</span>
+        <a class="nav-link {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapsed' }}" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gear"></i><span>Pengaturan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-      </li><!-- Data Warga Pindahan-->
+        <ul id="icons-nav" class="nav-content {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapse' }} " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Pengaturan Halaman Utama</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Pengaturan Global</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Pengaturan Footer</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- Pengaturan -->
 
     </ul>
 
