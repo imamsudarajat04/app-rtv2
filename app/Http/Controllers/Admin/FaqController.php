@@ -45,7 +45,7 @@ class FaqController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.faqs.create');
     }
 
     /**
@@ -56,7 +56,11 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        Faq::create($data);
+
+        return redirect()->route('Faq.index')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
