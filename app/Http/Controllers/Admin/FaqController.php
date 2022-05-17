@@ -112,6 +112,9 @@ class FaqController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $find = Faq::find($id);
+        $find->delete();
+
+        return response()->json($find);
     }
 }

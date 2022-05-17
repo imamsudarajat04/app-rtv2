@@ -92,27 +92,27 @@
             sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2"lf>rt<"bottom"p>',
 
             "fnCreatedRow": function(nRow, data) {
-                $(nRow).attr('id', 'warga' + data.id);
+                $(nRow).attr('id', 'faq' + data.id);
             },
         });
 
-        $(document).on("click", ".delete_warga", function() {
+        $(document).on("click", ".delete_akun", function() {
             var id = $(this).data('id');
             var token = $("meta[name='csrf-token']").attr("content");
 
             $.ajax({
-                url: "DataWarga/" + id,
+                url: "Faq/" + id,
                 type: "DELETE",
                 data: {
                     "id": id,
                     "_token": token,
                 },
                 success: function(data) {
-                    $('#warga' + id).remove();
-                    $('#tableWarga').DataTable().ajax.reload();
-                    $('#tableWarga').DataTable().draw();
+                    $('#faq' + id).remove();
+                    $('#tableFaq').DataTable().ajax.reload();
+                    $('#tableFaq').DataTable().draw();
                     $(".delete-response").append(
-                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data Warga<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
+                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data Faq<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
                     );
                 },
                 error: function(data) {
