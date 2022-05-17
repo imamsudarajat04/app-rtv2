@@ -38,7 +38,7 @@
       </li><!-- Data Warga Pindahan -->
 
       <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataWargaPindahan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahan.index') }}">
+        <a class="nav-link {{ (request()->routeIs('Faq.index')) ? '' : 'collapsed' }}" href="{{ route('Faq.index') }}">
           <i class="bi bi-journals"></i>
           <span>FAQ</span>
         </a>
