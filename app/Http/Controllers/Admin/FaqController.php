@@ -82,7 +82,9 @@ class FaqController extends Controller
      */
     public function edit($id)
     {
-        //
+        $find = Faq::find($id);
+
+        return view('admin.faqs.edit', compact('find'));
     }
 
     /**
@@ -94,7 +96,12 @@ class FaqController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $find = Faq::find($id);
+        $find->update($data);
+
+        return redirect()->route('Faq.index')->with('success', 'Data Berhasil Diubah');
     }
 
     /**
