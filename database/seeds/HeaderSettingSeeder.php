@@ -15,7 +15,7 @@ class HeaderSettingSeeder extends Seeder
             [
                 'app_name' => 'SILUR',
                 'title' => 'Sistem Informasi Lurah',
-                'subtitle' => 'Sistem Informasi Lurah',
+                'subtitle' => 'Pendataan Penduduk di SILUR',
             ]
         );
     }

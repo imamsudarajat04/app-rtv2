@@ -35,7 +35,14 @@
           <i class="bi bi-house-door"></i>
           <span>Data Warga Pindahan</span>
         </a>
-      </li><!-- Data Warga Pindahan-->
+      </li><!-- Data Warga Pindahan -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaPindahan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahan.index') }}">
+          <i class="bi bi-journals"></i>
+          <span>FAQ</span>
+        </a>
+      </li><!-- FAQ -->
 
       <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapsed' }}" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
