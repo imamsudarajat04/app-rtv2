@@ -43,7 +43,7 @@
         </a>
         <ul id="icons-nav" class="nav-content {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapse' }} " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="#">
+            <a href="{{ route('header-setting.index') }}">
               <i class="bi bi-circle"></i><span>Pengaturan Halaman Utama</span>
             </a>
           </li>
