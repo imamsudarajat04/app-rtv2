@@ -1,5 +1,6 @@
 <?php
 
+use App\GlobalSetting;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(FaqSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(ReligionSeeder::class);
+        $this->call(GlobalSettingSeeder::class);
         $this->call(HeaderSettingSeeder::class);
         $this->call(FooterSettingsSeeder::class);
     }
