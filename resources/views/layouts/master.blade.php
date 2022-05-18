@@ -37,7 +37,8 @@
       <h1>{{ $headerSettings->title }}</h1>
       <h2>{{ $headerSettings->subtitle }}</h2>
       <a href="#about" class="btn-get-started scrollto">{{ $globalSettings->button_name }}</a>
-      <img src="{{ asset('assets/img/hero-img.png') }}" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
+      <img src="{{ Storage::exists('public/' . $globalSettings->image_cover) && $globalSettings->image_cover ? Storage::url($globalSettings->image_cover) : asset('assets/img/hero-img.png') }}" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
+      {{-- <img src="{{ asset('assets/img/hero-img.png') }}" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150"> --}}
     </div>
 
   </section><!-- End Hero -->

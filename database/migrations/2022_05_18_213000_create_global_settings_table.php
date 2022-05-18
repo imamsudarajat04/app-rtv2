@@ -16,7 +16,7 @@ class CreateGlobalSettingsTable extends Migration
         Schema::create('global_settings', function (Blueprint $table) {
             $table->id();
             $table->string('button_name');
-            $table->string('image-cover')->nullable();
+            $table->string('image_cover')->nullable();
             $table->timestamps();
         });
     }
