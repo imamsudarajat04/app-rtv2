@@ -55,7 +55,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('global-setting.index') }}">
               <i class="bi bi-circle"></i><span>Pengaturan Global</span>
             </a>
           </li>
