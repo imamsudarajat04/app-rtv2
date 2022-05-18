@@ -9,6 +9,7 @@
 - [x] Pendataan Warga 
 - [x] Kategori Usia untuk pendataan warga
 - [x] Pendataan Warga Pindahan
+- [x] Pengaturan Tata Letak Tampilan / Layouts Website
 - [ ] Grafik Charts Warga Setiap Bulan & Pertahun
 - [ ] Recent Activity / Log Superadmin & RT
 - [ ] Template Landing Page User Friendly
