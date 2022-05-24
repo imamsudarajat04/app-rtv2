@@ -20,7 +20,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#services">Manfaat</a></li>
-          @if ($globalSettings->link_status == 0)
+          @if ($globalSettings->link_status == 1)
             <li><a class="nav-link" href="#">Registrasi Warga</a></li>
           @endif
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
@@ -57,7 +57,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Bikin</h3>
+            <h3>{{ $headerSettings->app_name }}</h3>
             <p>
               {{ $footerSettings->alamat }}<br><br>
               <strong>Telepon:</strong> {{ $footerSettings->telepon1 }}<br>

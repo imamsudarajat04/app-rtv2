@@ -44,15 +44,24 @@
                   <form class="row g-3" action="{{ route('global-setting.update', $globalSettings->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                      <div class="col-12">
-                        <label for="Nama Tombol" class="form-label">Nama Tombol</label>
-                        <input type="text" class="form-control" name="button_name" id="button_name" placeholder="Masukkan Nama Tombol.." value="{{ old('button_name', $globalSettings->button_name) }}" required>
-                      </div>
+                    <div class="col-12">
+                      <label for="Nama Tombol" class="form-label">Nama Tombol</label>
+                      <input type="text" class="form-control" name="button_name" id="button_name" placeholder="Masukkan Nama Tombol.." value="{{ old('button_name', $globalSettings->button_name) }}" required>
+                    </div>
 
-                      <div class="col-12">
-                        <label for="Cover Image" class="form-label">Cover Image</label>
-                        <input type="file" class="form-control" name="image_cover" id="customFile1">
-                      </div>
+                    <div class="col-12">
+                      <label for="Cover Image" class="form-label">Cover Image</label>
+                      <input type="file" class="form-control" name="image_cover" id="customFile1">
+                    </div>
+
+                    <div class="col-12">
+                      <label for="" class="form-label">Status Link</label>
+                      <select class="form-control" name="link_status" id="link_status">
+                        <option value="" disabled selected>Pilih Status</option>
+                        <option value="1" {{ old('link_status', $globalSettings->link_status) == 1 ? 'selected' : '' }}>Aktif</option>
+                        <option value="0" {{ old('link_status', $globalSettings->link_status) == 0 ? 'selected' : '' }}>Tidak Aktif</option>
+                      </select>
+                    </div>
                     <div class="text-center d-grid gap-2 mt-3">
                       <button type="submit" class="btn btn-primary">Update</button>
                       {{-- <a href="{{ route('DataAkun.index') }}" class="btn btn-danger">Kembali</a> --}}

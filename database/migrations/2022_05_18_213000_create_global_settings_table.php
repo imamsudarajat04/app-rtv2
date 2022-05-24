@@ -17,7 +17,7 @@ class CreateGlobalSettingsTable extends Migration
             $table->id();
             $table->string('button_name');
             $table->string('image_cover')->nullable();
-            $table->enum('link_status', ['0', '1'])->default('0');
+            $table->enum('link_status', ['0', '1'])->default('1');
             $table->timestamps();
         });
     }
