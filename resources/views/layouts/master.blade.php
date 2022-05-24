@@ -17,11 +17,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+          <li><a class="nav-link scrollto {{ (request()->routeIs('landingpage.index')) ? 'active' : '' }}" href="/">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#services">Manfaat</a></li>
           @if ($globalSettings->link_status == 1)
-            <li><a class="nav-link" href="#">Registrasi Warga</a></li>
+            <li><a class="nav-link {{ (request()->routeIs('pendaftaran-warga.index')) ? 'active' : '' }}" href="{{ route('pendaftaran-warga.index') }}">Registrasi Warga</a></li>
           @endif
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li><a class="getstarted scrollto" href="{{ route('login') }}">Login</a></li>
@@ -38,7 +38,11 @@
     <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
       <h1>{{ $headerSettings->title }}</h1>
       <h2>{{ $headerSettings->subtitle }}</h2>
+      @if(URL::current() != 'pendafataran-warga')
+        <a href="{{ route('pendaftaran-warga.index') }}" class="btn-get-started scrollto">Daftar</a>
+      @else
       <a href="#about" class="btn-get-started scrollto">{{ $globalSettings->button_name }}</a>
+      @endif
       <img src="{{ Storage::exists('public/' . $globalSettings->image_cover) && $globalSettings->image_cover ? Storage::url($globalSettings->image_cover) : asset('assets/img/hero-img.png') }}" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
       {{-- <img src="{{ asset('assets/img/hero-img.png') }}" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150"> --}}
     </div>
@@ -71,7 +75,9 @@
               <li><i class="bx bx-chevron-right"></i> <a href="/">Beranda</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about">Tentang</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#services">Manfaat</a></li>
+              @if ($globalSettings->link_status == 1)
               <li><i class="bx bx-chevron-right"></i> <a href="#">Registrasi Warga</a></li>
+              @endif
               <li><i class="bx bx-chevron-right"></i> <a href="#contanct">Kontak</a></li>
             </ul>
           </div>

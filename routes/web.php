@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', "User\IndexController@index");
+Route::get('/', "User\IndexController@index")->name('landingpage.index');
 Route::get('/login', "LoginController@index")->name('login');
 Route::post('/postLogin', "LoginController@postLogin")->name('postLogin.store');
 Route::get('/logout', "LoginController@logout")->name('logout.destroy');
 
-
+Route::resource('/pendaftaran-warga', "User\PendaftaranWargaController");
 Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
     Route::get('/dashboard', "DashboardController@index")->name('dashboard.index');
 
