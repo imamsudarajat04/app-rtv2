@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Settings;
 
-use App\Http\Controllers\Controller;
+use App\About;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AboutsSettingController extends Controller
 {
@@ -14,7 +15,8 @@ class AboutsSettingController extends Controller
      */
     public function index()
     {
-        //
+        $abouts = About::first();
+        return view('admin.setting.aboutsettings', compact('abouts'));
     }
 
     /**
@@ -69,7 +71,10 @@ class AboutsSettingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $find = About::find($id);
+        $find->update($request->all());
+        
+        return redirect()->route('abouts-setting.index')->with('success', 'Data Berhasil Diubah');
     }
 
     /**
