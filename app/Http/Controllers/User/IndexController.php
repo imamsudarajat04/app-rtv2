@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Faq;
+use App\About;
 use App\GlobalSetting;
 use App\FooterSettings;
 use App\HeaderSettings;
