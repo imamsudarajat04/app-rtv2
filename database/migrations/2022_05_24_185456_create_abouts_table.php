@@ -16,7 +16,7 @@ class CreateAboutsTable extends Migration
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->string('icon_one')->default('bx bx-receipt');
             $table->string('title_one');
             $table->string('subtitle_one');
