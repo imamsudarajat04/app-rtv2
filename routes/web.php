@@ -47,5 +47,6 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
         Route::resource('header-setting', "Admin\Settings\HeaderSettingController");
         Route::resource('global-setting', "Admin\Settings\GlobalSettingController");
         Route::resource('footer-setting', "Admin\Settings\FooterSettingController");
+        Route::resource('abouts-setting', "Admin\Settings\AboutsSettingController");
     });
 });
