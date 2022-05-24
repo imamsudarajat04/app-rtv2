@@ -11,5 +11,6 @@ class GlobalSetting extends Model
     protected $fillable = [
         'button_name',
         'image_cover',
+        'link_status'
     ];
 }

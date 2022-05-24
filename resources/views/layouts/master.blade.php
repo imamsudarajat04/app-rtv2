@@ -20,7 +20,9 @@
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#services">Manfaat</a></li>
-          <li><a class="nav-link" href="#">Registrasi Warga</a></li>
+          @if ($globalSettings->link_status == 0)
+            <li><a class="nav-link" href="#">Registrasi Warga</a></li>
+          @endif
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li><a class="getstarted scrollto" href="{{ route('login') }}">Login</a></li>
         </ul>

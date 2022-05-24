@@ -8,6 +8,7 @@ Route::get('/login', "LoginController@index")->name('login');
 Route::post('/postLogin', "LoginController@postLogin")->name('postLogin.store');
 Route::get('/logout', "LoginController@logout")->name('logout.destroy');
 
+
 Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
     Route::get('/dashboard', "DashboardController@index")->name('dashboard.index');
 
