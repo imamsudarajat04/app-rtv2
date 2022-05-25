@@ -9,6 +9,8 @@ use App\FooterSettings;
 use App\HeaderSettings;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DataWargaRequest;
+use Illuminate\Support\Facades\Storage;
 
 class PendaftaranWargaController extends Controller
 {
@@ -49,9 +51,9 @@ class PendaftaranWargaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DataWargaRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

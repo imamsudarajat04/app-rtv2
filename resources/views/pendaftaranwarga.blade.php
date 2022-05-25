@@ -15,9 +15,22 @@
                     <img src="assets/img/identitas.svg" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
+
+                    <!-- Alert -->
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="my-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    
                     <div class="card">
-                        <div class="card-body">
-                            <form class="form">
+                        <div class="card-body bg-light">
+                            <form class="form" action="{{ route('pendaftaran-warga.store') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <label for="Nomor NIK" class="form-label">Nomor Kartu Keluarga</label>
                                 <input class="form-control" type="text" name="no_kk" id="no_kk" placeholder="Masukkan Nomor Kartu Keluarga.." value="{{ old('no_kk') }}"></br>
 
@@ -163,7 +176,6 @@
 
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block">Simpan</button>
-                                    {{-- <a href="{{ route('DataWarga.index') }}" class="btn btn-danger">Kembali</a> --}}
                                 </div>
                             </form>
                         </div>
