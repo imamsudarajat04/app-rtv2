@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Provinsi;
+use App\Religions;
 use App\GlobalSetting;
 use App\FooterSettings;
 use App\HeaderSettings;
@@ -17,6 +19,8 @@ class PendaftaranWargaController extends Controller
      */
     public function index()
     {
+        $provinces = Provinsi::all();
+        $religions = Religions::all();
         $headerSettings = HeaderSettings::first();
         $globalSettings = GlobalSetting::first();
         $footerSettings = FooterSettings::first();
@@ -24,6 +28,8 @@ class PendaftaranWargaController extends Controller
             'headerSettings' => $headerSettings,
             'globalSettings' => $globalSettings,
             'footerSettings' => $footerSettings,
+            'religions'      => $religions,
+            'provinces'      => $provinces,
         ]);
     }
 

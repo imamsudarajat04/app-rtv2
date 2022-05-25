@@ -23,8 +23,12 @@
           @if ($globalSettings->link_status == 1)
             <li><a class="nav-link {{ (request()->routeIs('pendaftaran-warga.index')) ? 'active' : '' }}" href="{{ route('pendaftaran-warga.index') }}">Registrasi Warga</a></li>
           @endif
-          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a class="getstarted scrollto" href="{{ route('login') }}">Login</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+          @guest
+            <li><a class="getstarted scrollto" href="{{ route('login') }}">Login</a></li>
+          @else
+            <li><a class="getstarted scrollto" href="{{ route('dashboard.index') }}">Dashboard</a></li>
+          @endguest
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -121,7 +125,9 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/mainlandingpage.js') }}"></script>
+  <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
+  @stack('customjs')
 </body>
 
 </html>

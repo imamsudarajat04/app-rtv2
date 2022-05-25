@@ -9,6 +9,15 @@ Route::post('/postLogin', "LoginController@postLogin")->name('postLogin.store');
 Route::get('/logout', "LoginController@logout")->name('logout.destroy');
 
 Route::resource('/pendaftaran-warga', "User\PendaftaranWargaController");
+
+//Kabupaten get id provinsi
+Route::get('getKabupaten/{id}', 'Admin\DataWargaController@getKabupaten');
+
+//Kecamatan get id kabupaten
+Route::get('getKecamatan/{id}', 'Admin\DataWargaController@getKecamatan');
+
+//Kelurahan get id kecamatan
+Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
 Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
     Route::get('/dashboard', "DashboardController@index")->name('dashboard.index');
 
@@ -24,15 +33,6 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
 
     //Khusus tujuan Data Warga
     Route::resource('/DataWarga', 'Admin\DataWargaController');
-
-    //Kabupaten get id provinsi
-    Route::get('getKabupaten/{id}', 'Admin\DataWargaController@getKabupaten');
-
-    //Kecamatan get id kabupaten
-    Route::get('getKecamatan/{id}', 'Admin\DataWargaController@getKecamatan');
-
-    //Kelurahan get id kecamatan
-    Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
 
     //Khusus tujuan Data Warga Pindahan
     Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
