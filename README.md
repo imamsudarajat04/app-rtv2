@@ -11,7 +11,7 @@
 - [x] Pendataan Warga Pindahan
 - [x] Pengaturan Tata Letak Tampilan / Layouts Website
 - [x] Template Landing Page User Friendly
-- [ ] Formulir Pendataan Warga User Friendly
+- [x] Formulir Pendataan Warga User Friendly
 - [ ] Grafik Charts Warga Setiap Bulan & Pertahun
 - [ ] Recent Activity / Log Superadmin & RT
 
