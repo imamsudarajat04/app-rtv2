@@ -73,30 +73,38 @@ class DataWargaController extends Controller
     public function store(DataWargaRequest $request)
     {
         $data = $request->all();
-        $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
+        $cek = Data_warga::where('nik', $data['nik'])->first();
 
-        if($request->hasFile('foto_paspor')){
-            $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
-        }
+        // dd($cek);
 
-        $tanggal = new DateTime($request->tanggal_lahir);
-        $today = new DateTime('today');
-        $y = $today->diff($tanggal)->y;
+        if($cek) {
+            return redirect()->route('DataWarga.create')->with('error', 'Data Sudah Ada');
+        }else{
+            $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
 
-        if($y >= 5 && $y <= 11){
-            $data['kategori_usia'] = 'Anak-anak';
-        }elseif($y >= 12 && $y <= 25){
-            $data['kategori_usia'] = 'Remaja';
-        }elseif($y >= 26 && $y <= 45){
-            $data['kategori_usia'] = 'Dewasa';
-        }elseif($y >= 46 && $y <= 65){
-            $data['kategori_usia'] = 'Lansia';
-        }elseif($y >= 66 && $y <= 100){
-            $data['kategori_usia'] = 'Manula';
-        }
+            if($request->hasFile('foto_paspor')){
+                $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+            }
 
-        Data_warga::create($data);
-        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
+            $tanggal = new DateTime($request->tanggal_lahir);
+            $today = new DateTime('today');
+            $y = $today->diff($tanggal)->y;
+
+            if($y >= 5 && $y <= 11){
+                $data['kategori_usia'] = 'Anak-anak';
+            }elseif($y >= 12 && $y <= 25){
+                $data['kategori_usia'] = 'Remaja';
+            }elseif($y >= 26 && $y <= 45){
+                $data['kategori_usia'] = 'Dewasa';
+            }elseif($y >= 46 && $y <= 65){
+                $data['kategori_usia'] = 'Lansia';
+            }elseif($y >= 66 && $y <= 100){
+                $data['kategori_usia'] = 'Manula';
+            }
+
+            Data_warga::create($data);
+            return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
+        }    
     }
 
     /**

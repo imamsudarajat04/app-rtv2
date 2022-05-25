@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
 
-                    <!-- Alert -->
+                    <!-- Alert Validasi Error -->
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul class="my-0">
@@ -26,7 +26,15 @@
                             </ul>
                         </div>
                     @endif
-                    
+
+                    <!-- Alert Berhasil -->
+                    @if($message = Session::get('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ $message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
                     <div class="card">
                         <div class="card-body bg-light">
                             <form class="form" action="{{ route('pendaftaran-warga.store') }}" method="POST" enctype="multipart/form-data">

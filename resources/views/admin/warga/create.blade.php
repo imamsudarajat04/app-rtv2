@@ -20,7 +20,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <!-- Alert -->
+                    <!-- Alert Validasi -->
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul class="my-0">
@@ -28,6 +28,14 @@
                                     <li>{{ $error }}</li>
                                 @endforeach
                             </ul>
+                        </div>
+                    @endif
+
+                    <!-- Alert Error -->
+                    @if($message = Session::get('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ $message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     @endif
                     

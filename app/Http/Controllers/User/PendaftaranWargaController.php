@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
+use DateTime;
 use App\Provinsi;
 use App\Religions;
+use App\Data_warga;
 use App\GlobalSetting;
 use App\FooterSettings;
 use App\HeaderSettings;
@@ -11,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DataWargaRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
 
 class PendaftaranWargaController extends Controller
 {
@@ -53,7 +56,31 @@ class PendaftaranWargaController extends Controller
      */
     public function store(DataWargaRequest $request)
     {
-        dd($request->all());
+        $data = $request->all();
+        $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
+
+        if($request->hasFile('foto_paspor')){
+            $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+        }
+
+        $tanggal = new DateTime($request->tanggal_lahir);
+        $today = new DateTime('today');
+        $y = $today->diff($tanggal)->y;
+
+        if($y >= 5 && $y <= 11){
+            $data['kategori_usia'] = 'Anak-anak';
+        }elseif($y >= 12 && $y <= 25){
+            $data['kategori_usia'] = 'Remaja';
+        }elseif($y >= 26 && $y <= 45){
+            $data['kategori_usia'] = 'Dewasa';
+        }elseif($y >= 46 && $y <= 65){
+            $data['kategori_usia'] = 'Lansia';
+        }elseif($y >= 66 && $y <= 100){
+            $data['kategori_usia'] = 'Manula';
+        }
+
+        Data_warga::create($data);
+        return Redirect::back()->with('success', "Data berhasil ditambahkan");
     }
 
     /**

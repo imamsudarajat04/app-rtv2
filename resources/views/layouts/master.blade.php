@@ -78,7 +78,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#about">Tentang</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#services">Manfaat</a></li>
               @if ($globalSettings->link_status == 1)
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Registrasi Warga</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('pendaftaran-warga.index') }}">Registrasi Warga</a></li>
               @endif
               <li><i class="bx bx-chevron-right"></i> <a href="#contanct">Kontak</a></li>
             </ul>
