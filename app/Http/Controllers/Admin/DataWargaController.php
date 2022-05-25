@@ -75,8 +75,6 @@ class DataWargaController extends Controller
         $data = $request->all();
         $cek = Data_warga::where('nik', $data['nik'])->first();
 
-        // dd($cek);
-
         if($cek) {
             return redirect()->route('DataWarga.create')->with('error', 'Data Sudah Ada');
         }else{

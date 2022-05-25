@@ -35,6 +35,14 @@
                         </div>
                     @endif
 
+                    <!-- Alert Error -->
+                    @if($message = Session::get('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ $message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
                     <div class="card">
                         <div class="card-body bg-light">
                             <form class="form" action="{{ route('pendaftaran-warga.store') }}" method="POST" enctype="multipart/form-data">
