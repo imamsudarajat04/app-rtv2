@@ -156,28 +156,48 @@
               </div>
 
               <div class="tab-pane fade pt-3" id="profile-change-password">
-                <!-- Change Password Form -->
-                <form action="" method="POST">
-                  @csrf
 
+                <!-- Alert Berhasil -->
+                @if ($message = Session::get('success'))
+                  <script>window.alert("{{ $message }}")</script>
+                @endif
+
+                <!-- Alert Gagal -->
+                @if ($message = Session::get('error'))
+                  <script>window.alert("{{ $message }}")</script>
+                @endif
+                
+                <!-- Change Password Form -->
+                <form action="{{ route('ganti-password.update', Auth::user()->id) }}" method="POST">
+                  @csrf
+                  @method('PUT')
                   <div class="row mb-3">
                     <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Password Lama</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="password" type="password" class="form-control" id="currentPassword">
+                      <input name="old_password" type="password" class="form-control" id="old_password" value="{{ old('old_password') }}">
+                      @error('old_password')
+                          <small class="text-danger">{{ $message }}</small>
+                      @enderror
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Password Baru</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="newpassword" type="password" class="form-control" id="newPassword">
+                      <input name="password" type="password" class="form-control" id="newPassword">
+                      @error('password')
+                          <small class="text-danger">{{ $message }}</small>
+                      @enderror
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Konfirmasi Password</label>
                     <div class="col-md-8 col-lg-9">
-                      <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                      <input name="confirm_password" type="password" class="form-control" id="renewPassword">
+                      @error('confirm_password')
+                          <small class="text-danger">{{ $message }}</small>
+                      @enderror
                     </div>
                   </div>
 

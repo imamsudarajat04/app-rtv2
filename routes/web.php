@@ -26,6 +26,9 @@ Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
     Route::get('/setting', "Admin\SettingProfileController@index")->name('setting.index');
     Route::put('/setting/{id}', "Admin\SettingProfileController@update")->name('setting.update');
 
+    //Khusus untuk Setting Password
+    Route::resource('/ganti-password', "Admin\ChangePasswordController");
+
     //Khusus tujuan Data Akun
     Route::resource('/DataAkun', 'Admin\DataAkunController');
 

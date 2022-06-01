@@ -4,6 +4,7 @@
 - [x] Get Data Prov, Kecamatan, Kabupaten menggunakan dependent dropdown with jquery and ajax
 - [x] Untuk Pendataan Data Menggunakan Plugin DataTables Yang Dapat Memudahkan Pendataan Data, Seperti Short Data, Pagination Data, dll.
 - [x] Regex password ('Testing123').
+- [x] Change Password Setiap Akun.
 - [x] Pendataan sudah menggunakan serverside processing jadi aman dan tidak lelet saat mengecek data.
 - [x] Table Agama
 - [x] Pendataan Warga 
