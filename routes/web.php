@@ -18,6 +18,7 @@ Route::get('getKecamatan/{id}', 'Admin\DataWargaController@getKecamatan');
 
 //Kelurahan get id kecamatan
 Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
+
 Route::group(['middleware' => ['auth','CekRole:superadmin']], function() {
     Route::get('/dashboard', "DashboardController@index")->name('dashboard.index');
 

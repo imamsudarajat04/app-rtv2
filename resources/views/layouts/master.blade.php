@@ -11,9 +11,12 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="/">{{ $headerSettings->app_name }}</a></h1>
+      <h1 class="logo">
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lambang_Kota_Tanjungpinang.png" alt="" class="img-fluid"></a>
+        <a href="/">{{ $headerSettings->app_name }}</a>
+      </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="#" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      {{-- <a href="#" class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lambang_Kota_Tanjungpinang.png" alt="" class="img-fluid"></a> --}}
 
       <nav id="navbar" class="navbar">
         <ul>
