@@ -18,7 +18,8 @@
       <div class="col-lg-8">
         <div class="row">
 
-          <!-- Sales Card -->
+        @if (Auth::user()->role == 'superadmin')
+          <!-- Data Akun Card -->
           <div class="col-xxl-4 col-md-6">
             <div class="card info-card sales-card">
 
@@ -37,9 +38,9 @@
               </div>
 
             </div>
-          </div><!-- End Sales Card -->
+          </div><!-- End Data Akun Card -->
 
-          <!-- Revenue Card -->
+          <!-- Data RT Card -->
           <div class="col-xxl-4 col-md-6">
             <div class="card info-card revenue-card">
 
@@ -58,12 +59,11 @@
               </div>
 
             </div>
-          </div><!-- End Revenue Card -->
+          </div><!-- End Data RT Card -->
 
-          <!-- Customers Card -->
-          <div class="col-xxl-4 col-xl-12">
-
-            <div class="card info-card customers-card">
+          <!-- Data Warga Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card sales-card">
 
               <div class="card-body">
                 <h5 class="card-title">Data Warga </h5>
@@ -77,12 +77,77 @@
 
                   </div>
                 </div>
-
               </div>
+
             </div>
+          </div><!-- End Data Warga Card -->
 
-          </div><!-- End Customers Card -->
+          <!-- Data Warga Pindahan Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card customers-card">
 
+              <div class="card-body">
+                <h5 class="card-title">Data Warga Pindahan </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-house-door"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $warga_pindahan }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Data Warga Pindahan Card -->
+        @endif
+
+        @if (Auth::user()->role == 'rt')
+
+          <!-- Data Warga Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card sales-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Data Warga </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-person-lines-fill"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $warga }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Data Warga Card -->
+
+          <!-- Data Warga Pindahan Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card customers-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Data Warga Pindahan </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-house-door"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $warga_pindahan }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Data Warga Pindahan Card -->
+        @endif
         </div>
       </div><!-- End Left side columns -->
 
