@@ -21,7 +21,7 @@ class DataWargaController extends Controller
         // dd($tes);
         if (request()->ajax()) {
 
-            $query = Data_warga::where('rt', Auth()->user()->rt)->get();
+            $query = Data_warga::where('rt', Auth()->user()->rt)->where('rw', Auth()->user()->rw)->get();
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
