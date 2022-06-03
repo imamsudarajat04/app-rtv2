@@ -2,6 +2,8 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
+      @if(Auth::user()->role == 'superadmin')
+
       <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('dashboard.index')) ? '' : 'collapsed' }}" href="{{ route('dashboard.index') }}">
           <i class="bi bi-grid"></i>
@@ -76,7 +78,32 @@
           </li>
         </ul>
       </li><!-- Pengaturan -->
+      @endif
 
+      @if(Auth::user()->role == 'rt')
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('dashboard.index')) ? '' : 'collapsed' }}" href="{{ route('dashboard.index') }}">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaRT.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaRT.index') }}">
+          <i class="bi bi-person-lines-fill"></i>
+          <span>Data Warga</span>
+        </a>
+      </li><!-- Data Warga -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaPindahan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahan.index') }}">
+          <i class="bi bi-house-door"></i>
+          <span>Data Warga Pindahan</span>
+        </a>
+      </li><!-- Data Warga Pindahan -->
+
+      @endif
     </ul>
 
 </aside>

@@ -38,6 +38,9 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
     //Khusus tujuan Data Warga
     Route::resource('/DataWarga', 'Admin\DataWargaController');
 
+    //Data Warga Khusus Role RT
+    Route::resource('/DataWargaRT', 'Rt\DataWargaController');
+
     //Khusus tujuan Data Warga Pindahan
     Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
 
@@ -46,6 +49,7 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
 
     // Setting Layouts Admin
     // Route::get('/setting/layouts', "Admin\Settings\SettingsController@index")->name('setting.layouts.index');
+
 
     //Setting
     Route::prefix('settings')->group(function() {
