@@ -13,7 +13,7 @@
 - [x] Pengaturan Tata Letak Tampilan / Layouts Website
 - [x] Template Landing Page User Friendly
 - [x] Formulir Pendataan Warga User Friendly
-- [ ] Jumlah Kategori Umur (x)
+- [x] Jumlah Kategori Umur (Balita dan Lansia)
 - [ ] Recent Activity / Log Superadmin & RT
 
 <b>Note<b/> : Masih dalam tahap pengembangan dan uji coba !
