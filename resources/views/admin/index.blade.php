@@ -84,7 +84,7 @@
 
           <!-- Data Warga Pindahan Card -->
           <div class="col-xxl-4 col-md-6">
-            <div class="card info-card customers-card">
+            <div class="card info-card revenue-card">
 
               <div class="card-body">
                 <h5 class="card-title">Data Warga Pindahan </h5>
@@ -139,7 +139,7 @@
                     <i class="bi bi-house-door"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>{{ $warga_pindahan }}</h6>
+                    <h6>{{ $warga_pindahan_rt }}</h6>
 
                   </div>
                 </div>
@@ -147,75 +147,96 @@
 
             </div>
           </div><!-- End Data Warga Pindahan Card -->
+
+          <!-- Data Jumlah Kategori Balita Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card revenue-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Jumlah Kategori Balita </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="fas fa-baby"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $balita_rt }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Jumlah Kategori Balitaa Card -->
+
+          <!-- Data Jumlah Kategori Lansia Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card revenue-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Jumlah Kategori Lansia </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="fas fa-male"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $lansia_rt }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Jumlah Kategori Lansia Card -->
         @endif
         </div>
       </div><!-- End Left side columns -->
 
       <!-- Right side columns -->
       <div class="col-lg-4">
+        @if (Auth::user()->role == 'superadmin')
+            <!-- Kategori Balita -->
+            <div class="card info-card customers-card">
 
-        <!-- Recent Activity -->
-        <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Jumlah Kategori Balita </h5>
 
-          <div class="card-body">
-            <h5 class="card-title">Recent Activity</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="fas fa-baby"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $balita }}</h6>
 
-            <div class="activity">
-
-              <div class="activity-item d-flex">
-                <div class="activite-label">32 min</div>
-                <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                <div class="activity-content">
-                  Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
+                  </div>
                 </div>
-              </div><!-- End activity item-->
-
-              <div class="activity-item d-flex">
-                <div class="activite-label">56 min</div>
-                <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
-                <div class="activity-content">
-                  Voluptatem blanditiis blanditiis eveniet
-                </div>
-              </div><!-- End activity item-->
-
-              <div class="activity-item d-flex">
-                <div class="activite-label">2 hrs</div>
-                <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
-                <div class="activity-content">
-                  Voluptates corrupti molestias voluptatem
-                </div>
-              </div><!-- End activity item-->
-
-              <div class="activity-item d-flex">
-                <div class="activite-label">1 day</div>
-                <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
-                <div class="activity-content">
-                  Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
-                </div>
-              </div><!-- End activity item-->
-
-              <div class="activity-item d-flex">
-                <div class="activite-label">2 days</div>
-                <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
-                <div class="activity-content">
-                  Est sit eum reiciendis exercitationem
-                </div>
-              </div><!-- End activity item-->
-
-              <div class="activity-item d-flex">
-                <div class="activite-label">4 weeks</div>
-                <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
-                <div class="activity-content">
-                  Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
-                </div>
-              </div><!-- End activity item-->
+              </div>
 
             </div>
+            <!-- End Kategori Balita -->
 
-          </div>
-        </div><!-- End Recent Activity -->
+            <!-- Kategori Balita -->
+            <div class="card info-card customers-card">
 
+              <div class="card-body">
+                <h5 class="card-title">Jumlah Kategori Lansia </h5>
 
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="fas fa-male"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $lansia }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- End Kategori Balita -->
+        @endif
+        
       </div><!-- End Right side columns -->
 
     </div>

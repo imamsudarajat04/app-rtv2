@@ -88,17 +88,19 @@ class DataWargaController extends Controller
             $today = new DateTime('today');
             $y = $today->diff($tanggal)->y;
 
-            if($y >= 5 && $y <= 11){
+            if($y >= 1 && $y <= 6){
+                $data['kategori_usia'] = 'Balita';
+            }elseif($y >= 7 && $y <= 12){
                 $data['kategori_usia'] = 'Anak-anak';
-            }elseif($y >= 12 && $y <= 25){
+            }elseif($y >= 13 && $y <= 18){
                 $data['kategori_usia'] = 'Remaja';
-            }elseif($y >= 26 && $y <= 45){
+            }elseif($y >= 19 && $y <= 59){
                 $data['kategori_usia'] = 'Dewasa';
-            }elseif($y >= 46 && $y <= 65){
+            }elseif($y >= 60 && $y <= 100){
                 $data['kategori_usia'] = 'Lansia';
-            }elseif($y >= 66 && $y <= 100){
-                $data['kategori_usia'] = 'Manula';
             }
+
+
 
             Data_warga::create($data);
             return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
@@ -201,16 +203,16 @@ class DataWargaController extends Controller
         $today = new DateTime('today');
         $y = $today->diff($tanggal)->y;
 
-        if($y >= 5 && $y <= 11){
+        if($y >= 1 && $y <= 6){
+            $data['kategori_usia'] = 'Balita';
+        }elseif($y >= 7 && $y <= 12){
             $data['kategori_usia'] = 'Anak-anak';
-        }elseif($y >= 12 && $y <= 25){
+        }elseif($y >= 13 && $y <= 18){
             $data['kategori_usia'] = 'Remaja';
-        }elseif($y >= 26 && $y <= 45){
+        }elseif($y >= 19 && $y <= 59){
             $data['kategori_usia'] = 'Dewasa';
-        }elseif($y >= 46 && $y <= 65){
+        }elseif($y >= 60 && $y <= 100){
             $data['kategori_usia'] = 'Lansia';
-        }elseif($y >= 66 && $y <= 100){
-            $data['kategori_usia'] = 'Manula';
         }
         
         $cek->update($data);

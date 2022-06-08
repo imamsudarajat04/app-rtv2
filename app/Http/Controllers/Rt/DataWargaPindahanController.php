@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Rt;
 
 use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataWargaPindahanController extends Controller
@@ -17,7 +18,7 @@ class DataWargaPindahanController extends Controller
     public function index(Request $request)
     {
         if (request()->ajax()) {
-            $query = Data_warga::where('warga_pindahan',  1)->get();
+            $query = Data_warga::where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->where('warga_pindahan', '=', '1')->get();
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -31,8 +32,7 @@ class DataWargaPindahanController extends Controller
                 ->addIndexColumn()
                 ->make();
         }
-        return view('admin.wargapindahan.index');
-        // return "testing";
+        return view('rt.datawargapindahan.index');
     }
 
     /**

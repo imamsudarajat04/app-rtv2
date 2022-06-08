@@ -38,11 +38,14 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
     //Khusus tujuan Data Warga
     Route::resource('/DataWarga', 'Admin\DataWargaController');
 
+    //Khusus tujuan Data Warga Pindahan
+    Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
+
     //Data Warga Khusus Role RT
     Route::resource('/DataWargaRT', 'Rt\DataWargaController');
 
-    //Khusus tujuan Data Warga Pindahan
-    Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
+    //Data Warga Pindahan Khusus Role RT
+    Route::resource('/DataWargaPindahanRT', 'Rt\DataWargaPindahanController');
 
     //Khusus FAQ
     Route::resource('/Faq', 'Admin\FaqController');
