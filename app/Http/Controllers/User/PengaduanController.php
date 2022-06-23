@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+use App\Pengaduan;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 class PengaduanController extends Controller
 {
@@ -40,6 +42,12 @@ class PengaduanController extends Controller
             'title'   => 'required',
             'message' => 'required',
         ]);
+
+        $data = $request->all();
+
+        Pengaduan::create($data);
+
+        return Redirect::back()->with('success', 'Pengaduan Berhasil Disimpan');
     }
 
     /**

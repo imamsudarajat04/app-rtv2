@@ -241,6 +241,12 @@
             </div>
   
             <div class="col-lg-6 mt-4 mt-md-0">
+
+              <!-- Alert -->
+              @if ($message = Session::get('success'))
+                <script>window.alert("{{ $message }}")</script>
+              @endif
+
               <form action="{{ route('pengaduan-suara.store') }}" method="post" role="form" class="php-email-form">
                 @csrf
                 <div class="row">
