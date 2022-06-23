@@ -241,24 +241,28 @@
             </div>
   
             <div class="col-lg-6 mt-4 mt-md-0">
-              <form action="" method="post" role="form" class="php-email-form">
+              <form action="{{ route('pengaduan-suara.store') }}" method="post" role="form" class="php-email-form">
                 @csrf
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Nama Lengkap">
+                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Nama Lengkap">
                   </div>
                 </div>
+
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Judul">
+                  <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title" placeholder="Judul">
                 </div>
+
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Pesan"></textarea>
+                  <textarea class="form-control @error('message') is-invalid @enderror" name="message" rows="5" placeholder="Pesan"></textarea>
                 </div>
+
                 <div class="my-3">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
+
                 <div class="text-center"><button type="submit">Kirim Pesan</button></div>
               </form>
             </div>

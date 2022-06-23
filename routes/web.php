@@ -20,6 +20,7 @@ Route::get('getKecamatan/{id}', 'Admin\DataWargaController@getKecamatan');
 Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
 
 //Pengaduan 
+Route::resource('pengaduan-suara', 'User\PengaduanController');
 
 Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
     Route::get('/dashboard', "DashboardController@index")->name('dashboard.index');
