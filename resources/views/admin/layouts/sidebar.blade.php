@@ -47,6 +47,13 @@
       </li><!-- FAQ -->
 
       <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('Faq.index')) ? '' : 'collapsed' }}" href="{{ route('Faq.index') }}">
+          <i class="bi bi-envelope"></i>
+          <span>Pengaduan</span>
+        </a>
+      </li><!-- Pengaduan -->
+
+      <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapsed' }}" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-gear"></i><span>Pengaturan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
