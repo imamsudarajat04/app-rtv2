@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengaduan extends Model
 {
-    //
+    protected $table = 'pengaduans';
+
+    protected $fillable = [
+        'name',
+        'title',
+        'message',
+    ];
 }
