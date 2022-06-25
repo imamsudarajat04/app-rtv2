@@ -106,16 +106,16 @@
             var token = $("meta[name='csrf-token']").attr("content");
 
             $.ajax({
-                url: "DataAkun/" + id,
+                url: "pengaduan-suara-admin/" + id,
                 type: "DELETE",
                 data: {
                     "id": id,
                     "_token": token,
                 },
                 success: function(data) {
-                    $('#user' + id).remove();
-                    $('#tableUser').DataTable().ajax.reload();
-                    $('#tableUser').DataTable().draw();
+                    $('#penggaduan' + id).remove();
+                    $('#tablePengaduan').DataTable().ajax.reload();
+                    $('#tablePengaduan').DataTable().draw();
                     $(".delete-response").append(
                         '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data Akun<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
                     );

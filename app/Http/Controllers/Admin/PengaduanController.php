@@ -111,6 +111,9 @@ class PengaduanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $find = Pengaduan::findOrFail($id);
+        $find->delete();
+
+        return response()->json($find);
     }
 }
