@@ -47,7 +47,7 @@
       </li><!-- FAQ -->
 
       <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('Faq.index')) ? '' : 'collapsed' }}" href="{{ route('Faq.index') }}">
+        <a class="nav-link {{ (request()->routeIs('pengaduan-suara-admin.index')) ? '' : 'collapsed' }}" href="{{ route('pengaduan-suara-admin.index') }}">
           <i class="bi bi-envelope"></i>
           <span>Pengaduan</span>
         </a>

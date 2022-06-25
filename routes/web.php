@@ -53,8 +53,8 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
     //Khusus FAQ
     Route::resource('/Faq', 'Admin\FaqController');
 
-    // Setting Layouts Admin
-    // Route::get('/setting/layouts', "Admin\Settings\SettingsController@index")->name('setting.layouts.index');
+    //Pengaduan Suara
+    Route::resource('pengaduan-suara-admin', 'Admin\PengaduanController');
 
 
     //Setting
