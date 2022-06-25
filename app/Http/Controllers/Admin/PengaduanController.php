@@ -74,9 +74,10 @@ class PengaduanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $data = Pengaduan::where('slug', $slug)->first();
+        return view('admin.pengaduan.show', compact('data'));
     }
 
     /**
