@@ -17,6 +17,7 @@ class CreatePengaduansTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
+            $table->string('slug');
             $table->longText('message');
             $table->timestamps();
         });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Pengaduan;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
@@ -44,7 +45,7 @@ class PengaduanController extends Controller
         ]);
 
         $data = $request->all();
-
+        $data['slug'] = Str::slug($data['title']);
         Pengaduan::create($data);
 
         return Redirect::back()->with('success', 'Pengaduan Berhasil Disimpan');

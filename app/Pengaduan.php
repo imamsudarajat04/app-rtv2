@@ -11,6 +11,7 @@ class Pengaduan extends Model
     protected $fillable = [
         'name',
         'title',
+        'slug',
         'message',
     ];
 }

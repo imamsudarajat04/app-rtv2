@@ -22,7 +22,7 @@ class PengaduanController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="btn btn-success" href="' . route('DataAkun.edit', $item->id) . '">
+                        <a class="btn btn-success" href="' . route('pengaduan-suara-admin.show', $item->slug) . '">
                             <i class="far fa-eye"></i> Detail 
                         </a>
                         <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
