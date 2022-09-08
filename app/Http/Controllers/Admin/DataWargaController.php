@@ -10,10 +10,16 @@ use App\Kelurahan;
 use App\Religions;
 use App\Data_warga;
 use Illuminate\Http\Request;
+use App\Exports\DataWargaExport;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\DataWargaRequest;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
+use App\Exports\DataWargaKategoriBalitaExport;
+use App\Exports\DataWargaKategoriLansiaExport;
+use App\Exports\DataWargaKategoriDisabilitasExport;
+use App\Exports\DataWargaKategoriBantuanPemerintahExport;
 
 class DataWargaController extends Controller
 {
@@ -248,5 +254,30 @@ class DataWargaController extends Controller
     public function getKelurahan($id) {
         $kelurahan = Kelurahan::where('id_kec', $id)->pluck('nama_bps', 'id');
         return response()->json($kelurahan);
+    }
+
+    public function export() 
+    {
+        return Excel::download(new DataWargaExport, 'DataWarga.xlsx');
+    }
+
+    public function exportBalita()
+    {
+        return Excel::download(new DataWargaKategoriBalitaExport, 'DataWargaKategoriBalita.xlsx');
+    }
+
+    public function exportLansia()
+    {
+        return Excel::download(new DataWargaKategoriLansiaExport, 'DataWargaKategoriLansia.xlsx');
+    }
+
+    public function exportDisabilitas() 
+    {
+        return Excel::download(new DataWargaKategoriDisabilitasExport, 'DataWargaKategoriDisabilitas.xlsx');
+    }
+
+    public function exportBantuanPemerintah()
+    {
+        return Excel::download(new DataWargaKategoriBantuanPemerintahExport, 'DataWargaKategoriBantuanPemerintah.xlsx');
     }
 }

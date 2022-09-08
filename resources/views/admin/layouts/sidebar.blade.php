@@ -54,6 +54,55 @@
       </li><!-- Pengaduan -->
 
       <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapsed' }}" data-bs-target="#icons-nav1" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-file-earmark-arrow-down"></i><span>Export Data</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav1" class="nav-content {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapse' }} " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ route('DataRT.Export') }}">
+              <i class="bi bi-circle"></i><span>Data RT</span>
+            </a> 
+          </li>
+
+          <li>
+            <a href="{{ route('DataWarga.export') }}">
+              <i class="bi bi-circle"></i><span>Data Warga</span>
+            </a> 
+          </li>
+
+          <li>
+            <a href="{{ route('DataWargaPindahan.export') }}">
+              <i class="bi bi-circle"></i><span>Data Warga Pindahan</span>
+            </a> 
+          </li>
+
+          <li>
+            <a href="{{ route('DataWargaBalita.export') }}">
+              <i class="bi bi-circle"></i><span>Data Warga Kategori Balita</span>
+            </a> 
+          </li>
+
+          <li>
+            <a href="{{ route('DataWargaLansia.export') }}">
+              <i class="bi bi-circle"></i><span>Data Warga Kategori Lansia</span>
+            </a> 
+          </li>
+
+          <li>
+            <a href="{{ route('DataWargaDisabilitas.export') }}">
+              <i class="bi bi-circle"></i><span>Data Warga Kategori Disabilitas</span>
+            </a> 
+          </li>
+
+          <li>
+            <a href="{{ route('DataWargaBantuanPemerintah.export') }}">
+              <i class="bi bi-circle"></i><span>Data Warga Kategori Bantuan Pemerintah</span>
+            </a> 
+          </li>
+        </ul>
+      </li><!-- Export Data -->
+
+      <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('setting.layouts.index')) ? '' : 'collapsed' }}" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-gear"></i><span>Pengaturan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>

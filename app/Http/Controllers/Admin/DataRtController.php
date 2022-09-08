@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Data_rt;
 use Illuminate\Http\Request;
+use App\Exports\DatartExport;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DataRTRequest;
+use Maatwebsite\Excel\Facades\Excel;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataRtController extends Controller
@@ -116,5 +118,10 @@ class DataRtController extends Controller
             'success' => true,
             'message' => 'Data RT Berhasil Dihapus'
         ]);
+    }
+
+    public function export() 
+    {
+        return Excel::download(new DatartExport, 'DataRT.xlsx');
     }
 }

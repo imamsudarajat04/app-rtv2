@@ -117,7 +117,7 @@
                     $('#tablePengaduan').DataTable().ajax.reload();
                     $('#tablePengaduan').DataTable().draw();
                     $(".delete-response").append(
-                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data Akun<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
+                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Penggaduan Suara<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
                     );
                 },
                 error: function(data) {

@@ -37,12 +37,19 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
 
     //Khusus tujuan Data RT
     Route::resource('/DataRT', 'Admin\DataRtController');
+    Route::get('/DataRT-export', 'Admin\DataRtController@export')->name('DataRT.Export');
 
     //Khusus tujuan Data Warga
     Route::resource('/DataWarga', 'Admin\DataWargaController');
+    Route::get('/DataWarga-export', 'Admin\DataWargaController@export')->name('DataWarga.export');
+    Route::get('/DataWarga-exportBalita', 'Admin\DataWargaController@exportBalita')->name('DataWargaBalita.export');
+    Route::get('/DataWarga-exportLansia', 'Admin\DataWargaController@exportLansia')->name('DataWargaLansia.export');
+    Route::get('/DataWarga-exportDisabilitas', 'Admin\DataWargaController@exportDisabilitas')->name('DataWargaDisabilitas.export');
+    Route::get('/DataWarga-exportBantuanPemerintah', 'Admin\DataWargaController@exportBantuanPemerintah')->name('DataWargaBantuanPemerintah.export');
 
     //Khusus tujuan Data Warga Pindahan
     Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
+    Route::get('/DataWargaPindahan-export', 'Admin\DataWargaPindahanController@export')->name('DataWargaPindahan.export');
 
     //Data Warga Khusus Role RT
     Route::resource('/DataWargaRT', 'Rt\DataWargaController');

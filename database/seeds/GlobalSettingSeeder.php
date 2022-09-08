@@ -13,7 +13,7 @@ class GlobalSettingSeeder extends Seeder
     {
         \App\GlobalSetting::create(
             [
-                'button_name' => 'Klik Disini!',
+                'button_name' => 'Pendataan Warga',
             ]
         );
     }
