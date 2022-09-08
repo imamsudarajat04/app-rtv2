@@ -14,6 +14,7 @@
 - [x] Template Landing Page User Friendly
 - [x] Formulir Pendataan Warga User Friendly
 - [x] Jumlah Kategori Umur (Balita dan Lansia)
+- [x] Export Data Via Excel Data RT, Warga, Warga Pindahan, Bantuan Pemerintah, Disabilitas, Kategori Balita dan Kategori Lansia
 - [ ] Recent Activity / Log Superadmin & RT
 
 <b>Note<b/> : Masih dalam tahap pengembangan dan uji coba !
