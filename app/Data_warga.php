@@ -12,6 +12,7 @@ class Data_warga extends Model
         'no_kk',
         'nik',
         'nama_lengkap',
+        'no_telp',
         'tempat_lahir',
         'tanggal_lahir',
         'jenis_kelamin',

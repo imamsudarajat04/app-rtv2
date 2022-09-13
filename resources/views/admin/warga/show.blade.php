@@ -109,11 +109,15 @@
                                 <div class="subtitle">{{ $data->pendidikan }}</div>
                             </div>
                             <div class="col-12 col-md-6">
-                                <div class="title">Jenis Pekerjaan</div>
-                                <div class="subtitle">{{ $data->jenis_pekerjaan }}</div>
+                                <div class="title">Nomor Handphone</div>
+                                <div class="subtitle">{{ $data->no_telp }}</div>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="title">Jenis Pekerjaan</div>
+                                <div class="subtitle">{{ $data->jenis_pekerjaan }}</div>
+                            </div>
                             <div class="col-12 col-md-6">
                                 <div class="title">Status Perkawinan</div>
                                 <div class="subtitle">
@@ -129,12 +133,12 @@
                                     @endif
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="title">Status Dalam Keluarga</div>
                                 <div class="subtitle">{{ $sdk }}</div>
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="title">Kewarganegaraan</div>
                                 <div class="subtitle">
