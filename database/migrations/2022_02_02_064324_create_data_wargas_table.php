@@ -22,7 +22,7 @@ class CreateDataWargasTable extends Migration
             $table->date('tanggal_lahir');
             $table->string('kategori_usia')->nullable();
             $table->string('jenis_kelamin');
-            // $table->string('agama');
+            $table->string('no_telp');
             $table->unsignedBigInteger('religions_id');
             $table->foreign('religions_id')->references('id')->on('religions')->onUpdate('cascade')->onDelete('cascade');
             $table->string('provinsi');
