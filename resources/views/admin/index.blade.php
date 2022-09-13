@@ -24,7 +24,7 @@
             <div class="card info-card sales-card">
 
               <div class="card-body">
-                <h5 class="card-title">Data Akun </h5>
+                <h5 class="card-title">Jumlah Data Akun </h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -45,7 +45,7 @@
             <div class="card info-card revenue-card">
 
               <div class="card-body">
-                <h5 class="card-title">Data RT </h5>
+                <h5 class="card-title">Jumlah Data RT </h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -66,7 +66,7 @@
             <div class="card info-card sales-card">
 
               <div class="card-body">
-                <h5 class="card-title">Data Warga </h5>
+                <h5 class="card-title">Jumlah Data Semua Warga</h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -87,7 +87,7 @@
             <div class="card info-card revenue-card">
 
               <div class="card-body">
-                <h5 class="card-title">Data Warga Pindahan </h5>
+                <h5 class="card-title">Jumlah Warga Pindahan </h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -95,6 +95,48 @@
                   </div>
                   <div class="ps-3">
                     <h6>{{ $warga_pindahan }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Data Warga Pindahan Card -->
+
+          <!-- Data Warga Pindahan Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card sales-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Jumlah Data Perempuan </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="fas fa-female"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $perempuan }}</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Data Warga Pindahan Card -->
+
+          <!-- Data Warga Pindahan Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card revenue-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Jumlah Data Pria </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="fas fa-male"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>{{ $pria }}</h6>
 
                   </div>
                 </div>
@@ -216,7 +258,7 @@
             </div>
             <!-- End Kategori Balita -->
 
-            <!-- Kategori Balita -->
+            <!-- Kategori Lansia -->
             <div class="card info-card customers-card">
 
               <div class="card-body">
@@ -234,7 +276,7 @@
               </div>
 
             </div>
-            <!-- End Kategori Balita -->
+            <!-- End Kategori Lansia -->
         @endif
         
       </div><!-- End Right side columns -->

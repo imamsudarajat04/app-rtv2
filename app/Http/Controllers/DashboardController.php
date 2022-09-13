@@ -19,12 +19,16 @@ class DashboardController extends Controller
             $warga_pindahan = Data_warga::where('warga_pindahan', '=', '1')->count();
             $balita = Data_warga::where('kategori_usia', 'Balita')->count();
             $lansia = Data_warga::where('kategori_usia', 'Lansia')->count();
+            $perempuan = Data_warga::where('jenis_kelamin', 'Perempuan')->count();
+            $pria = Data_warga::where('jenis_kelamin', 'Laki-laki')->count();
             return view('admin.index', [
-                'user'           => $user,
                 'rt'             => $rt,
+                'user'           => $user,
+                'pria'           => $pria,
                 'warga'          => $warga,
                 'balita'         => $balita,
                 'lansia'         => $lansia,
+                'perempuan'      => $perempuan,
                 'warga_pindahan' => $warga_pindahan,
             ]);
         } else {
