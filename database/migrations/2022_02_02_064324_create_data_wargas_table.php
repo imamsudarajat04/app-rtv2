@@ -15,7 +15,7 @@ class CreateDataWargasTable extends Migration
     {
         Schema::create('data_wargas', function (Blueprint $table) {
             $table->id();
-            $table->string('no_kk')->unique();
+            $table->string('no_kk');
             $table->string('nik');
             $table->string('nama_lengkap');
             $table->string('tempat_lahir');
