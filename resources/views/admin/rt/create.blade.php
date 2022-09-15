@@ -17,20 +17,20 @@
 <section class="section">
     <div class="row">
         <div class="col-lg-12">
+
+            <!-- Alert -->
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="my-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            
             <div class="card">
                 <div class="card-body">
-
-                    <!-- Alert -->
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul class="my-0">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-                    
                   <h5 class="card-title">Pengisian Data</h5>
     
                   <form class="row g-3" action="{{ route('DataRT.store') }}" method="POST">

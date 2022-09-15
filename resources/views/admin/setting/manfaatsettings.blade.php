@@ -17,28 +17,28 @@
 <section class="section">
     <div class="row">
         <div class="col-lg-12">
+
+            <!-- Alert Validasi-->
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="my-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <!-- Alert -->
+            @if($message = Session::get('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ $message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            
             <div class="card">
                 <div class="card-body">
-
-                    <!-- Alert Validasi-->
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul class="my-0">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-                    <!-- Alert -->
-                    @if($message = Session::get('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            {{ $message }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-                    
                   <h5 class="card-title">Pengisian Data</h5>
     
                   <form class="row g-3" action="{{ route('manfaat-setting.update', $manfaat->id) }}" method="POST">
