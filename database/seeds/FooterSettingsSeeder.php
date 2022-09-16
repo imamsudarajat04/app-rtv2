@@ -22,7 +22,7 @@ class FooterSettingsSeeder extends Seeder
                 'instagram' => 'https://instagram.com/',
                 'youtube' => 'https://youtube.com/',
                 'whatsapp' => 'https://wa.me/',
-                'copyright' => 'Copyright © 2022. All rights reserved.'
+                'copyright' => 'Copyright ©Imam Sudarajat 2022. All rights reserved.'
             ]
         );
     }
