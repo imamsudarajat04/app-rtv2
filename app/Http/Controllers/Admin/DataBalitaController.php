@@ -17,7 +17,7 @@ class DataBalitaController extends Controller
     public function index(Request $request)
     {
         if (request()->ajax()) {
-            $query = Data_warga::where('warga_pindahan',  1)->get();
+            $query = Data_warga::where('kategori_usia',  'Balita')->get();
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -31,7 +31,7 @@ class DataBalitaController extends Controller
                 ->addIndexColumn()
                 ->make();
         }
-        return view('admin.wargapindahan.index');
+        return view('admin.balita.index');
     }
 
     /**
