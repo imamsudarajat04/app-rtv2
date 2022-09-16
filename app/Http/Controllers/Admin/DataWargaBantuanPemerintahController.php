@@ -5,11 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Maatwebsite\Excel\Facades\Excel;
 use Yajra\DataTables\Facades\DataTables;
-use App\Exports\DataWargaPindahanExport;
 
-class DataWargaPindahanController extends Controller
+class DataWargaBantuanPemerintahController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +17,7 @@ class DataWargaPindahanController extends Controller
     public function index(Request $request)
     {
         if (request()->ajax()) {
-            $query = Data_warga::where('warga_pindahan',  '1')->get();
+            $query = Data_warga::where('bantuan_pemerintah',  '1')->get();
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -33,8 +31,7 @@ class DataWargaPindahanController extends Controller
                 ->addIndexColumn()
                 ->make();
         }
-        return view('admin.wargapindahan.index');
-        // return "testing";
+        return view('admin.bantuanpemerintah.index');
     }
 
     /**
@@ -101,10 +98,5 @@ class DataWargaPindahanController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function export() 
-    {
-        return Excel::download(new DataWargaPindahanExport, 'DataWargaPindahan.xlsx');
     }
 }

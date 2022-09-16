@@ -40,11 +40,46 @@
       </li><!-- Data Warga Balita -->
 
       <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataLansia.index')) ? '' : 'collapsed' }}" href="{{ route('DataLansia.index') }}">
+          <i class="fas fa-male"></i> 
+          <span>Data Lansia</span>
+        </a>
+      </li><!-- Data Warga Lansia -->
+
+      <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataWargaPindahan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahan.index') }}">
           <i class="bi bi-house-door"></i>
           <span>Data Warga Pindahan</span>
         </a>
       </li><!-- Data Warga Pindahan -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaDisabilitas.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaDisabilitas.index') }}">
+          <i class="fas fa-wheelchair"></i>
+          <span>Data Warga Disabilitas</span>
+        </a>
+      </li><!-- Data Warga Disabilitas -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaBantuanPemerintah.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaBantuanPemerintah.index') }}">
+          <i class="fas fa-people-carry"></i>
+          <span>Data Warga Bantuan Pemerintah</span>
+        </a>
+      </li><!-- Data Warga Bantuan Pemerintah -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaPria.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPria.index') }}">
+          <i class="fas fa-male"></i>
+          <span>Data Warga Pria</span>
+        </a>
+      </li><!-- Data Warga Pria -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaPerempuan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPerempuan.index') }}">
+          <i class="fas fa-female"></i>
+          <span>Data Warga Perempuan</span>
+        </a>
+      </li><!-- Data Warga Perempuan -->
 
       <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('Faq.index')) ? '' : 'collapsed' }}" href="{{ route('Faq.index') }}">

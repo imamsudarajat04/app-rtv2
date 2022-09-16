@@ -42,6 +42,21 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
     //Khusus tujuan Data Balita
     Route::resource('DataBalita', 'Admin\DataBalitaController');
 
+    //Khusus tujuan Data Lansia
+    Route::resource('DataLansia', 'Admin\DataLansiaController');
+
+    //Khusus tujuan Data Warga Disabilitas
+    Route::resource('DataWargaDisabilitas', 'Admin\DataWargaDisabilitasController');
+
+    //Khusus tujuan Data Warga Bantuan Pemerintah
+    Route::resource('DataWargaBantuanPemerintah', 'Admin\DataWargaBantuanPemerintahController');
+
+    //Khusus tujuan Data Warga Berjenis Kelamin Pria
+    Route::resource('DataWargaPria', 'Admin\DataWargaPriaController');
+
+    //Khusus tujuan Data Warga Berjenis Kelamin Perempuan
+    Route::resource('DataWargaPerempuan', 'Admin\DataWargaPerempuanController');
+
     //Khusus tujuan Data Warga
     Route::resource('/DataWarga', 'Admin\DataWargaController');
     Route::get('/DataWarga-export', 'Admin\DataWargaController@export')->name('DataWarga.export');
