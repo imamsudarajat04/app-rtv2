@@ -94,7 +94,9 @@ class DataWargaController extends Controller
             $today = new DateTime('today');
             $y = $today->diff($tanggal)->y;
 
-            if($y >= 1 && $y <= 6){
+            // dd($y);
+
+            if($y >= 0 && $y <= 6){
                 $data['kategori_usia'] = 'Balita';
             }elseif($y >= 7 && $y <= 12){
                 $data['kategori_usia'] = 'Anak-anak';

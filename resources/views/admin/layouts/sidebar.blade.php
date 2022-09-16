@@ -33,6 +33,13 @@
       </li><!-- Data Warga -->
 
       <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataBalita.index')) ? '' : 'collapsed' }}" href="{{ route('DataBalita.index') }}">
+          <i class="fas fa-baby"></i>
+          <span>Data Balita</span>
+        </a>
+      </li><!-- Data Warga Balita -->
+
+      <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataWargaPindahan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahan.index') }}">
           <i class="bi bi-house-door"></i>
           <span>Data Warga Pindahan</span>
