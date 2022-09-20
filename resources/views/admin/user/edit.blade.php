@@ -79,10 +79,16 @@
 
                             @if ($user->role == 'superadmin')
                                 <option value="superadmin" selected>Superadmin</option>
+                                <option value="rw">RW</option>
                                 <option value="rt">RT</option>
+                            @elseif($user->role == 'rt')
+                                <option value="superadmin">Superadmin</option>
+                                <option value="rw">RW</option>
+                                <option value="rt" selected>RT</option>
                             @else
                                 <option value="superadmin">Superadmin</option>
-                                <option value="rt" selected>RT</option>
+                                <option value="rw" selected>RW</option>
+                                <option value="rt">RT</option>
                             @endif
                         </select>
                     </div>

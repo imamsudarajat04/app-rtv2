@@ -36,14 +36,18 @@ class DataAkunController extends Controller
                     ';
                 })
                 ->editColumn('role', function($item) {
-                    if($item->role == 'superadmin')
+                    if($item->role == "superadmin")
                     {
                         return '
                             <label class="badge badge-success mr-2">' . $item->role . '</label>
                         ';
-                    }else{
+                    }else if($item->role == "rt") {
                         return '
                             <label class="badge badge-primary mr-2">' . $item->role . '</label>
+                        ';
+                    }else{
+                        return '
+                            <label class="badge badge-danger mr-2">' . $item->role . '</label>
                         ';
                     }
                 })
@@ -74,7 +78,6 @@ class DataAkunController extends Controller
     public function store(SettingProfileRequest $request)
     {
         $data = $request->all();
-        // $data['password'] = bcrypt($request->password);
         $data['password'] = Hash::make($request->password);
         
         if($request->hasFile('avatar')){

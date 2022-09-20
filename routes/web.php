@@ -16,13 +16,13 @@ Route::get('getKabupaten/{id}', 'Admin\DataWargaController@getKabupaten');
 //Kecamatan get id kabupaten
 Route::get('getKecamatan/{id}', 'Admin\DataWargaController@getKecamatan');
 
-//Kelurahan get id kecamatan
+//Kelurahan get id kecamatans
 Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
 
 //Pengaduan 
 Route::resource('pengaduan-suara', 'User\PengaduanController');
 
-Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
+Route::group(['middleware' => ['auth','CekRole:superadmin,rt,rw']], function() {
     Route::get('/dashboard', "DashboardController@index")->name('dashboard.index');
 
     //Khusus untuk Setting Profile

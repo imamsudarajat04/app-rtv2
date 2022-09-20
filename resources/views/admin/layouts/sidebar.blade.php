@@ -26,6 +26,13 @@
       </li><!-- Data RT -->
 
       <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataRT.index')) ? '' : 'collapsed' }}" href="{{ route('DataRT.index') }}">
+          <i class="bi bi-people-fill"></i>
+          <span>Data RW</span>
+        </a>
+      </li><!-- Data RW -->
+
+      <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataWarga.index')) ? '' : 'collapsed' }}" href="{{ route('DataWarga.index') }}">
           <i class="bi bi-person-lines-fill"></i>
           <span>Data Warga</span>

@@ -189,28 +189,7 @@
 
             </div>
           </div><!-- End Data Warga Pindahan Card -->
-
-          <!-- Data Jumlah Kategori Balita Card -->
-          <div class="col-xxl-4 col-md-6">
-            <div class="card info-card revenue-card">
-
-              <div class="card-body">
-                <h5 class="card-title">Jumlah Kategori Balita </h5>
-
-                <div class="d-flex align-items-center">
-                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="fas fa-baby"></i>
-                  </div>
-                  <div class="ps-3">
-                    <h6>{{ $balita_rt }}</h6>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div><!-- End Jumlah Kategori Balitaa Card -->
-
+z
           <!-- Data Jumlah Kategori Lansia Card -->
           <div class="col-xxl-4 col-md-6">
             <div class="card info-card revenue-card">
@@ -238,6 +217,26 @@
       <!-- Right side columns -->
       <div class="col-lg-4">
         @if (Auth::user()->role == 'superadmin')
+            <!-- Data RW -->
+            <div class="card info-card customers-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Jumlah Data RW </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>123</h6>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- End Kategori Balita -->
+
             <!-- Kategori Balita -->
             <div class="card info-card customers-card">
 

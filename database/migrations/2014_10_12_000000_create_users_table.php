@@ -25,8 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('rt')->nullable();
             $table->string('rw')->nullable();
             $table->text('address');
-            // $table->enum('role', ['superadmin', 'rt', 'warga'])->default('warga');
-            $table->enum('role', ['superadmin', 'rt']);
+            $table->enum('role', ['superadmin', 'rt', 'rw']);
             $table->string('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();
