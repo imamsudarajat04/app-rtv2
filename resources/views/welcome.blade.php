@@ -53,75 +53,70 @@
         <div class="container">
   
           <div class="section-title">
-            <h2>Fitur - Fitur</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h2>Biodata</h2>
+            {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
           </div>
   
           <div class="row content">
             <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/features-1.png" class="img-fluid" alt="">
+              <img src="assets/img/profile-lurah.jpg" class="img-fluid" alt="Foto Lurah">
             </div>
             <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
-              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-              <p class="fst-italic">
+              <h3>Tugas Pokok dan Fungsi Lurah </h3>
+              {{-- <p class="fst-italic">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua.
-              </p>
+              </p> --}}
               <ul>
-                <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+                <li><i class="bi bi-check"></i> Melaksanakan kordinasi pelaksanan, perencanaan, pengawasan pengendalian dibidang pemeliharaan ketertiban umum, bidang penegakan peraturan perundang undangan, bidang pelayanan umum masyarakat, bidang sarana dan prasarana pasilitas umum.</li>
+                <li><i class="bi bi-check"></i> Melaksanakan pembinaan dan pengawasan pelaksanaan tugas pemerintah diwilayah kerja dan pelaksanaan administrasi ketatausahaan kelurahan.</li>
+                <li><i class="bi bi-check"></i> Melaksanakan pembinaan dan koordinasi terhadap bawahan, terhadap pelaksanaan tugas-tugas jabatan fungsional umum dan lingkungan kelurahan.</li>
+                <li><i class="bi bi-check"></i> Melaksanakan pemberian motivasi dan menetapkan kebijakan dalam rangka pemberdayaan masyarakat yang mandiri.</li>
+                <li><i class="bi bi-check"></i> Melaporkan hasil kerja pelaksanaan tugas kepada camat setiap bulan dan akhir tahun.</li>
+                <li><i class="bi bi-check"></i> Melaksanakan tugas dari pemerintah atasan.</li>
               </ul>
             </div>
           </div>
   
           <div class="row content">
             <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-              <img src="assets/img/features-2.png" class="img-fluid" alt="">
+              <img src="assets/img/profile-ketua-forum.jpg" class="img-fluid" alt="Profile Ketua Forum">
             </div>
             <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-              <h3>Corporis temporibus maiores provident</h3>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
+              <h3>Fungsi dan Tugas Forum RT/RW</h3>
+              <p>Peran Forum RT/RW ini pada dasarnya merupakan perpanjangan tangan dari kecamatan dengan fungsinya, antara lain :</p>
+              <ul>
+                <li><i class="bi bi-check"></i> Sebagai wadah silaturahmi sekaligus menguatkan tugas dan fungsi forum RT/RW di tiap-tiap Kelurahan.</li>
+                <li><i class="bi bi-check"></i> Sebagai sarana penyampaian aspirasi dalam penyelesaian permasalahan.</li>
+                <li><i class="bi bi-check"></i> Sebagai wadah dalam penyeragaman sistem pembinaan untuk mendukung pelaksanaan program kegiatan kecamatan agar lebih terarah.</li>
+              </ul>
             </div>
           </div>
   
           <div class="row content">
             <div class="col-md-5" data-aos="fade-right">
-              <img src="assets/img/features-3.png" class="img-fluid" alt="">
+              <img src="assets/img/profile-jojo.jpg" class="img-fluid" alt="Profile Jojok Sutrisno">
             </div>
             <div class="col-md-7 pt-5" data-aos="fade-left">
-              <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-              <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+              <h3>Data diri Jojok Sutrisno</h3>
+              <p>Keterangan :</p>
               <ul>
-                <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+                <li><i class="bi bi-check"></i> Relawan sebagai Pembina dan Penilai dlm bidang Sekolah Adywiyata tingkat SD,SMP,SLTA baik tingkat kota maupun tingkat Provinsi.</li>
+                <li><i class="bi bi-check"></i> Relawan sebagai anggota pd prapantau dlm bidang Adipura tingkat kota.</li>
+                <li><i class="bi bi-check"></i> Relawan sebagai ketua dua pd Forum Kota Sehat tingkat kota.</li>
+                <li><i class="bi bi-check"></i> Relawan sebagai diPokja Penelitian dan Pengembangan pd Forum Koordinasi BPDAS Provinsi Kepri.</li>
               </ul>
             </div>
           </div>
   
           <div class="row content">
             <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-              <img src="assets/img/features-4.png" class="img-fluid" alt="">
+              <img src="assets/img/profile-ketua-karang-taruna.jpg" class="img-fluid" alt="Profile Ketua Karang Taruna">
             </div>
             <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-              <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
+              <h3>Profil Ketua Karang Taruna</h3>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
+                Karang Taruna adalah organisasi sosial kemasyarakatan sebagai wadah dan sarana pengembangan setiap anggota masyarakat yang tumbuh dan berkembang atas dasar kesadaran dan tanggung jawab sosial dari, oleh dan untuk masyarakat terutama generasi muda di wilayah desa/kelurahan terutama bergerak dibidang usaha kesejahteraan sosial.
               </p>
             </div>
           </div>
