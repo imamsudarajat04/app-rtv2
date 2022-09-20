@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Data_rw;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RequestDataRW;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataRWController extends Controller
@@ -22,7 +23,7 @@ class DataRWController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="btn btn-primary" href="' . route('DataRT.edit', $item->id) . '">
+                        <a class="btn btn-primary" href="' . route('DataRW.edit', $item->id) . '">
                             <i class="fas fa-pen"></i> Ubah
                         </a>
                         <button class="btn btn-danger delete_akun" data-id="' . $item->id . '">
@@ -45,7 +46,7 @@ class DataRWController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.rw.create');
     }
 
     /**
@@ -54,9 +55,12 @@ class DataRWController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RequestDataRW $request)
     {
-        //
+        $data = $request->all();
+        Data_rw::create($data);
+
+        return redirect()->route('DataRW.index')->with('success', 'Data RW berhasil ditambahkan');
     }
 
     /**
@@ -78,7 +82,8 @@ class DataRWController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Data_rw::findOrFail($id);
+        return view('admin.rw.edit', compact('data'));
     }
 
     /**
@@ -88,9 +93,12 @@ class DataRWController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RequestDataRW $request, $id)
     {
-        //
+        $data = Data_rw::findOrFail($id);
+        $data->update($request->all());
+
+        return redirect()->route('DataRW.index')->with('success', 'Data RW berhasil diubah');
     }
 
     /**
@@ -101,6 +109,12 @@ class DataRWController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Data_rw::findOrFail($id);
+        $item->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Data RT Berhasil Dihapus'
+        ]);
     }
 }

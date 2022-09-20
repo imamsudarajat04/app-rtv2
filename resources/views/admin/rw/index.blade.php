@@ -32,7 +32,7 @@
 
         <div class="card">
           <div class="card-body">
-              <a href="{{ route('DataRT.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah RW</a>
+              <a href="{{ route('DataRW.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah RW</a>
               <h5 class="card-title">Data RW</h5>
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableRW">
                     <thead>
@@ -122,7 +122,7 @@
             sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2"lf>rt<"bottom"p>',
 
             "fnCreatedRow": function(nRow, data) {
-                $(nRow).attr('id', 'rt' + data.id);
+                $(nRow).attr('id', 'rw' + data.id);
             },
         });
 
@@ -131,18 +131,18 @@
             var token = $("meta[name='csrf-token']").attr("content");
 
             $.ajax({
-                url: "DataRT/" + id,
+                url: "DataRW/" + id,
                 type: "DELETE",
                 data: {
                     "id": id,
                     "_token": token,
                 },
                 success: function(data) {
-                    $('#rt' + id).remove();
-                    $('#tableRT').DataTable().ajax.reload();
-                    $('#tableRT').DataTable().draw();
+                    $('#rw' + id).remove();
+                    $('#tableRW').DataTable().ajax.reload();
+                    $('#tableRW').DataTable().draw();
                     $(".delete-response").append(
-                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data RT<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
+                        '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Menghapus Data RW<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>',
                     );
                 },
                 error: function(data) {

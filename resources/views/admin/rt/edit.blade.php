@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="pagetitle">
-    <h1>Formulir Edit Akun</h1>
+    <h1>Formulir Edit Data RT</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
