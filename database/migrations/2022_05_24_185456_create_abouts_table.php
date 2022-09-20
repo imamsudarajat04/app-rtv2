@@ -17,18 +17,16 @@ class CreateAboutsTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('description');
-            $table->string('icon_one')->default('bx bx-receipt');
             $table->string('title_one');
             $table->string('subtitle_one');
-            $table->string('icon_two')->default('bx bx-cube-alt');
             $table->string('title_two');
             $table->string('subtitle_two');
-            $table->string('icon_three')->default('bx bx-images');
             $table->string('title_three');
             $table->string('subtitle_three');
-            $table->string('icon_four')->default('bx bx-shield');
             $table->string('title_four');
             $table->string('subtitle_four');
+            $table->string('title_five');
+            $table->string('subtitle_five');
             $table->timestamps();
         });
     }

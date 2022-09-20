@@ -20,25 +20,25 @@
             <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
               <div class="icon-boxes d-flex flex-column justify-content-center">
                 <div class="row">
-                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <i class="{{ $abouts->icon_one }}"></i>
+                  <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="100">
                     <h4>{{ $abouts->title_one }}</h4>
                     <p>{{ $abouts->subtitle_one }}</p>
                   </div>
-                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                    <i class="{{ $abouts->icon_two }}"></i>
+                  <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="200">
                     <h4>{{ $abouts->title_two }}</h4>
                     <p>{{ $abouts->subtitle_two }}</p>
                   </div>
-                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                    <i class="{{ $abouts->icon_three }}"></i>
+                  <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="300">
                     <h4>{{ $abouts->title_three }}</h4>
                     <p>{{ $abouts->subtitle_three }}</p>
                   </div>
-                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                    <i class="{{ $abouts->icon_four }}"></i>
+                  <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="400">
                     <h4>{{ $abouts->title_four }}</h4>
                     <p>{{ $abouts->subtitle_four }}</p>
+                  </div>
+                  <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <h4>{{ $abouts->title_five }}</h4>
+                    <p>{{ $abouts->subtitle_five }}</p>
                   </div>
                 </div>
               </div><!-- End .content-->

@@ -12,17 +12,15 @@ class About extends Model
     [
         'title', 
         'description', 
-        'icon_one', 
         'title_one', 
-        'subtitle_one', 
-        'icon_two', 
+        'subtitle_one',
         'title_two', 
-        'subtitle_two', 
-        'icon_three', 
+        'subtitle_two',
         'title_three', 
-        'subtitle_three', 
-        'icon_four', 
+        'subtitle_three',
         'title_four', 
-        'subtitle_four'
+        'subtitle_four',
+        'title_five', 
+        'subtitle_five',
     ];
 }

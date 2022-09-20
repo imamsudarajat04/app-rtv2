@@ -26,7 +26,7 @@
       </li><!-- Data RT -->
 
       <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataRT.index')) ? '' : 'collapsed' }}" href="{{ route('DataRT.index') }}">
+        <a class="nav-link {{ (request()->routeIs('DataRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataRW.index') }}">
           <i class="bi bi-people-fill"></i>
           <span>Data RW</span>
         </a>
@@ -163,7 +163,7 @@
           </li>
           <li>
             <a href="{{ route('abouts-setting.index') }}">
-              <i class="bi bi-circle"></i><span>Pengaturan About</span>
+              <i class="bi bi-circle"></i><span>Pengaturan VISI & MISI</span>
             </a>
           </li>
           <li>
