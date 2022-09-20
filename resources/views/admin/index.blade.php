@@ -228,7 +228,7 @@ z
                     <i class="bi bi-people-fill"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>123</h6>
+                    <h6>{{ $rw }}</h6>
 
                   </div>
                 </div>
