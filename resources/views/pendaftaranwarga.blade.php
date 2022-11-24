@@ -56,6 +56,9 @@
                                 <label for="Nama Lengkap" class="form-label">Nama Lengkap</label>
                                 <input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Masukkan Nama Lengkap.." value="{{ old('nama_lengkap') }}"></br>
 
+                                <label for="Nomor Handphone" class="form-label">Nomor Handphone</label>
+                                <input class="form-control" type="text" name="no_telp" id="no_telp" placeholder="Masukkan Nomor Handphone.." value="{{ old('no_telp') }}"></br>
+
                                 <label for="Tempat Lahir" class="form-label">Tempat Lahir</label>
                                 <input class="form-control" type="text" name="tempat_lahir" id="tempat_lahir" placeholder="Masukkan Tempat Lahir.." value="{{ old('tempat_lahir') }}"></br>
 
