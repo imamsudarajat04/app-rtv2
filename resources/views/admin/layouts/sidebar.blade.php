@@ -209,6 +209,37 @@
       </li><!-- Data Warga Pindahan -->
 
       @endif
+
+      @if (Auth::user()->role == 'rw')
+      
+        <li class="nav-item">
+          <a class="nav-link {{ (request()->routeIs('dashboard.index')) ? '' : 'collapsed' }}" href="{{ route('dashboard.index') }}">
+            <i class="bi bi-grid"></i>
+            <span>Dashboard</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
+        
+        <li class="nav-item">
+          <a class="nav-link {{ (request()->routeIs('DataKhususRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataKhususRW.index') }}">
+            <i class="bi bi-person-badge-fill"></i>
+            <span>Data RT</span>
+          </a>
+        </li><!-- Data RT -->
+        
+        <li class="nav-item">
+          <a class="nav-link {{ (request()->routeIs('DataWargaRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaRW.index') }}">
+            <i class="bi bi-person-lines-fill"></i>
+            <span>Data Warga</span>
+          </a>
+        </li><!-- Data Warga -->
+
+        <li class="nav-item">
+          <a class="nav-link {{ (request()->routeIs('DataWargaPindahanRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahanRW.index') }}">
+            <i class="bi bi-house-door"></i>
+            <span>Data Warga Pindahan</span>
+          </a>
+        </li><!-- Data Warga Pindahan -->
+      @endif
     </ul>
 
 </aside>

@@ -34,7 +34,7 @@ class DashboardController extends Controller
                 'warga_pindahan' => $warga_pindahan,
                 'rw'             => $rw,
             ]);
-        } else {
+        } elseif(Auth::user()->role == 'rt') {
             $warga = Data_warga::where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->count();
             $balita_rt = Data_warga::where('kategori_usia', 'Balita')->where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->count();
             $lansia_rt = Data_warga::where('kategori_usia', 'Lansia')->where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->count();
@@ -44,6 +44,16 @@ class DashboardController extends Controller
                 'balita_rt'            => $balita_rt,
                 'lansia_rt'            => $lansia_rt,
                 'warga_pindahan_rt'    => $warga_pindahan_rt
+            ]);
+        } else {
+            $rt = Data_rt::where('rw', Auth::user()->rw)->count();
+            $warga = Data_warga::where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->count();
+            $warga_pindahan_rw = Data_warga::where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->where('warga_pindahan', '1')->count();
+
+            return view('admin.index', [
+                'warga'          => $warga,
+                'rt'             => $rt,
+                'warga_pindahan' => $warga_pindahan_rw,
             ]);
         }
         

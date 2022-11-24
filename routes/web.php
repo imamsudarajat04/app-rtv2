@@ -84,6 +84,11 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt,rw']], function() {
     //Pengaduan Suara
     Route::resource('pengaduan-suara-admin', 'Admin\PengaduanController');
 
+    Route::get('/DataWargaRW', 'Rw\RwController@DataWargaRW')->name('DataWargaRW.index');
+    Route::get('/DataRTKhususRW', 'Rw\RwController@DataRW')->name('DataKhususRW.index');
+    Route::get('/DataWargaPindahanRW', 'Rw\RwController@DataWargaPindahanRW')->name('DataWargaPindahanRW.index');
+    
+
 
     //Setting
     Route::prefix('settings')->group(function() {
