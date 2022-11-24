@@ -17,6 +17,7 @@
 - [x] Export Data Via Excel Data RT, Warga, Warga Pindahan, Bantuan Pemerintah, Disabilitas, Kategori Balita dan Kategori Lansia
 - [x] Pemisahan Data Pria dan Perempuan
 - [x] Fix Error Duplikat Nomor KK pada inputan Data Warga
+- [x] Regex password (Contoh123) tidak menggunakan special karakter atau simbol
 - [ ] Recent Activity / Log Superadmin & RT
 
 <b>Note<b/> : Masih dalam tahap pengembangan dan uji coba !
