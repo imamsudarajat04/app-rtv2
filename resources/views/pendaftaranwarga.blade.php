@@ -1,13 +1,18 @@
 @extends('layouts.master')
 @section('title', 'Pendaftaran Warga')
 
+@push('styles')
+    {{-- <style>
+
+    </style> --}}
+@endpush
+
 @section('content')
     <!-- ======= Pendaftaran Warga ======= -->
     <section id="pendaftaran-warga" class="features" data-aos="fade-up">
         <div class="container">
             <div class="section-title">
                 <h2>Pendaftaran Warga</h2>
-                {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
             </div>
 
             <div class="row content">
@@ -47,32 +52,32 @@
                         <div class="card-body bg-light">
                             <form class="form" action="{{ route('pendaftaran-warga.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <label for="Nomor NIK" class="form-label">Nomor Kartu Keluarga</label>
+                                <label for="Nomor NIK" class="form-label">Nomor Kartu Keluarga<span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="no_kk" id="no_kk" placeholder="Masukkan Nomor Kartu Keluarga.." value="{{ old('no_kk') }}"></br>
 
-                                <label for="Nomor Induk Kependudukan" class="form-label">Nomor Induk Kependudukan</label>
+                                <label for="Nomor Induk Kependudukan" class="form-label">Nomor Induk Kependudukan<span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="nik" id="nik" placeholder="Masukkan Nomor Induk Kependudukan.." value="{{ old('nik') }}"></br>
 
-                                <label for="Nama Lengkap" class="form-label">Nama Lengkap</label>
+                                <label for="Nama Lengkap" class="form-label">Nama Lengkap<span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Masukkan Nama Lengkap.." value="{{ old('nama_lengkap') }}"></br>
 
-                                <label for="Nomor Handphone" class="form-label">Nomor Handphone</label>
+                                <label for="Nomor Handphone" class="form-label">Nomor Handphone<span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="no_telp" id="no_telp" placeholder="Masukkan Nomor Handphone.." value="{{ old('no_telp') }}"></br>
 
-                                <label for="Tempat Lahir" class="form-label">Tempat Lahir</label>
+                                <label for="Tempat Lahir" class="form-label">Tempat Lahir<span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="tempat_lahir" id="tempat_lahir" placeholder="Masukkan Tempat Lahir.." value="{{ old('tempat_lahir') }}"></br>
 
-                                <label for="Tanggal Lahir" class="form-label">Tanggal Lahir</label>
+                                <label for="Tanggal Lahir" class="form-label">Tanggal Lahir<span class="text-danger">*</span></label>
                                 <input class="form-control" type="date" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir') }}"></br>
 
-                                <label for="Jenis Kelamin" class="form-label">Jenis Kelamin</label>
+                                <label for="Jenis Kelamin" class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
                                 <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
                                     <option value="" selected disabled>Pilih Jenis Kelamin</option>
                                     <option value="Laki-laki">Laki-laki</option>
                                     <option value="Perempuan">Perempuan</option>
                                 </select></br>
 
-                                <label for="Tanggal Lahir" class="form-label">Agama</label>
+                                <label for="Tanggal Lahir" class="form-label">Agama<span class="text-danger">*</span></label>
                                 <select class="form-control" name="religions_id" id="religions_id">
                                     <option value="" selected disabled>Pilih Agama</option>
                                     @foreach ($religions as $religion)
@@ -80,7 +85,7 @@
                                     @endforeach
                                 </select></br>
 
-                                <label for="Tanggal Lahir" class="form-label">Provinsi</label>
+                                <label for="Tanggal Lahir" class="form-label">Provinsi<span class="text-danger">*</span></label>
                                 <select class="form-control" name="provinsi" id="provinsi">
                                     <option value="" selected disabled>Pilih Provinsi</option>
                                     @foreach ($provinces as $province)
@@ -88,41 +93,53 @@
                                     @endforeach
                                 </select></br>
 
-                                <label for="kabupaten" class="form-label">Kabupaten</label>
+                                <label for="kabupaten" class="form-label">Kabupaten<span class="text-danger">*</span></label>
                                 <select class="form-control" name="kabupaten" id="kabupaten">
                                     <option value="0" selected disabled>Pilih Kabupaten / Kota</option>
                                 </select></br>
 
-                                <label for="kecamatan" class="form-label">Kecamatan</label>
+                                <label for="kecamatan" class="form-label">Kecamatan<span class="text-danger">*</span></label>
                                 <select class="form-control" name="kecamatan" id="kecamatan">
                                     <option value="0" selected disabled>Pilih Kecamatan</option>
                                 </select></br>
 
-                                <label for="kelurahan" class="form-label">Kelurahan</label>
+                                <label for="kelurahan" class="form-label">Kelurahan<span class="text-danger">*</span></label>
                                 <select class="form-control" name="kelurahan" id="kelurahan">
                                     <option value="0" selected disabled>Pilih Kelurahan</option>
                                 </select></br>
 
-                                <label for="kodePos" class="form-label">Kode Pos</label>
+                                <label for="kodePos" class="form-label">Kode Pos<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="kode_pos" id="kode_pos" placeholder="Masukkan Kode Pos.." value="{{ old('kode_pos') }}"></br>
 
-                                <label for="alamatLengkap" class="form-label">Alamat Lengkap</label>
+                                <label for="alamatLengkap" class="form-label">Alamat Lengkap<span class="text-danger">*</span></label>
                                 <textarea class="form-control" name="alamat" id="alamat" placeholder="Masukkan Alamat Lengkap..">{{ old('alamat') }}</textarea></br>
 
-                                <label for="rt" class="form-label">RT</label>
+                                <label for="alamatSebelumnya" class="form-label">Alamat Sebelumnya<span class="text-danger">*</span></label>
+                                <textarea class="form-control" name="alamat_sebelumnya" id="alamat_sebelumnya" placeholder="Masukkan Alamat Sebelumnya..">{{ old('alamat_sebelumnya') }}</textarea></br>
+
+                                <label for="rt" class="form-label">RT<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="rt" id="rt" placeholder="Masukkan RT.." value="{{ old('rt') }}"></br>
 
-                                <label for="rw" class="form-label">RW</label>
+                                <label for="rw" class="form-label">RW<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="rw" id="rw" placeholder="Masukkan RW.." value="{{ old('rw') }}"></br>
 
-                                <label for="pendidikan" class="form-label">Pendidikan</label>
-                                <input type="text" class="form-control" name="pendidikan" id="pendidikan" placeholder="Masukkan Pendidikan.." value="{{ old('pendidikan') }}"></br>
+                                <label for="pendidikan" class="form-label">Pendidikan<span class="text-danger">*</span></label>
+                                <select class="form-select" name="pendidikan">
+                                    <option value="" selected disabled>Pilih Pendidikan</option>
+                                    <option value="SD">SD</option>
+                                    <option value="SMP">SMP</option>
+                                    <option value="SMA">SMP</option>
+                                    <option value="SMK">SMK</option>
+                                    <option value="D3">D3</option>
+                                    <option value="S1">S1</option>
+                                    <option value="S2">S2</option>
+                                </select><br>
 
-                                <label for="jenisPekerjaan" class="form-label">Jenis Pekerjaan</label>
+                                <label for="jenisPekerjaan" class="form-label">Jenis Pekerjaan<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="jenis_pekerjaan" id="jenis_pekerjaan" placeholder="Masukkan Jenis Pekerjaan.." value="{{ old('jenis_pekerjaan') }}"></br>
 
-                                <label for="statusPerkawinan" class="form-label">Status Perkawinan</label>
-                                <select class="form-control" name="status_perkawinan" id="status_perkawinan">
+                                <label for="statusPerkawinan" class="form-label">Status Perkawinan<span class="text-danger">*</span></label>
+                                <select class="form-select" name="status_perkawinan" id="status_perkawinan">
                                     <option value="" selected disabled>Pilih Status Perkawinan</option>
                                     <option value="0">Belum Menikah</option>
                                     <option value="1">Menikah</option>
@@ -130,8 +147,8 @@
                                     <option value="3">Cerai Mati</option>
                                 </select></br>
 
-                                <label for="statusDalamKeluarga" class="form-label">Status Dalam Keluarga</label>
-                                <select class="form-control" name="status_dalam_keluarga" id="status_dalam_keluarga">
+                                <label for="statusDalamKeluarga" class="form-label">Status Dalam Keluarga<span class="text-danger">*</span></label>
+                                <select class="form-select" name="status_dalam_keluarga" id="status_dalam_keluarga">
                                     <option value="" selected disabled>Pilih Status Dalam Keluarga</option>
                                     <option value="0">Kepala Keluarga</option>
                                     <option value="1">Istri</option>
@@ -145,49 +162,43 @@
                                     <option value="9">Lainnya</option>
                                 </select></br>
 
-                                <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
-                                <select class="form-control" name="kewarganegaraan" id="kewarganegaraan">
+                                <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span class="text-danger">*</span></label>
+                                <select class="form-select" name="kewarganegaraan" id="kewarganegaraan">
                                     <option value="WNI">Warga Negara Indonesia</option>
                                     <option value="WNA">Warga Negara Asing</option>
                                 </select></br>
 
-                                <label for="fotoKK" class="form-label">Foto Kartu Keluarga</label>
+                                <label for="fotoKK" class="form-label">Foto Kartu Keluarga<span class="text-danger">*</span></label>
                                 <input type="file" class="form-control" name="foto_kk" id="customFile1" placeholder="Masukkan Foto KK.."></br>
 
-                                <label for="noPaspor" class="form-label">Nomor Paspor</label>
-                                <input type="text" class="form-control" name="no_paspor" id="no_paspor" placeholder="Masukkan Nomor Paspor (Jika Ada) .." value="{{ old('no_paspor') }}"></br>
+                                <label for="fotoKTP" class="form-label">Foto KTP<span class="text-danger">*</span></label>
+                                <input type="file" class="form-control" name="foto_ktp" id="customFile2" placeholder="Masukkan Foto KTP.."></br>
 
-                                <label for="noKitasKitap" class="form-label">Nomor Kitas Kitap</label>
-                                <input type="text" class="form-control" name="no_kitas_kitap" id="no_kitas_kitap" placeholder="Masukkan Nomor Kitas Kitap (Jika Ada) .." value="{{ old('no_kitas_kitap') }}"></br>
-
-                                <label for="fotoPaspor" class="form-label">Foto Paspor*</label>
-                                <input type="file" class="form-control" name="foto_paspor" id="customFile2"></br>
-
-                                <label for="namaAyah" class="form-label">Nama Ayah</label>
+                                <label for="namaAyah" class="form-label">Nama Ayah<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="nama_ayah" id="nama_ayah" placeholder="Masukkan Nama Ayah.." value="{{ old('nama_ayah') }}"></br>
 
-                                <label for="pekerjaanAyah" class="form-label">Pekerjaan Ayah</label>
+                                <label for="pekerjaanAyah" class="form-label">Pekerjaan Ayah<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="pekerjaan_ayah" id="pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah.." value="{{ old('pekerjaan_ayah') }}"></br>
                                 
-                                <label for="namaIbu" class="form-label">Nama Ibu</label>
+                                <label for="namaIbu" class="form-label">Nama Ibu<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="nama_ibu" id="nama_ibu" placeholder="Masukkan Nama Ibu.." value="{{ old('nama_ibu') }}"></br>
 
-                                <label for="pekerjaanIbu" class="form-label">Pekerjaan Ibu</label>
+                                <label for="pekerjaanIbu" class="form-label">Pekerjaan Ibu<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaan_ibu" placeholder="Masukkan Pekerjaan Ibu.." value="{{ old('pekerjaan_ibu') }}"></br>
 
-                                <label for="wargaPindahan" class="form-label">Warga Pindahan</label></br>
+                                <label for="wargaPindahan" class="form-label">Warga Pindahan<span class="text-danger">*</span></label></br>
                                 <input type="radio" id="warga_pindahan" name="warga_pindahan" value="1">
                                 <label for="Ya">Ya</label>
                                 <input type="radio" id="warga_pindahan" name="warga_pindahan" value="0">
                                 <label for="Tidak">Tidak</label><br></br>
 
-                                <label for="bantuanPemerintah" class="form-label">Bantuan Pemerintah</label></br>
+                                <label for="bantuanPemerintah" class="form-label">Bantuan Pemerintah<span class="text-danger">*</span></label></br>
                                 <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="1">
                                 <label for="Ya">Ya</label>
                                 <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="0">
                                 <label for="Tidak">Tidak</label><br></br>
 
-                                <label for="disabilitas" class="form-label">Disabilitas</label></br>
+                                <label for="disabilitas" class="form-label">Disabilitas<span class="text-danger">*</span></label></br>
                                 <input type="radio" id="disabilitas" name="disabilitas" value="1">
                                 <label for="Ya">Ya</label>
                                 <input type="radio" id="disabilitas" name="disabilitas" value="0">

@@ -30,6 +30,7 @@ class CreateDataWargasTable extends Migration
             $table->string('kecamatan');
             $table->string('kelurahan');
             $table->string('kode_pos');
+            $table->longText('alamat_sebelumnya')->nullable();
             $table->longText('alamat');
             $table->string('rt');
             $table->string('rw');
@@ -38,11 +39,9 @@ class CreateDataWargasTable extends Migration
             $table->enum('status_perkawinan', ['0', '1', '2', '3']);
             $table->enum('status_dalam_keluarga', ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
             $table->enum('kewarganegaraan', ['WNI', 'WNA']);
+            //Foto KTP dan KK
             $table->string('foto_kk');
-            //Dokumentasi Imigrasi
-            $table->string('no_paspor')->nullable();
-            $table->string('no_kitas_kitap')->nullable();
-            $table->string('foto_paspor')->nullable();
+            $table->string('foto_ktp')->nullable();
             //Data Orangtua
             $table->string('nama_ayah');
             $table->string('pekerjaan_ayah');
@@ -51,6 +50,7 @@ class CreateDataWargasTable extends Migration
             $table->enum('warga_pindahan', ['0', '1'])->default('0');
             $table->enum('bantuan_pemerintah', ['0', '1'])->default('0');
             $table->enum('disabilitas', ['0', '1'])->default('0');
+            $table->enum('verifikasi', ['0', '1'])->default('0');
             $table->timestamps();
         });
     }

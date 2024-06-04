@@ -16,3 +16,6 @@
 
 <!-- Template Main CSS File -->
 <link href="{{ asset('assets/css/stylelandingpage.css') }}" rel="stylesheet">
+
+<!-- Custom CSS -->
+@stack('styles')

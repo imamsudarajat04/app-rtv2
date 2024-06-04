@@ -9,11 +9,8 @@ use App\Data_warga;
 use App\GlobalSetting;
 use App\FooterSettings;
 use App\HeaderSettings;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\DataWargaRequest;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Redirect;
+use App\Http\Requests\PendaftaranWargaLandingPageRequest;
 
 class PendaftaranWargaController extends Controller
 {
@@ -39,22 +36,12 @@ class PendaftaranWargaController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(DataWargaRequest $request)
+    public function store(PendaftaranWargaLandingPageRequest $request)
     {
         $data = $request->all();
         $cek = Data_warga::where('nik', $data['nik'])->first();
@@ -63,16 +50,15 @@ class PendaftaranWargaController extends Controller
             return redirect()->route('pendaftaran-warga.index')->with('error', 'Data Sudah Ada');
         }else{
             $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
-
-            if($request->hasFile('foto_paspor')){
-                $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
-            }
+            $data['foto_ktp'] = $request->file('foto_ktp')->store('datawarga/foto_ktp', 'public');
 
             $tanggal = new DateTime($request->tanggal_lahir);
             $today = new DateTime('today');
             $y = $today->diff($tanggal)->y;
 
-            if($y >= 5 && $y <= 11){
+            if($y >= 1 && $y <= 5) {
+                $data['kategori_usia'] = 'Balita';
+            }elseif($y >= 5 && $y <= 11){
                 $data['kategori_usia'] = 'Anak-anak';
             }elseif($y >= 12 && $y <= 25){
                 $data['kategori_usia'] = 'Remaja';
@@ -87,50 +73,5 @@ class PendaftaranWargaController extends Controller
             Data_warga::create($data);
             return redirect()->route('pendaftaran-warga.index')->with('success', 'Data Warga berhasil ditambahkan');
         }
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

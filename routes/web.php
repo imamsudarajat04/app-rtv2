@@ -8,7 +8,7 @@ Route::get('/login', "LoginController@index")->name('login');
 Route::post('/postLogin', "LoginController@postLogin")->name('postLogin.store');
 Route::get('/logout', "LoginController@logout")->name('logout.destroy');
 
-Route::resource('/pendaftaran-warga', "User\PendaftaranWargaController");
+Route::resource('/pendaftaran-warga', "User\PendaftaranWargaController")->except(['create','show', 'edit', 'update', 'destroy']);
 
 //Kabupaten get id provinsi
 Route::get('getKabupaten/{id}', 'Admin\DataWargaController@getKabupaten');
