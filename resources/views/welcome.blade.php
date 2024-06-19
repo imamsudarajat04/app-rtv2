@@ -82,6 +82,7 @@
             </div>
           </div>
 
+        {{-- Grid Start --}}
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
@@ -157,6 +158,7 @@
           </div>
 
         </div>
+        {{-- Grid End --}}
   
         </div>
       </section><!-- End Features Section -->
