@@ -59,7 +59,7 @@
   
           <div class="row content">
             <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/profile-bu-lurah.jpg" class="img-fluid" alt="Foto Lurah">
+              <img src="{!! asset('assets/img/profile-bu-lurah.jpg') !!}" class="img-fluid" alt="Foto Lurah">
             </div>
             <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
               <h3>Tugas Pokok dan Fungsi Lurah </h3>
@@ -77,7 +77,7 @@
           <div class="row content justify-content-center mb-5">
             <div class="col-md-5 order-1 order-md-2" data-aos="fade-center">
               <div class="">
-                <img src="assets/img/PANRB.jpg" class="img-fluid" alt="Profile Ketua Forum">
+                <img src="{!! asset('assets/img/PANRB.jpg') !!}" class="img-fluid" alt="Profile Ketua Forum">
               </div>
             </div>
           </div>
@@ -87,73 +87,73 @@
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/PembuatanKK.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/PembuatanKK.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/PembuatanKTP.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/PembuatanKTP.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/PengurusanIMB.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/PengurusanIMB.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/PengurusanTanah.png" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/PengurusanTanah.png') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratKeteranganAhliWaris.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratKeteranganAhliWaris.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratKeteranganDomisiliUsaha.png" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratKeteranganDomisiliUsaha.png') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratKeteranganLain-Lain.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratKeteranganLain-Lain.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratKeteranganUsaha.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratKeteranganUsaha.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratPengantarKematian.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratPengantarKematian.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratPengantarNikah.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratPengantarNikah.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratPindahDatang.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratPindahDatang.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/document/SuratPindahKeluar.jpg" class="img-fluid" alt="">
+              <img src="{!! asset('assets/img/document/SuratPindahKeluar.jpg') !!}" class="img-fluid" alt="">
             </div>
           </div>
 
