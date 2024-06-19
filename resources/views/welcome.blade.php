@@ -59,14 +59,10 @@
   
           <div class="row content">
             <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/profile-lurah.jpg" class="img-fluid" alt="Foto Lurah">
+              <img src="assets/img/profile-bu-lurah.jpg" class="img-fluid" alt="Foto Lurah">
             </div>
             <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
               <h3>Tugas Pokok dan Fungsi Lurah </h3>
-              {{-- <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p> --}}
               <ul>
                 <li><i class="bi bi-check"></i> Melaksanakan kordinasi pelaksanan, perencanaan, pengawasan pengendalian dibidang pemeliharaan ketertiban umum, bidang penegakan peraturan perundang undangan, bidang pelayanan umum masyarakat, bidang sarana dan prasarana pasilitas umum.</li>
                 <li><i class="bi bi-check"></i> Melaksanakan pembinaan dan pengawasan pelaksanaan tugas pemerintah diwilayah kerja dan pelaksanaan administrasi ketatausahaan kelurahan.</li>
@@ -78,48 +74,185 @@
             </div>
           </div>
   
-          <div class="row content">
-            <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-              <img src="assets/img/profile-ketua-forum.jpg" class="img-fluid" alt="Profile Ketua Forum">
-            </div>
-            <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-              <h3>Fungsi dan Tugas Forum RT/RW</h3>
-              <p>Peran Forum RT/RW ini pada dasarnya merupakan perpanjangan tangan dari kecamatan dengan fungsinya, antara lain :</p>
-              <ul>
-                <li><i class="bi bi-check"></i> Sebagai wadah silaturahmi sekaligus menguatkan tugas dan fungsi forum RT/RW di tiap-tiap Kelurahan.</li>
-                <li><i class="bi bi-check"></i> Sebagai sarana penyampaian aspirasi dalam penyelesaian permasalahan.</li>
-                <li><i class="bi bi-check"></i> Sebagai wadah dalam penyeragaman sistem pembinaan untuk mendukung pelaksanaan program kegiatan kecamatan agar lebih terarah.</li>
-              </ul>
+          <div class="row content justify-content-center mb-5">
+            <div class="col-md-5 order-1 order-md-2" data-aos="fade-center">
+              <div class="">
+                <img src="assets/img/PANRB.jpg" class="img-fluid" alt="Profile Ketua Forum">
+              </div>
             </div>
           </div>
-  
-          <div class="row content">
-            <div class="col-md-5" data-aos="fade-right">
-              <img src="assets/img/profile-jojo.jpg" class="img-fluid" alt="Profile Jojok Sutrisno">
-            </div>
-            <div class="col-md-7 pt-5" data-aos="fade-left">
-              <h3>Data diri Jojok Sutrisno</h3>
-              <p>Keterangan :</p>
-              <ul>
-                <li><i class="bi bi-check"></i> Relawan sebagai Pembina dan Penilai dlm bidang Sekolah Adywiyata tingkat SD,SMP,SLTA baik tingkat kota maupun tingkat Provinsi.</li>
-                <li><i class="bi bi-check"></i> Relawan sebagai anggota pd prapantau dlm bidang Adipura tingkat kota.</li>
-                <li><i class="bi bi-check"></i> Relawan sebagai ketua dua pd Forum Kota Sehat tingkat kota.</li>
-                <li><i class="bi bi-check"></i> Relawan sebagai diPokja Penelitian dan Pengembangan pd Forum Koordinasi BPDAS Provinsi Kepri.</li>
-              </ul>
-            </div>
-          </div>
-  
-          <div class="row content">
-            <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-              <img src="assets/img/profile-ketua-karang-taruna.jpg" class="img-fluid" alt="Profile Ketua Karang Taruna">
-            </div>
-            <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-              <h3>Profil Ketua Karang Taruna</h3>
-              <p>
-                Karang Taruna adalah organisasi sosial kemasyarakatan sebagai wadah dan sarana pengembangan setiap anggota masyarakat yang tumbuh dan berkembang atas dasar kesadaran dan tanggung jawab sosial dari, oleh dan untuk masyarakat terutama generasi muda di wilayah desa/kelurahan terutama bergerak dibidang usaha kesejahteraan sosial.
-              </p>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/PembuatanKK.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
             </div>
           </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/PembuatanKTP.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/PengurusanIMB.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/PengurusanTanah.png" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratKeteranganAhliWaris.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratKeteranganDomisiliUsaha.png" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratKeteranganLain-Lain.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratKeteranganUsaha.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratPengantarKematian.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratPengantarNikah.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratPindahDatang.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-2 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/document/SuratPindahKeluar.jpg" class="img-fluid" alt="">
+              {{-- <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+        </div>
   
         </div>
       </section><!-- End Features Section -->
