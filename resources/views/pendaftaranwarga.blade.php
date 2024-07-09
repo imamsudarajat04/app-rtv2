@@ -1,12 +1,6 @@
 @extends('layouts.master')
 @section('title', 'Pendaftaran Warga')
 
-@push('styles')
-    {{-- <style>
-
-    </style> --}}
-@endpush
-
 @section('content')
     <!-- ======= Pendaftaran Warga ======= -->
     <section id="pendaftaran-warga" class="features" data-aos="fade-up">
@@ -22,7 +16,7 @@
                 <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
 
                     <!-- Alert Validasi Error -->
-                    @if ($errors->any())
+                    {{-- @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul class="my-0">
                                 @foreach ($errors->all() as $error)
@@ -30,7 +24,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                    @endif
+                    @endif --}}
 
                     <!-- Alert Berhasil -->
                     @if($message = Session::get('success'))
@@ -41,168 +35,354 @@
                     @endif
 
                     <!-- Alert Error -->
-                    @if($message = Session::get('error'))
+                    {{-- @if($message = Session::get('error'))
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                             {{ $message }}
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-                    @endif
+                    @endif --}}
 
                     <div class="card">
                         <div class="card-body bg-light">
                             <form class="form" action="{{ route('pendaftaran-warga.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <label for="Nomor NIK" class="form-label">Nomor Kartu Keluarga<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="no_kk" id="no_kk" placeholder="Masukkan Nomor Kartu Keluarga.." value="{{ old('no_kk') }}"></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Nomor NIK" class="form-label">Nomor Kartu Keluarga<span class="text-danger">*</span></label>
+                                    <input class="form-control {{ $errors->has('no_kk') ? ' is-invalid' : '' }}" type="text" name="no_kk" id="no_kk" placeholder="Masukkan Nomor Kartu Keluarga.." value="{{ old('no_kk') }}">
+    
+                                    @error('no_kk')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="Nomor Induk Kependudukan" class="form-label">Nomor Induk Kependudukan<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="nik" id="nik" placeholder="Masukkan Nomor Induk Kependudukan.." value="{{ old('nik') }}"></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Nomor Induk Kependudukan" class="form-label">Nomor Induk Kependudukan<span class="text-danger">*</span></label>
+                                    <input class="form-control {{ $errors->has('nik') ? ' is-invalid' : '' }}" type="text" name="nik" id="nik" placeholder="Masukkan Nomor Induk Kependudukan.." value="{{ old('nik') }}">
 
-                                <label for="Nama Lengkap" class="form-label">Nama Lengkap<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Masukkan Nama Lengkap.." value="{{ old('nama_lengkap') }}"></br>
+                                    @error('nik')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="Nomor Handphone" class="form-label">Nomor Handphone<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="no_telp" id="no_telp" placeholder="Masukkan Nomor Handphone.." value="{{ old('no_telp') }}"></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Nama Lengkap" class="form-label">Nama Lengkap<span class="text-danger">*</span></label>
+                                    <input class="form-control {{ $errors->has('nama_lengkap') ? ' is-invalid' : '' }}" type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Masukkan Nama Lengkap.." value="{{ old('nama_lengkap') }}">
 
-                                <label for="Tempat Lahir" class="form-label">Tempat Lahir<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="tempat_lahir" id="tempat_lahir" placeholder="Masukkan Tempat Lahir.." value="{{ old('tempat_lahir') }}"></br>
+                                    @error('nama_lengkap')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="Tanggal Lahir" class="form-label">Tanggal Lahir<span class="text-danger">*</span></label>
-                                <input class="form-control" type="date" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir') }}"></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Nomor Handphone" class="form-label">Nomor Handphone<span class="text-danger">*</span></label>
+                                    <input class="form-control {{ $errors->has('no_telp') ? ' is-invalid' : '' }}" type="text" name="no_telp" id="no_telp" placeholder="Masukkan Nomor Handphone.." value="{{ old('no_telp') }}">
 
-                                <label for="Jenis Kelamin" class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
-                                <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
-                                    <option value="" selected disabled>Pilih Jenis Kelamin</option>
-                                    <option value="Laki-laki">Laki-laki</option>
-                                    <option value="Perempuan">Perempuan</option>
-                                </select></br>
+                                    @error('no_telp')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="Tanggal Lahir" class="form-label">Agama<span class="text-danger">*</span></label>
-                                <select class="form-control" name="religions_id" id="religions_id">
-                                    <option value="" selected disabled>Pilih Agama</option>
-                                    @foreach ($religions as $religion)
-                                        <option value="{{ $religion->id }}">{{ $religion->name }}</option>
-                                    @endforeach
-                                </select></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Tempat Lahir" class="form-label">Tempat Lahir<span class="text-danger">*</span></label>
+                                    <input class="form-control {{ $errors->has('tempat_lahir') ? ' is-invalid' : '' }}" type="text" name="tempat_lahir" id="tempat_lahir" placeholder="Masukkan Tempat Lahir.." value="{{ old('tempat_lahir') }}">
 
-                                <label for="Tanggal Lahir" class="form-label">Provinsi<span class="text-danger">*</span></label>
-                                <select class="form-control" name="provinsi" id="provinsi">
-                                    <option value="" selected disabled>Pilih Provinsi</option>
-                                    @foreach ($provinces as $province)
-                                        <option value="{{ $province->id }}">{{ $province->nama_bps }}</option>
-                                    @endforeach
-                                </select></br>
+                                    @error('tempat_lahir')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="kabupaten" class="form-label">Kabupaten<span class="text-danger">*</span></label>
-                                <select class="form-control" name="kabupaten" id="kabupaten">
-                                    <option value="0" selected disabled>Pilih Kabupaten / Kota</option>
-                                </select></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Tanggal Lahir" class="form-label">Tanggal Lahir<span class="text-danger">*</span></label>
+                                    <input class="form-control {{ $errors->has('tanggal_lahir') ? ' is-invalid' : '' }}" type="date" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir') }}">
 
-                                <label for="kecamatan" class="form-label">Kecamatan<span class="text-danger">*</span></label>
-                                <select class="form-control" name="kecamatan" id="kecamatan">
-                                    <option value="0" selected disabled>Pilih Kecamatan</option>
-                                </select></br>
+                                    @error('tanggal_lahir')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="kelurahan" class="form-label">Kelurahan<span class="text-danger">*</span></label>
-                                <select class="form-control" name="kelurahan" id="kelurahan">
-                                    <option value="0" selected disabled>Pilih Kelurahan</option>
-                                </select></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Jenis Kelamin" class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
+                                    <select class="form-control {{ $errors->has('jenis_kelamin') ? ' is-invalid' : '' }}" name="jenis_kelamin" id="jenis_kelamin">
+                                        <option value="" selected disabled>Pilih Jenis Kelamin</option>
+                                        <option value="Laki-laki">Laki-laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
 
-                                <label for="kodePos" class="form-label">Kode Pos<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="kode_pos" id="kode_pos" placeholder="Masukkan Kode Pos.." value="{{ old('kode_pos') }}"></br>
+                                    @error('jenis_kelamin')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="alamatLengkap" class="form-label">Alamat Lengkap<span class="text-danger">*</span></label>
-                                <textarea class="form-control" name="alamat" id="alamat" placeholder="Masukkan Alamat Lengkap..">{{ old('alamat') }}</textarea></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Tanggal Lahir" class="form-label">Agama<span class="text-danger">*</span></label>
+                                    <select class="form-control {{ $errors->has('religions_id') ? ' is-invalid' : '' }}" name="religions_id" id="religions_id">
+                                        <option value="" selected disabled>Pilih Agama</option>
+                                        @foreach ($religions as $religion)
+                                            <option value="{{ $religion->id }}">{{ $religion->name }}</option>
+                                        @endforeach
+                                    </select>
 
-                                <label for="alamatSebelumnya" class="form-label">Alamat Sebelumnya<span class="text-danger">*</span></label>
-                                <textarea class="form-control" name="alamat_sebelumnya" id="alamat_sebelumnya" placeholder="Masukkan Alamat Sebelumnya..">{{ old('alamat_sebelumnya') }}</textarea></br>
+                                    @error('religions_id')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="rt" class="form-label">RT<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="rt" id="rt" placeholder="Masukkan RT.." value="{{ old('rt') }}"></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="Tanggal Lahir" class="form-label">Provinsi<span class="text-danger">*</span></label>
+                                    <select class="form-control {{ $errors->has('provinsi') ? ' is-invalid' : '' }}" name="provinsi" id="provinsi">
+                                        <option value="" selected disabled>Pilih Provinsi</option>
+                                        @foreach ($provinces as $province)
+                                            <option value="{{ $province->id }}">{{ $province->nama_bps }}</option>
+                                        @endforeach
+                                    </select>
 
-                                <label for="rw" class="form-label">RW<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="rw" id="rw" placeholder="Masukkan RW.." value="{{ old('rw') }}"></br>
+                                    @error('provinsi')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="pendidikan" class="form-label">Pendidikan<span class="text-danger">*</span></label>
-                                <select class="form-select" name="pendidikan">
-                                    <option value="" selected disabled>Pilih Pendidikan</option>
-                                    <option value="SD">SD</option>
-                                    <option value="SMP">SMP</option>
-                                    <option value="SMA">SMP</option>
-                                    <option value="SMK">SMK</option>
-                                    <option value="D3">D3</option>
-                                    <option value="S1">S1</option>
-                                    <option value="S2">S2</option>
-                                </select><br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="kabupaten" class="form-label">Kabupaten<span class="text-danger">*</span></label>
+                                    <select class="form-control {{ $errors->has('kabupaten') ? ' is-invalid' : '' }}" name="kabupaten" id="kabupaten">
+                                        <option value="0" selected disabled>Pilih Kabupaten / Kota</option>
+                                    </select>
 
-                                <label for="jenisPekerjaan" class="form-label">Jenis Pekerjaan<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="jenis_pekerjaan" id="jenis_pekerjaan" placeholder="Masukkan Jenis Pekerjaan.." value="{{ old('jenis_pekerjaan') }}"></br>
+                                    @error('kabupaten')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="statusPerkawinan" class="form-label">Status Perkawinan<span class="text-danger">*</span></label>
-                                <select class="form-select" name="status_perkawinan" id="status_perkawinan">
-                                    <option value="" selected disabled>Pilih Status Perkawinan</option>
-                                    <option value="0">Belum Menikah</option>
-                                    <option value="1">Menikah</option>
-                                    <option value="2">Cerai Hidup</option>
-                                    <option value="3">Cerai Mati</option>
-                                </select></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="kecamatan" class="form-label">Kecamatan<span class="text-danger">*</span></label>
+                                    <select class="form-control {{ $errors->has('kecamatan') ? ' is-invalid' : '' }}" name="kecamatan" id="kecamatan">
+                                        <option value="0" selected disabled>Pilih Kecamatan</option>
+                                    </select>
 
-                                <label for="statusDalamKeluarga" class="form-label">Status Dalam Keluarga<span class="text-danger">*</span></label>
-                                <select class="form-select" name="status_dalam_keluarga" id="status_dalam_keluarga">
-                                    <option value="" selected disabled>Pilih Status Dalam Keluarga</option>
-                                    <option value="0">Kepala Keluarga</option>
-                                    <option value="1">Istri</option>
-                                    <option value="2">Anak</option>
-                                    <option value="3">Menantu</option>
-                                    <option value="4">Cucu</option>
-                                    <option value="5">Orang Tua</option>
-                                    <option value="6">Mertua</option>
-                                    <option value="7">Keluarga Lain</option>
-                                    <option value="8">Pembantu</option>
-                                    <option value="9">Lainnya</option>
-                                </select></br>
+                                    @error('kecamatan')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span class="text-danger">*</span></label>
-                                <select class="form-select" name="kewarganegaraan" id="kewarganegaraan">
-                                    <option value="WNI">Warga Negara Indonesia</option>
-                                    <option value="WNA">Warga Negara Asing</option>
-                                </select></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="kelurahan" class="form-label">Kelurahan<span class="text-danger">*</span></label>
+                                    <select class="form-control {{ $errors->has('kelurahan') ? ' is-invalid' : '' }}" name="kelurahan" id="kelurahan">
+                                        <option value="0" selected disabled>Pilih Kelurahan</option>
+                                    </select>
 
-                                <label for="fotoKK" class="form-label">Foto Kartu Keluarga<span class="text-danger">*</span></label>
-                                <input type="file" class="form-control" name="foto_kk" id="customFile1" placeholder="Masukkan Foto KK.."></br>
+                                    @error('kelurahan')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="fotoKTP" class="form-label">Foto KTP<span class="text-danger">*</span></label>
-                                <input type="file" class="form-control" name="foto_ktp" id="customFile2" placeholder="Masukkan Foto KTP.."></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="kodePos" class="form-label">Kode Pos<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('kode_pos') ? ' is-invalid' : '' }}" name="kode_pos" id="kode_pos" placeholder="Masukkan Kode Pos.." value="{{ old('kode_pos') }}">
 
-                                <label for="namaAyah" class="form-label">Nama Ayah<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="nama_ayah" id="nama_ayah" placeholder="Masukkan Nama Ayah.." value="{{ old('nama_ayah') }}"></br>
+                                    @error('kode_pos')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="pekerjaanAyah" class="form-label">Pekerjaan Ayah<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="pekerjaan_ayah" id="pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah.." value="{{ old('pekerjaan_ayah') }}"></br>
-                                
-                                <label for="namaIbu" class="form-label">Nama Ibu<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="nama_ibu" id="nama_ibu" placeholder="Masukkan Nama Ibu.." value="{{ old('nama_ibu') }}"></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="alamatLengkap" class="form-label">Alamat Lengkap<span class="text-danger">*</span></label>
+                                    <textarea class="form-control {{ $errors->has('alamat') ? ' is-invalid' : '' }}" name="alamat" id="alamat" placeholder="Masukkan Alamat Lengkap..">{{ old('alamat') }}</textarea>
 
-                                <label for="pekerjaanIbu" class="form-label">Pekerjaan Ibu<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaan_ibu" placeholder="Masukkan Pekerjaan Ibu.." value="{{ old('pekerjaan_ibu') }}"></br>
+                                    @error('alamat')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="wargaPindahan" class="form-label">Warga Pindahan<span class="text-danger">*</span></label></br>
-                                <input type="radio" id="warga_pindahan" name="warga_pindahan" value="1">
-                                <label for="Ya">Ya</label>
-                                <input type="radio" id="warga_pindahan" name="warga_pindahan" value="0">
-                                <label for="Tidak">Tidak</label><br></br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="alamatSebelumnya" class="form-label">Alamat Sebelumnya<span class="text-danger">*</span></label>
+                                    <textarea class="form-control {{ $errors->has('alamat_sebelumnya') ? ' is-invalid' : '' }}" name="alamat_sebelumnya" id="alamat_sebelumnya" placeholder="Masukkan Alamat Sebelumnya..">{{ old('alamat_sebelumnya') }}</textarea>
 
-                                <label for="bantuanPemerintah" class="form-label">Bantuan Pemerintah<span class="text-danger">*</span></label></br>
-                                <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="1">
-                                <label for="Ya">Ya</label>
-                                <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="0">
-                                <label for="Tidak">Tidak</label><br></br>
+                                    @error('alamat_sebelumnya')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                                <label for="disabilitas" class="form-label">Disabilitas<span class="text-danger">*</span></label></br>
-                                <input type="radio" id="disabilitas" name="disabilitas" value="1">
-                                <label for="Ya">Ya</label>
-                                <input type="radio" id="disabilitas" name="disabilitas" value="0">
-                                <label for="Tidak">Tidak</label><br>
+                                <div class="col-lg-12 mb-2">
+                                    <label for="rt" class="form-label">RT<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('rt') ? ' is-invalid' : '' }}" name="rt" id="rt" placeholder="Masukkan RT.." value="{{ old('rt') }}">
+
+                                    @error('rt')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="rw" class="form-label">RW<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('rw') ? ' is-invalid' : '' }}" name="rw" id="rw" placeholder="Masukkan RW.." value="{{ old('rw') }}">
+
+                                    @error('rw')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="pendidikan" class="form-label">Pendidikan<span class="text-danger">*</span></label>
+                                    <select class="form-select {{ $errors->has('email') ? ' is-invalid' : '' }}" name="pendidikan">
+                                        <option value="" selected disabled>Pilih Pendidikan</option>
+                                        <option value="SD">SD</option>
+                                        <option value="SMP">SMP</option>
+                                        <option value="SMA">SMP</option>
+                                        <option value="SMK">SMK</option>
+                                        <option value="D3">D3</option>
+                                        <option value="S1">S1</option>
+                                        <option value="S2">S2</option>
+                                    </select>
+
+                                    @error('pendidikan')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="jenisPekerjaan" class="form-label">Jenis Pekerjaan<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('jenis_pekerjaan') ? ' is-invalid' : '' }}" name="jenis_pekerjaan" id="jenis_pekerjaan" placeholder="Masukkan Jenis Pekerjaan.." value="{{ old('jenis_pekerjaan') }}">
+
+                                    @error('jenis_pekerjaan')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="statusPerkawinan" class="form-label">Status Perkawinan<span class="text-danger">*</span></label>
+                                    <select class="form-select {{ $errors->has('status_perkawinan') ? ' is-invalid' : '' }}" name="status_perkawinan" id="status_perkawinan">
+                                        <option value="" selected disabled>Pilih Status Perkawinan</option>
+                                        <option value="0">Belum Menikah</option>
+                                        <option value="1">Menikah</option>
+                                        <option value="2">Cerai Hidup</option>
+                                        <option value="3">Cerai Mati</option>
+                                    </select>
+
+                                    @error('status_perkawinan')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="statusDalamKeluarga" class="form-label">Status Dalam Keluarga<span class="text-danger">*</span></label>
+                                    <select class="form-select {{ $errors->has('status_dalam_keluarga') ? ' is-invalid' : '' }}" name="status_dalam_keluarga" id="status_dalam_keluarga">
+                                        <option value="" selected disabled>Pilih Status Dalam Keluarga</option>
+                                        <option value="0">Kepala Keluarga</option>
+                                        <option value="1">Istri</option>
+                                        <option value="2">Anak</option>
+                                        <option value="3">Menantu</option>
+                                        <option value="4">Cucu</option>
+                                        <option value="5">Orang Tua</option>
+                                        <option value="6">Mertua</option>
+                                        <option value="7">Keluarga Lain</option>
+                                        <option value="8">Pembantu</option>
+                                        <option value="9">Lainnya</option>
+                                    </select>
+
+                                    @error('status_dalam_keluarga')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span class="text-danger">*</span></label>
+                                    <select class="form-select {{ $errors->has('kewarganegaraan') ? ' is-invalid' : '' }}" name="kewarganegaraan" id="kewarganegaraan">
+                                        <option value="WNI">Warga Negara Indonesia</option>
+                                        <option value="WNA">Warga Negara Asing</option>
+                                    </select>
+
+                                    @error('kewarganegaraan')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="fotoKK" class="form-label">Foto Kartu Keluarga<span class="text-danger">*</span></label>
+                                    <input type="file" class="form-control {{ $errors->has('foto_kk') ? ' is-invalid' : '' }}" name="foto_kk" id="customFile1" placeholder="Masukkan Foto KK..">
+
+                                    @error('foto_kk')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="fotoKTP" class="form-label">Foto KTP<span class="text-danger">*</span></label>
+                                    <input type="file" class="form-control {{ $errors->has('foto_ktp') ? ' is-invalid' : '' }}" name="foto_ktp" id="customFile2" placeholder="Masukkan Foto KTP..">
+
+                                    @error('foto_ktp')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="namaAyah" class="form-label">Nama Ayah<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('nama_ayah') ? ' is-invalid' : '' }}" name="nama_ayah" id="nama_ayah" placeholder="Masukkan Nama Ayah.." value="{{ old('nama_ayah') }}">
+
+                                    @error('nama_ayah')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="pekerjaanAyah" class="form-label">Pekerjaan Ayah<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('pekerjaan_ayah') ? ' is-invalid' : '' }}" name="pekerjaan_ayah" id="pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah.." value="{{ old('pekerjaan_ayah') }}">
+
+                                    @error('pekerjaan_ayah')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="namaIbu" class="form-label">Nama Ibu<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('nama_ibu') ? ' is-invalid' : '' }}" name="nama_ibu" id="nama_ibu" placeholder="Masukkan Nama Ibu.." value="{{ old('nama_ibu') }}">
+
+                                    @error('nama_ibu')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="pekerjaanIbu" class="form-label">Pekerjaan Ibu<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control {{ $errors->has('pekerjaan_ibu') ? ' is-invalid' : '' }}" name="pekerjaan_ibu" id="pekerjaan_ibu" placeholder="Masukkan Pekerjaan Ibu.." value="{{ old('pekerjaan_ibu') }}">
+                                    
+                                    @error('pekerjaan_ibu')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="wargaPindahan" class="form-label">Warga Pindahan<span class="text-danger">*</span></label></br>
+                                    <input type="radio" id="warga_pindahan" name="warga_pindahan" value="1">
+                                    <label for="Ya">Ya</label>
+                                    <input type="radio" id="warga_pindahan" name="warga_pindahan" value="0">
+                                    <label for="Tidak">Tidak</label>
+
+                                    @error('warga_pindahan')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="bantuanPemerintah" class="form-label">Bantuan Pemerintah<span class="text-danger">*</span></label></br>
+                                    <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="1">
+                                    <label for="Ya">Ya</label>
+                                    <input type="radio" id="bantuan_pemerintah" name="bantuan_pemerintah" value="0">
+                                    <label for="Tidak">Tidak</label>
+
+                                    @error('bantuan_pemerintah')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12 mb-2">
+                                    <label for="disabilitas" class="form-label">Disabilitas<span class="text-danger">*</span></label></br>
+                                    <input type="radio" id="disabilitas" name="disabilitas" value="1">
+                                    <label for="Ya">Ya</label>
+                                    <input type="radio" id="disabilitas" name="disabilitas" value="0">
+                                    <label for="Tidak">Tidak</label>
+
+                                    @error('disabilitas')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block">Simpan</button>
