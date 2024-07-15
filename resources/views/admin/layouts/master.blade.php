@@ -33,7 +33,7 @@
   <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
   <script src="{{ asset('assets/vendor/echarts/echarts.min.js') }}"></script>
   
-  <script type="text/javascript" src="{{ asset('assets/vendor/DataTables/datatables.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('assets/vendor/datatables/datatables.min.js') }}"></script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
