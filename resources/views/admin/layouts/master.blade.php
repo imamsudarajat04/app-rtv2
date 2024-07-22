@@ -15,7 +15,8 @@
     @include('admin.layouts.sidebar')
   <!-- End Sidebar-->
 
-  <main id="main" class="main">
+  <main id="main" class="main"> 
+    {{-- create div container --}}
     @yield('content')
   </main><!-- End #main -->
 

@@ -24,6 +24,7 @@ class Data_warga extends Model
         'kelurahan',
         'kode_pos',
         'alamat',
+        'alamat_sebelumnya',
         'rt',
         'rw',
         'pendidikan',

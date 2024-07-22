@@ -134,6 +134,11 @@
                         <textarea class="form-control" name="alamat" id="alamat" placeholder="Masukkan Alamat Lengkap.." required>{{ old('alamat') }}</textarea>
                     </div>
 
+                    <div class="col-12">
+                        <label for="alamat_sebelumnya" class="form-label">Alamat Sebelumnya</label>
+                        <textarea class="form-control" name="alamat_sebelumnya" id="alamat_sebelumnya" placeholder="Masukkan Alamat Sebelumnya.." required>{{ old('alamat') }}</textarea>
+                    </div>
+
                     <div class="col-6">
                         <label for="rt" class="form-label">RT</label>
                         <input type="text" class="form-control" name="rt" id="rt" placeholder="Masukkan RT.." value="{{ old('rt') }}" required>
@@ -195,19 +200,9 @@
                         <input type="file" class="form-control" name="foto_kk" id="customFile1" placeholder="Masukkan Foto KK.." required>
                     </div>
 
-                    <div class="col-6">
-                        <label for="noPaspor" class="form-label">Nomor Paspor</label>
-                        <input type="text" class="form-control" name="no_paspor" id="no_paspor" placeholder="Masukkan Nomor Paspor (Jika Ada) .." value="{{ old('no_paspor') }}">
-                    </div>
-
-                    <div class="col-6">
-                        <label for="noKitasKitap" class="form-label">Nomor Kitas Kitap</label>
-                        <input type="text" class="form-control" name="no_kitas_kitap" id="no_kitas_kitap" placeholder="Masukkan Nomor Kitas Kitap (Jika Ada) .." value="{{ old('no_kitas_kitap') }}">
-                    </div>
-
                     <div class="col-12">
-                        <label for="fotoPaspor" class="form-label">Foto Paspor*</label>
-                        <input type="file" class="form-control" name="foto_paspor" id="customFile2">
+                        <label for="foto_ktp" class="form-label">Foto KTP</label>
+                        <input type="file" class="form-control" name="foto_ktp" id="customFile2">
                     </div>
 
                     <div class="col-6">

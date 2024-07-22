@@ -94,6 +94,12 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="title">Alamat Sebelumnya</div>
+                                <div class="subtitle">{{ $data->alamat_sebelumnya }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="title">RT</div>
                                 <div class="subtitle">{{ $data->rt }}</div>
@@ -121,7 +127,6 @@
                             <div class="col-12 col-md-6">
                                 <div class="title">Status Perkawinan</div>
                                 <div class="subtitle">
-                                    {{-- {{ $data->citaCita }} --}}
                                     @if ($data->status_perkawinan == '0')
                                         Belum Kawin
                                     @elseif ($data->status_perkawinan == '1')
@@ -146,28 +151,6 @@
                                         Warga Negara Indonesia
                                     @elseif ($data->kewarganegaraan == 'WNA')
                                         Warga Negara Asing
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <div class="title">Nomor Paspor</div>
-                                <div class="subtitle">
-                                    @if($data->no_paspor == null)
-                                        -
-                                    @else
-                                        {{ $data->no_paspor }}
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="title">Nomor Kitas / Kitap</div>
-                                <div class="subtitle">
-                                    @if($data->no_kitas_kitap == null)
-                                        -
-                                    @else
-                                        {{ $data->no_kitas_kitap }}
                                     @endif
                                 </div>
                             </div>
@@ -230,10 +213,10 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <div class="title">Foto Paspor</div>
+                                <div class="title">Foto KTP</div>
                                 <div class="banner-image-wrapper">
-                                    @if(!empty($data->foto_paspor))
-                                        <div class="image" style="background-image: url({{ Storage::exists('public/' . $data->foto_paspor) && $data->foto_paspor ? Storage::url($data->foto_paspor) : '' }})"></div>
+                                    @if(!empty($data->foto_ktp))
+                                        <div class="image" style="background-image: url({{ Storage::exists('public/' . $data->foto_ktp) && $data->foto_ktp ? Storage::url($data->foto_ktp) : '' }})"></div>
                                     @else
                                         <div class="subtitle">-</div>
                                     @endif

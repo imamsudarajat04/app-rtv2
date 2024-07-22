@@ -12,28 +12,28 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataAkun.index')) ? '' : 'collapsed' }}" href="{{ route('DataAkun.index') }}">
+        <a class="nav-link {{ (request()->routeIs('DataAkun*')) ? '' : 'collapsed' }}" href="{{ route('DataAkun.index') }}">
           <i class="bi bi-person"></i>
           <span>Data Akun</span>
         </a>
       </li><!-- Data Akun  -->
 
       <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataRT.index')) ? '' : 'collapsed' }}" href="{{ route('DataRT.index') }}">
+        <a class="nav-link {{ (request()->routeIs('DataRT*')) ? '' : 'collapsed' }}" href="{{ route('DataRT.index') }}">
           <i class="bi bi-person-badge-fill"></i>
           <span>Data RT</span>
         </a>
       </li><!-- Data RT -->
 
       <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataRW.index') }}">
+        <a class="nav-link {{ (request()->routeIs('DataRW*')) ? '' : 'collapsed' }}" href="{{ route('DataRW.index') }}">
           <i class="bi bi-people-fill"></i>
           <span>Data RW</span>
         </a>
       </li><!-- Data RW -->
 
       <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataWarga.index')) ? '' : 'collapsed' }}" href="{{ route('DataWarga.index') }}">
+        <a class="nav-link {{ (request()->routeIs('DataWarga*')) ? '' : 'collapsed' }}" href="{{ route('DataWarga.index') }}">
           <i class="bi bi-person-lines-fill"></i>
           <span>Data Warga</span>
         </a>

@@ -86,8 +86,8 @@ class DataWargaController extends Controller
         }else{
             $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
 
-            if($request->hasFile('foto_paspor')){
-                $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+            if($request->hasFile('foto_ktp')){
+                $data['foto_ktp'] = $request->file('foto_ktp')->store('datawarga/foto_ktp', 'public');
             }
 
             $tanggal = new DateTime($request->tanggal_lahir);
@@ -202,9 +202,9 @@ class DataWargaController extends Controller
             Storage::delete('public/' . $cek->foto_kk);
             $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
         }
-        if($request->hasFile('foto_paspor')){
-            Storage::delete('public/' . $cek->foto_paspor);
-            $data['foto_paspor'] = $request->file('foto_paspor')->store('datawarga/foto_paspor', 'public');
+        if($request->hasFile('foto_ktp')){
+            Storage::delete('public/' . $cek->foto_ktp);
+            $data['foto_ktp'] = $request->file('foto_ktp')->store('datawarga/foto_ktp', 'public');
         }
 
         $tanggal = new DateTime($request->tanggal_lahir);
@@ -237,7 +237,7 @@ class DataWargaController extends Controller
     {
         $cek = Data_warga::findOrFail($id);
         Storage::delete('public/' . $cek->foto_kk);
-        Storage::delete('public/' . $cek->foto_paspor);
+        Storage::delete('public/' . $cek->foto_ktp);
         $cek->delete();
         
         return response()->json($cek);

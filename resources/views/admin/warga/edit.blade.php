@@ -161,6 +161,11 @@
                         <textarea class="form-control" name="alamat" id="alamat" placeholder="Masukkan Alamat Lengkap.." required>{{ old('alamat', $data->alamat) }}</textarea>
                     </div>
 
+                    <div class="col-12">
+                        <label for="alamat_sebelumnya" class="form-label">Alamat Sebelumnya</label>
+                        <textarea class="form-control" name="alamat_sebelumnya" id="alamat_sebelumnya" placeholder="Masukkan Alamat Sebelumnya.." required>{{ old('alamat', $data->alamat_sebelumnya) }}</textarea>
+                    </div>
+
                     <div class="col-6">
                         <label for="rt" class="form-label">RT</label>
                         <input type="text" class="form-control" name="rt" id="rt" placeholder="Masukkan RT.." value="{{ old('rt', $data->rt) }}" required>
