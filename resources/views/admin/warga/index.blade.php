@@ -37,13 +37,13 @@
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableWarga">
                     <thead>
                         <tr>
-                            <th width="70px">No</th>
+                            <th style="width: 70px;">No</th>
                             <th>NO KK</th>
                             <th>NIK</th>
                             <th>NAMA LENGKAP</th>
                             <th>RT</th>
                             <th>RW</th>
-                            <th width="150px">Action</th>
+                            <th style="width: 150px;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
