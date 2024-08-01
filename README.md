@@ -21,5 +21,3 @@
 - [ ] Recent Activity / Log Superadmin & RT
 
 <b>Note<b/> : Masih dalam tahap pengembangan dan uji coba !
-
-### Pembuat : Imam Sudarajat
