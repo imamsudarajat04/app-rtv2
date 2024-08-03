@@ -76,7 +76,7 @@
 
                     <div class="col-6">
                         <label for="jenisKelamin" class="form-label">Jenis Kelamin</label>
-                        <select class="form-control" name="jenis_kelamin" id="jenis_kelamin" >
+                        <select class="form-select" name="jenis_kelamin" id="jenis_kelamin" >
                             <option value="" selected disabled>Pilih Jenis Kelamin</option>
                             <option value="Laki-Laki" {{ old('jenis_kelamin') == 'Laki-Laki' ? 'selected' : '' }}>Laki-Laki</option>
                             <option value="Perempuan" {{ old('jenis_kelamin') == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
@@ -85,7 +85,7 @@
 
                     <div class="col-6">
                         <label for="agama" class="form-label">Agama</label>
-                        <select class="form-control" name="religions_id" id="religions_id" >
+                        <select class="form-select" name="religions_id" id="religions_id" >
                             <option value="" selected disabled>Pilih Agama</option>
                             @foreach ($religions as $religion)
                                 <option value="{{ $religion->id }}" {{ old('religions_id') == $religion->id ? 'selected' : '' }}>{{ $religion->name }}</option>
@@ -95,7 +95,7 @@
 
                     <div class="col-6">
                         <label for="provinsi" class="form-label">Provinsi</label>
-                        <select class="form-control" name="provinsi" id="provinsi" data-old="{{ old('provinsi') }}">
+                        <select class="form-select" name="provinsi" id="provinsi" data-old="{{ old('provinsi') }}">
                             <option value="" selected disabled>Pilih Provinsi</option>
                             @foreach ($provinces as $province)
                                 <option value="{{ $province->id }}" {{ old('provinsi') == $province->id ? 'selected' : '' }}>{{ $province->nama_bps }}</option>
@@ -105,21 +105,21 @@
 
                     <div class="col-6">
                         <label for="kabupaten" class="form-label">Kabupaten</label>
-                        <select class="form-control" name="kabupaten" id="kabupaten" data-old="{{ old('kabupaten') }}">
+                        <select class="form-select" name="kabupaten" id="kabupaten" data-old="{{ old('kabupaten') }}">
                             <option value="0" selected disabled>Pilih Kabupaten / Kota</option>
                         </select>
                     </div>
 
                     <div class="col-6">
                         <label for="kecamatan" class="form-label">Kecamatan</label>
-                        <select class="form-control" name="kecamatan" id="kecamatan" data-old="{{ old('kecamatan') }}">
+                        <select class="form-select" name="kecamatan" id="kecamatan" data-old="{{ old('kecamatan') }}">
                             <option value="0" selected disabled>Pilih Kecamatan</option>
                         </select>
                     </div>
 
                     <div class="col-6">
                         <label for="kelurahan" class="form-label">Kelurahan</label>
-                        <select class="form-control" name="kelurahan" id="kelurahan" data-old="{{ old('kelurahan') }}">
+                        <select class="form-select" name="kelurahan" id="kelurahan" data-old="{{ old('kelurahan') }}">
                             <option value="0" selected disabled>Pilih Kelurahan</option>
                         </select>
                     </div>
@@ -161,7 +161,7 @@
 
                     <div class="col-6">
                         <label for="statusPerkawinan" class="form-label">Status Perkawinan</label>
-                        <select class="form-control" name="status_perkawinan" id="status_perkawinan">
+                        <select class="form-select" name="status_perkawinan" id="status_perkawinan">
                             <option value="" selected disabled>Pilih Status Perkawinan</option>
                             <option value="0" {{ old('status_perkawinan') == '0' ? 'selected' : '' }}>Belum Menikah</option>
                             <option value="1" {{ old('status_perkawinan') == '1' ? 'selected' : '' }}>Menikah</option>
@@ -173,7 +173,7 @@
 
                     <div class="col-6">
                         <label for="statusDalamKeluarga" class="form-label">Status Dalam Keluarga</label>
-                        <select class="form-control" name="status_dalam_keluarga" id="status_dalam_keluarga" required>
+                        <select class="form-select" name="status_dalam_keluarga" id="status_dalam_keluarga" required>
                             <option value="" selected disabled>Pilih Status Dalam Keluarga</option>
                             <option value="0" {{ old('status_dalam_keluarga') == '0' ? 'selected' : '' }}>Kepala Keluarga</option>
                             <option value="1" {{ old('status_dalam_keluarga') == '1' ? 'selected' : '' }}>Istri</option>
@@ -191,7 +191,7 @@
 
                     <div class="col-12">
                         <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
-                        <select class="form-control" name="kewarganegaraan" id="kewarganegaraan" required>
+                        <select class="form-select" name="kewarganegaraan" id="kewarganegaraan" required>
                             <option value="WNI" {{ old('kewarganegaraan') == 'WNI' ? 'selected' : '' }}>Warga Negara Indonesia</option>
                             <option value="WNA" {{ old('kewarganegaraan') == 'WNA' ? 'selected' : '' }}>Warga Negara Asing</option>
                         </select>

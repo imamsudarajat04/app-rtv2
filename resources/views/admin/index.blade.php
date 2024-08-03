@@ -220,15 +220,16 @@
                 <h5 class="card-title">Verifikasi Data Warga</h5>
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableWarga">
                     <thead>
-                    <tr>
-                        <th style="width: 70px;">No</th>
-                        <th>NO KK</th>
-                        <th>NIK</th>
-                        <th>NAMA LENGKAP</th>
-                        <th>RT</th>
-                        <th>RW</th>
-                        <th style="width: 150px;">Action</th>
-                    </tr>
+                        <tr>
+                            <th style="width: 70px;">No</th>
+                            <th>NO KK</th>
+                            <th>NIK</th>
+                            <th>NAMA LENGKAP</th>
+                            <th>RT</th>
+                            <th>RW</th>
+                            <th>VERIFIKASI</th>
+                            <th style="width: 150px;">Action</th>
+                        </tr>
                     </thead>
                     <tbody>
 
@@ -242,7 +243,7 @@
 
 @push('customjs')
     <script>
-        var datatable = $('#tableWarga').DataTable({
+        $('#tableWarga').DataTable({
             processing: true,
             serverSide: true,
             ordering: true,
@@ -250,13 +251,14 @@
             order: [
                 [1, 'asc']
             ],
-            columns: [{
-                data: 'DT_RowIndex',
-                name: 'DT_RowIndex',
-                width: '1%',
-                orderable: false,
-                searchable: false
-            },
+            columns: [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex',
+                    width: '1%',
+                    orderable: false,
+                    searchable: false
+                },
                 {
                     data: 'no_kk',
                     name: 'no_kk'
@@ -276,6 +278,10 @@
                 {
                     data: 'rw',
                     name: 'rw',
+                },
+                {
+                  data: 'verification',
+                  name: 'verification'
                 },
                 {
                     data: 'action',

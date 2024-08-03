@@ -38,7 +38,7 @@
                                 <div class="col-lg-12 mb-2">
                                     <label for="Nomor NIK" class="form-label">Nomor Kartu Keluarga<span class="text-danger">*</span></label>
                                     <input class="form-control {{ $errors->has('no_kk') ? ' is-invalid' : '' }}" type="text" name="no_kk" id="no_kk" placeholder="Masukkan Nomor Kartu Keluarga.." value="{{ old('no_kk') }}">
-    
+
                                     @error('no_kk')
                                         <div class="text-danger mt-2">{{ $message }}</div>
                                     @enderror
@@ -93,7 +93,7 @@
                                     <label for="Jenis Kelamin" class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
                                     <select class="form-control {{ $errors->has('jenis_kelamin') ? ' is-invalid' : '' }}" name="jenis_kelamin" id="jenis_kelamin">
                                         <option value="" selected disabled>Pilih Jenis Kelamin</option>
-                                        <option value="Laki-laki">Laki-laki</option>
+                                        <option value="Laki-Laki">Laki-laki</option>
                                         <option value="Perempuan">Perempuan</option>
                                     </select>
 
@@ -331,7 +331,7 @@
                                 <div class="col-lg-12 mb-2">
                                     <label for="pekerjaanIbu" class="form-label">Pekerjaan Ibu<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control {{ $errors->has('pekerjaan_ibu') ? ' is-invalid' : '' }}" name="pekerjaan_ibu" id="pekerjaan_ibu" placeholder="Masukkan Pekerjaan Ibu.." value="{{ old('pekerjaan_ibu') }}">
-                                    
+
                                     @error('pekerjaan_ibu')
                                         <div class="text-danger mt-2">{{ $message }}</div>
                                     @enderror
@@ -413,7 +413,7 @@
                     url: '/getKabupaten/' + ProvinceID,
                     type: "GET",
                     dataType: "json",
-                    success:function(data) {         
+                    success:function(data) {
                         $('select[name="kabupaten"]').empty();
 						$('select[name="kabupaten"]').append('<option value="0">Pilih Kabupaten / Kota</option>');
                         $.each(data, function(key, value) {
@@ -433,7 +433,7 @@
                     url: '/getKecamatan/' + CitiesID,
                     type: "GET",
                     dataType: "json",
-                    success:function(data) {         
+                    success:function(data) {
                         $('select[name="kecamatan"]').empty();
 						$('select[name="kecamatan"]').append('<option value="0">Pilih Kecamatan</option>');
                         $.each(data, function(key, value) {
@@ -453,7 +453,7 @@
                     url: '/getKelurahan/' + WardID,
                     type: "GET",
                     dataType: "json",
-                    success:function(data) {         
+                    success:function(data) {
                         $('select[name="kelurahan"]').empty();
 						$('select[name="kelurahan"]').append('<option value="0">Pilih Kelurahan</option>');
                         $.each(data, function(key, value) {

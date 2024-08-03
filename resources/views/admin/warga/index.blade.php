@@ -43,6 +43,7 @@
                             <th>NAMA LENGKAP</th>
                             <th>RT</th>
                             <th>RW</th>
+                            <th>Verifikasi</th>
                             <th style="width: 150px;">Action</th>
                         </tr>
                     </thead>
@@ -95,6 +96,11 @@
                 {
                     data: 'rw',
                     name: 'rw',
+                },
+                {
+                    data: 'verification',
+                    name: 'verification',
+                    searchable: false,
                 },
                 {
                     data: 'action',

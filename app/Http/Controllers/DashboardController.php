@@ -33,15 +33,19 @@ class DashboardController extends Controller
                 return DataTables::of($query)
                     ->addColumn('action', function ($item) {
                         return '
-                        <a class="btn btn-success" href="' . route('DataWarga.show', $item->id) . '">
-                            <i class="far fa-eye"></i> Detail
-                        </a>
-                        <a class="btn btn-primary" href="' . route('DataWarga.edit', $item->id) . '">
-                            <i class="fas fa-check"></i> Verifikasi
-                        </a>
-                    ';
+                            <a class="btn btn-primary" href="' . route('DataWarga.verification', $item->id) . '">
+                                <i class="fas fa-check"></i> Verifikasi
+                            </a>
+                        ';
                     })
-                    ->rawColumns(['action'])
+                    ->editColumn('verification', function ($item) {
+                        if ($item->verification == '0') {
+                            return '<span class="rounded-pill badge badge-danger">Belum Verifikasi Data</span>';
+                        }else{
+                            return '<span class="rounded-pill badge badge-success">Sudah Verifikasi Data</span>';
+                        }
+                    })
+                    ->rawColumns(['action', 'verification'])
                     ->addIndexColumn()
                     ->make();
             }

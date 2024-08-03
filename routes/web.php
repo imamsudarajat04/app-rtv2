@@ -19,10 +19,10 @@ Route::get('getKecamatan/{id}', 'Admin\DataWargaController@getKecamatan');
 //Kelurahan get id kecamatans
 Route::get('getKelurahan/{id}', 'Admin\DataWargaController@getKelurahan');
 
-//Pengaduan 
+//Pengaduan
 Route::resource('pengaduan-suara', 'User\PengaduanController');
 
-Route::group(['middleware' => ['auth','CekRole:superadmin,rt,rw']], function() {
+Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
     Route::get('/dashboard', "DashboardController@index")->name('dashboard.index');
 
     //Khusus untuk Setting Profile
@@ -62,6 +62,8 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt,rw']], function() {
 
     //Khusus tujuan Data Warga
     Route::resource('/DataWarga', 'Admin\DataWargaController');
+    Route::get('/Verification/DataWarga/{id}', 'Admin\DataWargaController@verification')->name('DataWarga.verification');
+    Route::put('/Verification/DataWarga/{id}', 'Admin\DataWargaController@updateVerification')->name('DataWarga.UpdateVerification');
     Route::get('/DataWarga-export', 'Admin\DataWargaController@export')->name('DataWarga.export');
     Route::get('/DataWarga-exportBalita', 'Admin\DataWargaController@exportBalita')->name('DataWargaBalita.export');
     Route::get('/DataWarga-exportLansia', 'Admin\DataWargaController@exportLansia')->name('DataWargaLansia.export');
@@ -87,7 +89,7 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt,rw']], function() {
     Route::get('/DataWargaRW', 'Rw\RwController@DataWargaRW')->name('DataWargaRW.index');
     Route::get('/DataRTKhususRW', 'Rw\RwController@DataRW')->name('DataKhususRW.index');
     Route::get('/DataWargaPindahanRW', 'Rw\RwController@DataWargaPindahanRW')->name('DataWargaPindahanRW.index');
-    
+
 
 
     //Setting

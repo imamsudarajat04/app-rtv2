@@ -31,7 +31,8 @@ class DataWargaController extends Controller
     public function index(Request $request)
     {
         if (request()->ajax()) {
-            $query = Data_warga::all();
+            $query = Data_warga::where('verification', '1')
+                ->get();
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -47,7 +48,14 @@ class DataWargaController extends Controller
                         </button>
                     ';
                 })
-                ->rawColumns(['action'])
+                ->editColumn('verification', function ($item) {
+                    if ($item->verification == '0') {
+                        return '<span class="rounded-pill badge badge-danger">Belum Verifikasi Data</span>';
+                    }else{
+                        return '<span class="rounded-pill badge badge-success">Sudah Verifikasi Data</span>';
+                    }
+                })
+                ->rawColumns(['action', 'verification'])
                 ->addIndexColumn()
                 ->make();
         }
@@ -65,7 +73,7 @@ class DataWargaController extends Controller
         $provinces = Provinsi::all();
 
         return view('admin.warga.create', [
-            'religions' => $religions, 
+            'religions' => $religions,
             'provinces'  => $provinces
         ]);
     }
@@ -112,7 +120,7 @@ class DataWargaController extends Controller
 
             Data_warga::create($data);
             return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
-        }    
+        }
     }
 
     /**
@@ -174,16 +182,11 @@ class DataWargaController extends Controller
     public function edit($id)
     {
         $data = Data_warga::findOrFail($id);
-        $regencies = Kabupaten::where('id', $data->kabupaten)->get();
-        $districts = Kecamatan::where('id', $data->kecamatan)->get();
-        $villages = Kelurahan::where('id', $data->kelurahan)->get();
+
         return view('admin.warga.edit', [
             'data'      => $data,
             'religions' => Religions::all(),
             'provinces' => Provinsi::all(),
-            'regencies' => $regencies,
-            'districts' => $districts,
-            'villages'  => $villages
         ]);
     }
 
@@ -222,7 +225,7 @@ class DataWargaController extends Controller
         }elseif($y >= 60 && $y <= 100){
             $data['kategori_usia'] = 'Lansia';
         }
-        
+
         $cek->update($data);
         return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil diubah');
     }
@@ -239,7 +242,7 @@ class DataWargaController extends Controller
         Storage::delete('public/' . $cek->foto_kk);
         Storage::delete('public/' . $cek->foto_ktp);
         $cek->delete();
-        
+
         return response()->json($cek);
     }
 
@@ -258,7 +261,7 @@ class DataWargaController extends Controller
         return response()->json($kelurahan);
     }
 
-    public function export() 
+    public function export()
     {
         return Excel::download(new DataWargaExport, 'DataWarga.xlsx');
     }
@@ -273,7 +276,7 @@ class DataWargaController extends Controller
         return Excel::download(new DataWargaKategoriLansiaExport, 'DataWargaKategoriLansia.xlsx');
     }
 
-    public function exportDisabilitas() 
+    public function exportDisabilitas()
     {
         return Excel::download(new DataWargaKategoriDisabilitasExport, 'DataWargaKategoriDisabilitas.xlsx');
     }
@@ -281,5 +284,39 @@ class DataWargaController extends Controller
     public function exportBantuanPemerintah()
     {
         return Excel::download(new DataWargaKategoriBantuanPemerintahExport, 'DataWargaKategoriBantuanPemerintah.xlsx');
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function verification($id)
+    {
+        $data = Data_warga::findOrFail($id);
+
+        return view('admin.warga.verifikasi.edit', [
+            'data'      => $data,
+            'religions' => Religions::all(),
+            'provinces' => Provinsi::all(),
+        ]);
+    }
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @return void
+     */
+    public function updateVerification(Request $request, $id)
+    {
+        $cek = Data_warga::findOrFail($id);
+
+        $cek->update([
+            'verification' => $request['verification']
+        ]);
+
+//        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil diubah');
+        return redirect()
+            ->back()
+            ->with('success', 'Berhasil Verifikasi');
     }
 }
