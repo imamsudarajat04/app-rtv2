@@ -24,9 +24,11 @@ class DashboardController extends Controller
             $perempuan = Data_warga::where('jenis_kelamin', 'Perempuan')->count();
             $pria = Data_warga::where('jenis_kelamin', 'Laki-laki')->count();
             $rw = Data_rw::count();
+            $notVerication = Data_warga::where('verification', '0')->count();
 
             if (request()->ajax()) {
-                $query = Data_warga::all();
+                $query = Data_warga::where('verification', '0')
+                    ->get();
 
                 return DataTables::of($query)
                     ->addColumn('action', function ($item) {
@@ -44,15 +46,16 @@ class DashboardController extends Controller
                     ->make();
             }
             return view('admin.index', [
-                'rt'             => $rt,
-                'user'           => $user,
-                'pria'           => $pria,
-                'warga'          => $warga,
-                'balita'         => $balita,
-                'lansia'         => $lansia,
-                'perempuan'      => $perempuan,
-                'warga_pindahan' => $warga_pindahan,
-                'rw'             => $rw,
+                'rt'              => $rt,
+                'user'            => $user,
+                'pria'            => $pria,
+                'warga'           => $warga,
+                'balita'          => $balita,
+                'lansia'          => $lansia,
+                'perempuan'       => $perempuan,
+                'warga_pindahan'  => $warga_pindahan,
+                'rw'              => $rw,
+                'notVerivication' => $notVerication
             ]);
         } else {
             $warga = Data_warga::where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->count();

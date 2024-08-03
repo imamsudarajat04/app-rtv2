@@ -41,5 +41,6 @@ class Data_warga extends Model
         'warga_pindahan',
         'bantuan_pemerintah',
         'disabilitas',
+        'verification',
     ];
 }

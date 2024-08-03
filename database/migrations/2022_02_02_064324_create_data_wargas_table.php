@@ -50,6 +50,8 @@ class CreateDataWargasTable extends Migration
             $table->enum('warga_pindahan', ['0', '1'])->default('0');
             $table->enum('bantuan_pemerintah', ['0', '1'])->default('0');
             $table->enum('disabilitas', ['0', '1'])->default('0');
+            $table->enum('verification', ['0','1'])
+                ->default('0');
             $table->timestamps();
         });
     }
