@@ -12,7 +12,9 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo">
-        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lambang_Kota_Tanjungpinang.png" alt="" class="img-fluid"></a>
+{{--        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lambang_Kota_Tanjungpinang.png" alt="" class="img-fluid"></a>--}}
+          <a href="#"><img src="{{ asset('assets/img/new-logo-2.png') }}" alt="Logo" class="img-fluid"></a>
+
         <a href="/">{{ $headerSettings->app_name }}</a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->

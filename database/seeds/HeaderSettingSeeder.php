@@ -13,9 +13,9 @@ class HeaderSettingSeeder extends Seeder
     {
         \App\HeaderSettings::create(
             [
-                'app_name' => 'SIMKLUR',
+                'app_name' => 'SMART-RT',
                 'title' => 'Sistem Informasi Masyarakat Kelurahan',
-                'subtitle' => 'Pendataan Penduduk di SIMKLUR',
+                'subtitle' => 'Pendataan Penduduk di SMART-RT',
             ]
         );
     }
