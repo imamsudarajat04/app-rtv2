@@ -13,10 +13,10 @@ class FooterSettingsSeeder extends Seeder
     {
         \App\FooterSettings::create(
             [
-                'alamat' => 'Jl. Raya Kedungwuni No. 1, Kedungwuni, Kec. Kedungwuni, Kota Bandung, Jawa Barat 40257',
-                'telepon1' => '+62812-123456789',
-                'telepon2' => '+62812-123456789',
-                'email' => 'info@example.com',
+                'alamat' => 'Jalan Tugu Pahlawan, Tanjungpinang Kode 29121',
+                'telepon1' => '+62 852-7222-2515',
+                'telepon2' => '',
+                'email' => 'kel.bukitcermin@tanjungpinangkota.go.id',
                 'twitter' => 'https://twitter.com/',
                 'facebook' => 'https://facebook.com/',
                 'instagram' => 'https://instagram.com/',

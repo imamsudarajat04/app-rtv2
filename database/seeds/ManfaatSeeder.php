@@ -14,19 +14,21 @@ class ManfaatSeeder extends Seeder
         \App\ManfaatSetting::create(
             [
                 'title'                     => 'Manfaat',
-                'description'               => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                'icon_one'                  => 'bx bxl-dribbble',
-                'title_one'                 => 'Lorem ipsum dolor sit amet',
-                'short_description_one'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'icon_two'                  => 'bx bx-file',
-                'title_two'                 => 'Lorem ipsum dolor sit amet',
-                'short_description_two'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'icon_three'                => 'bx bx-tachometer',
-                'title_three'               => 'Lorem ipsum dolor sit amet',
-                'short_description_three'   => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'icon_four'                 => 'bx bx-layer',
-                'title_four'                => 'Lorem ipsum dolor sit amet',
-                'short_description_four'    => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                'description'               => 'Aplikasi Sistem Informasi Masyarakat Kelurahan adalah platform digital yang dirancangan untuk meningkatkan transparansi, komunikasi,
+                                                dan partisipasi aktif warga dalam pembangunan dan pengembangan lingkungan kelurahan. Aplikasi ini menyediakan akses mudah bagi warga untuk dapat
+                                                menyampaikan aspirasi, keluhan, dan pertanyaan secara langsung kepada pihak kelurahan.',
+                'icon_one'                  => 'bx bx-chat',
+                'title_one'                 => 'Komunikasi Dua Arah',
+                'short_description_one'     => 'Warga dapat menyampaikan aspirasi, keluhan, atau pertanyaan melalui aplikasi kepada pihak kelurahan.',
+                'icon_two'                  => 'bx bxs-bar-chart-alt-2',
+                'title_two'                 => 'Peningkatan Partisipasi Masyarakat',
+                'short_description_two'     => 'Aplikasi dapat mendorong warga untuk terlibat dan berpartisipasi dalam pembangunan dan pengembangan kelurahan.',
+                'icon_three'                => 'bx bx-shield-quarter',
+                'title_three'               => 'Peningkatan Keamanan Lingkungan',
+                'short_description_three'   => 'Aplikasi dapat menjadi sarana bagi warga untuk melaporkan isu-isu terkait keamanan dan ketertiban di lingkungan kelurahan.',
+                'icon_four'                 => 'bx bx-home',
+                'title_four'                => 'Integrasi dengan Teknologi Kota Cerdas (Smart City)',
+                'short_description_four'    => 'Aplikasi dapat terintegrasi dengan sistem dan platform yang digunakan dalam pengembangan kota cerdas di tingkat pemerintah daerah.',
             ]
         );
     }
