@@ -14,7 +14,7 @@ class HeaderSettingSeeder extends Seeder
         \App\HeaderSettings::create(
             [
                 'app_name' => 'SMART-RT',
-                'title' => 'Sistem Informasi Masyarakat Kelurahan',
+                'title' => 'SMART-RT KELURAHAN BUKIT CERMIN',
                 'subtitle' => 'Pendataan Penduduk di SMART-RT',
             ]
         );

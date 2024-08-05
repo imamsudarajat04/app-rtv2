@@ -15,6 +15,7 @@ class CreateDeathDataTable extends Migration
     {
         Schema::create('death_data', function (Blueprint $table) {
             $table->id();
+            $table->
             $table->timestamps();
         });
     }
