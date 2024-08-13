@@ -15,6 +15,12 @@ class CreateDeathDataTable extends Migration
     {
         Schema::create('death_data', function (Blueprint $table) {
             $table->id();
+            $table->string("no_akte_kematian")
+                ->unique();
+            $table->string("no_ktp")
+                ->unique();
+            $table->string("name");
+            $table->longText("address");
             $table->timestamps();
         });
     }

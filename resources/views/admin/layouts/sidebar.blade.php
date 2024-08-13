@@ -39,6 +39,13 @@
         </a>
       </li><!-- Data Warga -->
 
+        <li class="nav-item">
+            <a href="{{ route('DataKematian.index') }}" class="nav-link {{ (request()->routeIs('DataKematian*')) ? '' : 'collapsed' }}">
+                <i class="bi bi-file-text"></i>
+                <span>Data Kematian</span>
+            </a>
+        </li>
+
       <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataBalita.index')) ? '' : 'collapsed' }}" href="{{ route('DataBalita.index') }}">
           <i class="fas fa-baby"></i>
@@ -48,7 +55,7 @@
 
       <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataLansia.index')) ? '' : 'collapsed' }}" href="{{ route('DataLansia.index') }}">
-          <i class="fas fa-male"></i> 
+          <i class="fas fa-male"></i>
           <span>Data Lansia</span>
         </a>
       </li><!-- Data Warga Lansia -->
@@ -110,43 +117,43 @@
           <li>
             <a href="{{ route('DataRT.Export') }}">
               <i class="bi bi-circle"></i><span>Data RT</span>
-            </a> 
+            </a>
           </li>
 
           <li>
             <a href="{{ route('DataWarga.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga</span>
-            </a> 
+            </a>
           </li>
 
           <li>
             <a href="{{ route('DataWargaPindahan.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga Pindahan</span>
-            </a> 
+            </a>
           </li>
 
           <li>
             <a href="{{ route('DataWargaBalita.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga Kategori Balita</span>
-            </a> 
+            </a>
           </li>
 
           <li>
             <a href="{{ route('DataWargaLansia.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga Kategori Lansia</span>
-            </a> 
+            </a>
           </li>
 
           <li>
             <a href="{{ route('DataWargaDisabilitas.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga Kategori Disabilitas</span>
-            </a> 
+            </a>
           </li>
 
           <li>
             <a href="{{ route('DataWargaBantuanPemerintah.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga Kategori Bantuan Pemerintah</span>
-            </a> 
+            </a>
           </li>
         </ul>
       </li><!-- Export Data -->
@@ -211,21 +218,21 @@
       @endif
 
       @if (Auth::user()->role == 'rw')
-      
+
         <li class="nav-item">
           <a class="nav-link {{ (request()->routeIs('dashboard.index')) ? '' : 'collapsed' }}" href="{{ route('dashboard.index') }}">
             <i class="bi bi-grid"></i>
             <span>Dashboard</span>
           </a>
         </li><!-- End Dashboard Nav -->
-        
+
         <li class="nav-item">
           <a class="nav-link {{ (request()->routeIs('DataKhususRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataKhususRW.index') }}">
             <i class="bi bi-person-badge-fill"></i>
             <span>Data RT</span>
           </a>
         </li><!-- Data RT -->
-        
+
         <li class="nav-item">
           <a class="nav-link {{ (request()->routeIs('DataWargaRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaRW.index') }}">
             <i class="bi bi-person-lines-fill"></i>

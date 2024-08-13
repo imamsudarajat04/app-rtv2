@@ -12,6 +12,7 @@ use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Exports\DataWargaExport;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\DataWargaRequest;
 use Illuminate\Support\Facades\Storage;
@@ -32,6 +33,7 @@ class DataWargaController extends Controller
     {
         if (request()->ajax()) {
             $query = Data_warga::where('verification', '1')
+                ->where('is_death', false)
                 ->get();
 
             return DataTables::of($query)
@@ -314,9 +316,6 @@ class DataWargaController extends Controller
             'verification' => $request['verification']
         ]);
 
-//        return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil diubah');
-        return redirect()
-            ->back()
-            ->with('success', 'Berhasil Verifikasi');
+        return Redirect::back()->with("success", 'Berhasil Verifikasi!');
     }
 }

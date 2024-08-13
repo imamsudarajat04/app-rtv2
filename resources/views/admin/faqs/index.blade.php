@@ -34,19 +34,22 @@
           <div class="card-body">
               <a href="{{ route('Faq.create') }}" class="btn btn-primary float-right" style="margin-top: 15px;">Tambah Pertanyaan</a>
               <h5 class="card-title">FAQ</h5>
-                <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableFaq">
-                    <thead>
-                        <tr>
-                            <th width="70px">No</th>
-                            <th>Pertanyaan</th>
-                            <th>Jawaban</th>
-                            <th width="150px">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+              <div class="table-responsive">
+                  <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="tableFaq">
+                      <thead>
+                      <tr>
+                          <th width="70px">No</th>
+                          <th>Pertanyaan</th>
+                          <th>Jawaban</th>
+                          <th width="150px">Action</th>
+                      </tr>
+                      </thead>
+                      <tbody>
 
-                    </tbody>
-                </table>
+                      </tbody>
+                  </table>
+
+              </div>
           </div>
         </div>
 
