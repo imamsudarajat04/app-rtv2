@@ -79,7 +79,7 @@
           </div>
 
           <div class="col-lg-5 col-md-7 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Alternatif</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="/">Beranda</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about">Tentang</a></li>
@@ -92,8 +92,8 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <h4>Join untuk mendapatkan berita terbaru</h4>
+            <p>Masukkan email anda</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>

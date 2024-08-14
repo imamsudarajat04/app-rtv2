@@ -22,7 +22,7 @@ class FooterSettingsSeeder extends Seeder
                 'instagram' => 'https://instagram.com/',
                 'youtube' => 'https://youtube.com/',
                 'whatsapp' => 'https://wa.me/',
-                'copyright' => '© SMART-RT 2022. All rights reserved.'
+                'copyright' => '© SMART-RT KELURAHAN BUKIT CERMIN. All rights reserved.'
             ]
         );
     }
