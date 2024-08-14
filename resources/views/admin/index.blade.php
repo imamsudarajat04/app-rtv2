@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="col-xxl-4 col-md-6">
+            <div class="col-xxl-3 col-md-6">
                 <div class="card info-card sales-card">
 
                     <div class="card-body">
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="col-xxl-4 col-md-6">
+            <div class="col-xxl-3 col-md-6">
                 <div class="card info-card revenue-card">
 
                     <div class="card-body">
@@ -130,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="col-xxl-4 col-md-6">
+            <div class="col-xxl-3 col-md-6">
                 <div class="card info-card sales-card">
 
                     <div class="card-body">
@@ -147,6 +147,24 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <div class="col-xxl-3 col-md-6">
+                <div class="card info-card revenue-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Jumlah Warga Belum Verifikasi </h5>
+
+                        <div class="d-flex align-items-center">
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fas fa-male"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h6>{{ $notVerivication }}</h6>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -193,14 +211,14 @@
             <div class="col-xxl-4 col-md-6">
                 <div class="card info-card revenue-card">
                     <div class="card-body">
-                        <h5 class="card-title">Jumlah Warga Belum Verifikasi </h5>
+                        <h5 class="card-title">Jumlah Data Kematian </h5>
 
                         <div class="d-flex align-items-center">
                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="fas fa-male"></i>
+                                <i class="bi bi-file-text"></i>
                             </div>
                             <div class="ps-3">
-                                <h6>{{ $notVerivication }}</h6>
+                                <h6>{{ $deathData }}</h6>
 
                             </div>
                         </div>

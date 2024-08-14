@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DeathData;
 use App\User;
 use App\Data_rt;
 use App\Data_rw;
@@ -25,6 +26,7 @@ class DashboardController extends Controller
             $pria = Data_warga::where('jenis_kelamin', 'Laki-laki')->count();
             $rw = Data_rw::count();
             $notVerication = Data_warga::where('verification', '0')->count();
+            $deathData = DeathData::count();
 
             if (request()->ajax()) {
                 $query = Data_warga::where('verification', '0')
@@ -59,7 +61,8 @@ class DashboardController extends Controller
                 'perempuan'       => $perempuan,
                 'warga_pindahan'  => $warga_pindahan,
                 'rw'              => $rw,
-                'notVerivication' => $notVerication
+                'notVerivication' => $notVerication,
+                'deathData'       => $deathData,
             ]);
         } else {
             $warga = Data_warga::where('rt', Auth::user()->rt)->where('rw', Auth::user()->rw)->count();
