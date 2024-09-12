@@ -3,51 +3,61 @@
 namespace App\Http\Controllers\Api;
 
 use App\Data_warga;
+use App\Http\Requests\ApiRegisterWargaRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DateTime;
+use Exception;
 
 class ApiRegisterWargaController extends Controller
 {
     public function store(ApiRegisterWargaRequest $request)
     {
-        $data = $request->all();
-        
-        // Store the uploaded files
-        if ($request->hasFile('foto_kk')) {
-            $data['foto_kk'] = $request->file('foto_kk')->store('assets/foto_kk', 'public');
+        try {
+            $data = $request->all();
+            $cek = Data_warga::where('nik', $data['nik'])->first();
+
+            if ($cek) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Data Sudah Ada'
+                ], 400);
+            } else {
+                $data['foto_kk'] = $request->file('foto_kk')->store('datawarga/foto_kk', 'public');
+
+                if ($request->hasFile('foto_ktp')) {
+                    $data['foto_ktp'] = $request->file('foto_ktp')->store('datawarga/foto_ktp', 'public');
+                }
+
+                $tanggal = new DateTime($request->tanggal_lahir);
+                $today = new DateTime('today');
+                $y = $today->diff($tanggal)->y;
+
+                if ($y >= 0 && $y <= 6) {
+                    $data['kategori_usia'] = 'Balita';
+                } elseif ($y >= 7 && $y <= 12) {
+                    $data['kategori_usia'] = 'Anak-anak';
+                } elseif ($y >= 13 && $y <= 18) {
+                    $data['kategori_usia'] = 'Remaja';
+                } elseif ($y >= 19 && $y <= 59) {
+                    $data['kategori_usia'] = 'Dewasa';
+                } elseif ($y >= 60 && $y <= 100) {
+                    $data['kategori_usia'] = 'Lansia';
+                }
+
+                $warga = Data_warga::create($data);
+
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'Data Warga Berhasil Ditambahkan',
+                    'data' => $warga
+                ]);
+            }
+        } catch (Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ], 500);
         }
-        if ($request->hasFile('foto_ktp')) {
-            $data['foto_ktp'] = $request->file('foto_ktp')->store('assets/foto_ktp', 'public');
-        }
-    
-        // Calculate age category
-        $tanggal = new DateTime($request->tanggal_lahir);
-        $today = new DateTime('today');
-        $y = $today->diff($tanggal)->y;
-    
-        if ($y >= 1 && $y <= 5) {
-            $data['kategori_usia'] = 'Balita';
-        } elseif ($y >= 5 && $y <= 11) {
-            $data['kategori_usia'] = 'Anak-anak';
-        } elseif ($y >= 12 && $y <= 25) {
-            $data['kategori_usia'] = 'Remaja';
-        } elseif ($y >= 26 && $y <= 45) {
-            $data['kategori_usia'] = 'Dewasa';
-        } elseif ($y >= 46 && $y <= 65) {
-            $data['kategori_usia'] = 'Lansia';
-        } elseif ($y >= 66 && $y <= 100) {
-            $data['kategori_usia'] = 'Manula';
-        }
-    
-        // Create the new warga data
-        $warga = Data_warga::create($data);
-    
-        // Return JSON response
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Data Warga Berhasil Ditambahkan',
-            'data' => $warga
-        ]);
     }
 }
