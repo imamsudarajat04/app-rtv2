@@ -18,8 +18,8 @@ class ApiRegisterWargaRequest extends FormRequest
         if (in_array($this->method(), ['PUT', 'PATCH'])) {
             $rules = [
                 'nik'                       => 'required|numeric|digits_between:16,16',
-                'nama_lengkap'              => 'required|regex:/^[\pL\s\-]+$/u',
-                'no_telp'                   => ['required', 'regex:/^(\+62|62|0)8[1-9][0-9]{6,9}$/', 'min:11'],
+                'nama_lengkap'              => 'required|regex:/^[\pL\s\-]+$/u',              
+                'no_telp'                   => ['required', 'regex:/^(\+62|62|0)8[1-9][0-9]{7,12}$/'],
                 'tempat_lahir'              => 'required',
                 'tanggal_lahir'             => 'required|before:today',
                 'jenis_kelamin'             => 'required',
