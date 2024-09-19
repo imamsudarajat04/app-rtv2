@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Data_warga extends Model
 {
@@ -43,4 +44,29 @@ class Data_warga extends Model
         'disabilitas',
         'verification',
     ];
+
+    public function religion(): BelongsTo
+    {
+        return $this->belongsTo('App\Religions', 'religions_id', 'id');
+    }
+
+    public function province(): BelongsTo
+    {
+        return $this->belongsTo('App\Provinsi', 'provinsi', 'id');
+    }
+
+    public function regency(): BelongsTo
+    {
+        return $this->belongsTo('App\Kabupaten', 'kabupaten', 'id');
+    }
+
+    public function subdistrict(): BelongsTo
+    {
+        return $this->belongsTo('App\Kecamatan', 'kecamatan', 'id');
+    }
+
+    public function village(): BelongsTo
+    {
+        return $this->belongsTo('App\Kelurahan', 'kelurahan', 'id');
+    }
 }

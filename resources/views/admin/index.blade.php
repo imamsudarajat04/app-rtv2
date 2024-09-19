@@ -15,63 +15,68 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
+            @if (Auth::user()->role == 'admin')
+                <div class="col-xxl-3 col-md-6">
+                    <div class="card info-card sales-card">
 
-            <div class="col-xxl-3 col-md-6">
-                <div class="card info-card sales-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jumlah Data Akun</h5>
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>{{ $user }}</h6>
 
-                    <div class="card-body">
-                        <h5 class="card-title">Jumlah Data Akun</h5>
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-person"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h6>{{ $user }}</h6>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xxl-3 col-md-6">
-                <div class="card info-card revenue-card">
-
-                    <div class="card-body">
-                        <h5 class="card-title">Jumlah Data RT</h5>
-
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-person-badge-fill"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h6>{{ $rt }}</h6>
-
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endif
+            
+            @if (Auth::user()->role == 'admin')
+                <div class="col-xxl-3 col-md-6">
+                    <div class="card info-card revenue-card">
 
-            <div class="col-xxl-3 col-md-6">
-                <div class="card info-card customers-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jumlah Data RT</h5>
 
-                    <div class="card-body">
-                        <h5 class="card-title">Jumlah Data RW </h5>
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-person-badge-fill"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>{{ $rt }}</h6>
 
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h6>{{ $rw }}</h6>
-
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endif
+            
+            @if (Auth::user()->role == 'admin')
+                <div class="col-xxl-3 col-md-6">
+                    <div class="card info-card customers-card">
 
+                        <div class="card-body">
+                            <h5 class="card-title">Jumlah Data RW </h5>
+
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-people-fill"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>{{ $rw }}</h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+            
             <div class="col-xxl-3 col-md-6">
                 <div class="card info-card revenue-card">
 
@@ -160,7 +165,7 @@
                                 <i class="fas fa-male"></i>
                             </div>
                             <div class="ps-3">
-                                <h6>{{ $notVerivication }}</h6>
+                                <h6>{{ $notVerification }}</h6>
 
                             </div>
                         </div>
@@ -208,23 +213,25 @@
                 </div>
             </div>
 
-            <div class="col-xxl-4 col-md-6">
-                <div class="card info-card revenue-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Jumlah Data Kematian </h5>
+            @if (Auth::user()->role == 'admin')
+                <div class="col-xxl-4 col-md-6">
+                    <div class="card info-card revenue-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jumlah Data Kematian </h5>
 
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-file-text"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h6>{{ $deathData }}</h6>
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-file-text"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>{{ $deathData }}</h6>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endif
 
         </div>
       </div>
