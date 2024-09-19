@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Kecamatan extends Model
 {
@@ -20,5 +21,10 @@ class Kecamatan extends Model
     public function kabupaten()
     {
         return $this->belongsTo(Kabupaten::class, 'id_kab');
+    }
+
+    public function dataWargas(): HasMany
+    {
+        return $this->hasMany('App\Data_warga', 'kecamatan', 'id');
     }
 }

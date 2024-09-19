@@ -77,7 +77,6 @@
                         <select class="form-control" name="role" id="role" required>
                             <option value="" selected disabled>Pilih Role</option>
                             <option value="superadmin">Superadmin</option>
-                            <option value="rw">RW</option>
                             <option value="rt">RT</option>
                         </select>
                     </div>
