@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataWargaPerempuanController extends Controller
@@ -16,8 +17,19 @@ class DataWargaPerempuanController extends Controller
      */
     public function index(Request $request)
     {
+        $baseAuth = Auth::user()->role;
+
+        if ($baseAuth == 'superadmin') {
+            $baseData = Data_warga::where('jenis_kelamin',  'Perempuan')->get();
+        } else {
+            $baseData = Data_warga::where('jenis_kelamin',  'Perempuan')
+                ->where('rt', Auth::user()->rt)
+                ->where('rw', Auth::user()->rw)
+                ->get();
+        }
+        
         if (request()->ajax()) {
-            $query = Data_warga::where('jenis_kelamin',  'Perempuan')->get();
+            $query = $baseData;
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {

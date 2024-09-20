@@ -15,7 +15,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
-            @if (Auth::user()->role == 'admin')
+            @if (Auth::user()->role == 'superadmin')
                 <div class="col-xxl-3 col-md-6">
                     <div class="card info-card sales-card">
 
@@ -35,7 +35,7 @@
                 </div>
             @endif
             
-            @if (Auth::user()->role == 'admin')
+            @if (Auth::user()->role == 'superadmin')
                 <div class="col-xxl-3 col-md-6">
                     <div class="card info-card revenue-card">
 
@@ -56,7 +56,7 @@
                 </div>
             @endif
             
-            @if (Auth::user()->role == 'admin')
+            @if (Auth::user()->role == 'superadmin')
                 <div class="col-xxl-3 col-md-6">
                     <div class="card info-card customers-card">
 
@@ -213,7 +213,7 @@
                 </div>
             </div>
 
-            @if (Auth::user()->role == 'admin')
+            @if (Auth::user()->role == 'superadmin')
                 <div class="col-xxl-4 col-md-6">
                     <div class="card info-card revenue-card">
                         <div class="card-body">

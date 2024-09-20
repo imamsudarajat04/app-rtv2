@@ -39,12 +39,12 @@
         </a>
       </li><!-- Data Warga -->
 
-        <li class="nav-item">
-            <a href="{{ route('DataKematian.index') }}" class="nav-link {{ (request()->routeIs('DataKematian*')) ? '' : 'collapsed' }}">
-                <i class="bi bi-file-text"></i>
-                <span>Data Kematian</span>
-            </a>
-        </li>
+      <li class="nav-item">
+          <a href="{{ route('DataKematian.index') }}" class="nav-link {{ (request()->routeIs('DataKematian*')) ? '' : 'collapsed' }}">
+              <i class="bi bi-file-text"></i>
+              <span>Data Kematian</span>
+          </a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataBalita.index')) ? '' : 'collapsed' }}" href="{{ route('DataBalita.index') }}">
@@ -209,43 +209,61 @@
       </li><!-- Data Warga -->
 
       <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataBalita.index')) ? '' : 'collapsed' }}" href="{{ route('DataBalita.index') }}">
+          <i class="fas fa-baby"></i>
+          <span>Data Balita</span>
+        </a>
+      </li><!-- Data Warga Balita -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataLansia.index')) ? '' : 'collapsed' }}" href="{{ route('DataLansia.index') }}">
+          <i class="fas fa-male"></i>
+          <span>Data Lansia</span>
+        </a>
+      </li><!-- Data Warga Lansia -->
+
+      <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataWargaPindahanRT.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahanRT.index') }}">
           <i class="bi bi-house-door"></i>
           <span>Data Warga Pindahan</span>
         </a>
       </li><!-- Data Warga Pindahan -->
 
-      @endif
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaDisabilitas.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaDisabilitas.index') }}">
+          <i class="fas fa-wheelchair"></i>
+          <span>Data Warga Disabilitas</span>
+        </a>
+      </li><!-- Data Warga Disabilitas -->
 
-      @if (Auth::user()->role == 'rw')
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaBantuanPemerintah.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaBantuanPemerintah.index') }}">
+          <i class="fas fa-people-carry"></i>
+          <span>Data Warga Bantuan Pemerintah</span>
+        </a>
+      </li><!-- Data Warga Bantuan Pemerintah -->
 
-        <li class="nav-item">
-          <a class="nav-link {{ (request()->routeIs('dashboard.index')) ? '' : 'collapsed' }}" href="{{ route('dashboard.index') }}">
-            <i class="bi bi-grid"></i>
-            <span>Dashboard</span>
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaPria.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPria.index') }}">
+          <i class="fas fa-male"></i>
+          <span>Data Warga Pria</span>
+        </a>
+      </li><!-- Data Warga Pria -->
+
+      <li class="nav-item">
+        <a class="nav-link {{ (request()->routeIs('DataWargaPerempuan.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPerempuan.index') }}">
+          <i class="fas fa-female"></i>
+          <span>Data Warga Perempuan</span>
+        </a>
+      </li><!-- Data Warga Perempuan -->
+
+      <li class="nav-item">
+          <a href="{{ route('DataKematian.index') }}" class="nav-link {{ (request()->routeIs('DataKematian*')) ? '' : 'collapsed' }}">
+              <i class="bi bi-file-text"></i>
+              <span>Data Kematian</span>
           </a>
-        </li><!-- End Dashboard Nav -->
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link {{ (request()->routeIs('DataKhususRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataKhususRW.index') }}">
-            <i class="bi bi-person-badge-fill"></i>
-            <span>Data RT</span>
-          </a>
-        </li><!-- Data RT -->
-
-        <li class="nav-item">
-          <a class="nav-link {{ (request()->routeIs('DataWargaRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaRW.index') }}">
-            <i class="bi bi-person-lines-fill"></i>
-            <span>Data Warga</span>
-          </a>
-        </li><!-- Data Warga -->
-
-        <li class="nav-item">
-          <a class="nav-link {{ (request()->routeIs('DataWargaPindahanRW.index')) ? '' : 'collapsed' }}" href="{{ route('DataWargaPindahanRW.index') }}">
-            <i class="bi bi-house-door"></i>
-            <span>Data Warga Pindahan</span>
-          </a>
-        </li><!-- Data Warga Pindahan -->
       @endif
     </ul>
 

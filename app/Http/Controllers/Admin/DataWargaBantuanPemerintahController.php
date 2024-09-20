@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataWargaBantuanPemerintahController extends Controller
@@ -16,8 +17,19 @@ class DataWargaBantuanPemerintahController extends Controller
      */
     public function index(Request $request)
     {
+        $baseAuth = Auth::user()->role;
+
+        if ($baseAuth == 'superadmin') {
+            $baseData = Data_warga::where('bantuan_pemerintah',  '1')->get();
+        } else {
+            $baseData = Data_warga::where('bantuan_pemerintah',  '1')
+                ->where('rt', Auth::user()->rt)
+                ->where('rw', Auth::user()->rw)
+                ->get();
+        }
+        
         if (request()->ajax()) {
-            $query = Data_warga::where('bantuan_pemerintah',  '1')->get();
+            $query = $baseData;
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
