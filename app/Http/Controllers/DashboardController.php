@@ -32,6 +32,8 @@ class DashboardController extends Controller
             $rw = Data_rw::count();
             $notVerification = Data_warga::where('verification', '0')
                 ->count();
+            $disabilitas = Data_warga::where('disabilitas', '1')
+                ->count();
             $deathData = DeathData::count();
 
             if (request()->ajax()) {
@@ -69,6 +71,7 @@ class DashboardController extends Controller
                 'rw'              => $rw,
                 'notVerification' => $notVerification,
                 'deathData'       => $deathData,
+                'disabilitas'     => $disabilitas,
             ]);
         } else {
             $pria = Data_warga::where('jenis_kelamin', 'Laki-laki')
@@ -98,6 +101,12 @@ class DashboardController extends Controller
                 ->where('rw', Auth::user()->rw)
                 ->where('warga_pindahan', '1')
                 ->count();
+            $disabilitas = Data_warga::where('disabilitas', '1')
+            ->where('rt', Auth::user()->rt)
+            ->where('rw', Auth::user()->rw)
+            ->count();
+
+            $deathData = DeathData::count();
 
             if (request()->ajax()) {
                 $query = Data_warga::where('verification', '0')
@@ -132,7 +141,9 @@ class DashboardController extends Controller
                 'perempuan'            => $perempuan,
                 'notVerification'      => $notVerification,
                 'balita'               => $balita,
-                'lansia'               => $lansia
+                'lansia'               => $lansia,
+                'deathData'            => $deathData,
+                'disabilitas'          => $disabilitas,
             ]);
         }
     }
