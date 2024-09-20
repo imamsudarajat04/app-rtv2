@@ -34,6 +34,8 @@ class DashboardController extends Controller
                 ->count();
             $disabilitas = Data_warga::where('disabilitas', '1')
                 ->count();
+            $bantuanPemerintah = Data_warga::where('bantuan_pemerintah', '1')
+                ->count();
             $deathData = DeathData::count();
 
             if (request()->ajax()) {
@@ -60,18 +62,19 @@ class DashboardController extends Controller
                     ->make();
             }
             return view('admin.index', [
-                'rt'              => $rt,
-                'user'            => $user,
-                'pria'            => $pria,
-                'warga'           => $warga,
-                'balita'          => $balita,
-                'lansia'          => $lansia,
-                'perempuan'       => $perempuan,
-                'warga_pindahan'  => $warga_pindahan,
-                'rw'              => $rw,
-                'notVerification' => $notVerification,
-                'deathData'       => $deathData,
-                'disabilitas'     => $disabilitas,
+                'rt'                => $rt,
+                'user'              => $user,
+                'pria'              => $pria,
+                'warga'             => $warga,
+                'balita'            => $balita,
+                'lansia'            => $lansia,
+                'perempuan'         => $perempuan,
+                'warga_pindahan'    => $warga_pindahan,
+                'rw'                => $rw,
+                'notVerification'   => $notVerification,
+                'deathData'         => $deathData,
+                'disabilitas'       => $disabilitas,
+                'bantuanPemerintah' => $bantuanPemerintah,
             ]);
         } else {
             $pria = Data_warga::where('jenis_kelamin', 'Laki-laki')
@@ -102,9 +105,13 @@ class DashboardController extends Controller
                 ->where('warga_pindahan', '1')
                 ->count();
             $disabilitas = Data_warga::where('disabilitas', '1')
-            ->where('rt', Auth::user()->rt)
-            ->where('rw', Auth::user()->rw)
-            ->count();
+                ->where('rt', Auth::user()->rt)
+                ->where('rw', Auth::user()->rw)
+                ->count();
+            $bantuanPemerintah = Data_warga::where('bantuan_pemerintah', '1')
+                ->where('rt', Auth::user()->rt)
+                ->where('rw', Auth::user()->rw)
+                ->count();
 
             $deathData = DeathData::count();
 
@@ -144,6 +151,7 @@ class DashboardController extends Controller
                 'lansia'               => $lansia,
                 'deathData'            => $deathData,
                 'disabilitas'          => $disabilitas,
+                'bantuanPemerintah'    => $bantuanPemerintah,
             ]);
         }
     }
