@@ -161,6 +161,12 @@
               <i class="bi bi-circle"></i><span>Data Warga Kategori Bantuan Pemerintah</span>
             </a>
           </li>
+
+          <li>
+            <a href="{{ route('DataKematian.Export') }}">
+                <i class="bi bi-circle"></i><span>Data Kematian</span>
+            </a>
+          </li>
         </ul>
       </li><!-- Export Data -->
 

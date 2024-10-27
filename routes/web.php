@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
 
     //Khusus tujuan Data Kematian
     Route::resource('/DataKematian', 'Admin\DataKematianController');
+    Route::get('DataKematian-Export', 'Admin\DataKematianController@export')->name('DataKematian.Export');
 
     //Khusus tujuan Data RT
     Route::resource('DataRW', 'Admin\DataRWController');

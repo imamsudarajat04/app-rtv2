@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Data_warga;
 use App\DeathData;
+use App\Exports\DataKematianExport;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\ValidationException;
 use Yajra\DataTables\DataTables;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DataKematianController extends Controller
 {
@@ -154,5 +156,10 @@ class DataKematianController extends Controller
             return Redirect::back()
                 ->with("error", "Data tidak ditemukan!");
         }
+    }
+
+    public function export()
+    {
+        return Excel::download(new DataKematianExport, 'DataKematian.xlsx');
     }
 }
