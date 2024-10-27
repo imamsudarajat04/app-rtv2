@@ -121,6 +121,12 @@
           </li>
 
           <li>
+            <a href="{{ route('DataRW.Export') }}">
+                <i class="bi bi-circle"></i><span>Data RW</span>
+            </a>
+          </li>
+
+          <li>
             <a href="{{ route('DataWarga.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga</span>
             </a>

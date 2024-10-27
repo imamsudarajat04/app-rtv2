@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
 
     //Khusus tujuan Data RT
     Route::resource('DataRW', 'Admin\DataRWController');
+    Route::get('/DataRW-export', 'Admin\DataRWController@export')->name('DataRW.Export');
 
     //Khusus tujuan Data Balita
     Route::resource('DataBalita', 'Admin\DataBalitaController');

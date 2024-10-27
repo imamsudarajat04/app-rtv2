@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Data_rw;
 use Illuminate\Http\Request;
+use App\Exports\DataRwExport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RequestDataRW;
 use Yajra\DataTables\Facades\DataTables;
@@ -116,5 +118,11 @@ class DataRWController extends Controller
             'success' => true,
             'message' => 'Data RT Berhasil Dihapus'
         ]);
+    }
+
+
+    public function export()
+    {
+        return Excel::download(new DataRwExport, 'DataRw.xlsx');
     }
 }
