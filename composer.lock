@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a318f9da66b74159afa38c19c2392f00",
+    "content-hash": "b654d4330495aa851863a5316e4c35d6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1089,6 +1089,59 @@
                 }
             ],
             "time": "2023-12-03T20:05:35+00:00"
+        },
+        {
+            "name": "jalameta/jps-patcher",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jalameta/laravel-patcher.git",
+                "reference": "3a58f13bbfff72ee94d42410eb881224a187dba7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jalameta/laravel-patcher/zipball/3a58f13bbfff72ee94d42410eb881224a187dba7",
+                "reference": "3a58f13bbfff72ee94d42410eb881224a187dba7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/database": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jalameta\\Patcher\\PatcherServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-1.x": "1.1-dev",
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jalameta\\Patcher\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rifki Alhuraibi",
+                    "email": "veelasky@gmail.com"
+                }
+            ],
+            "description": "Laravel patch scripts.",
+            "support": {
+                "issues": "https://github.com/jalameta/laravel-patcher/issues",
+                "source": "https://github.com/jalameta/laravel-patcher/tree/v2.0.0"
+            },
+            "abandoned": "dentro/laravel-patcher",
+            "time": "2020-09-10T07:45:37+00:00"
         },
         {
             "name": "laravel/framework",
@@ -7893,12 +7946,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.2.5|^8.0"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

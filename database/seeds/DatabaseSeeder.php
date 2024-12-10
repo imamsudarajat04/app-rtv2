@@ -12,13 +12,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(FaqSeeder::class);
-        $this->call(UserSeeder::class);
-        $this->call(AboutSeeder::class);
-        $this->call(ManfaatSeeder::class);
-        $this->call(ReligionSeeder::class);
-        $this->call(GlobalSettingSeeder::class);
-        $this->call(HeaderSettingSeeder::class);
-        $this->call(FooterSettingsSeeder::class);
+        \Illuminate\Support\Facades\Artisan::call("patcher:run");
+        $this->call([
+            FaqSeeder::class,
+            UserSeeder::class,
+            AboutSeeder::class,
+            ManfaatSeeder::class,
+            ReligionSeeder::class,
+            GlobalSettingSeeder::class,
+            HeaderSettingSeeder::class,
+            FooterSettingsSeeder::class,
+        ]);
     }
 }
