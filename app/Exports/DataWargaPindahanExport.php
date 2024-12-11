@@ -40,7 +40,7 @@ class DataWargaPindahanExport implements FromCollection, WithHeadings
             0 => 'Tidak',
             1 => 'Ya',
         ];
-        
+
         return Data_warga::with(['religion', 'province', 'regency', 'subdistrict', 'village'])
         ->where('warga_pindahan', '1')
         ->get()
@@ -55,29 +55,9 @@ class DataWargaPindahanExport implements FromCollection, WithHeadings
                 $data->kategori_usia,
                 $data->jenis_kelamin,
                 $data->no_telp,
-                $data->religion ? $data->religion->name : null,
-                $data->provinsi ? $data->province->nama_dagri : null,
-                $data->kabupaten ? $data->regency->nama_dagri : null,
-                $data->kecamatan ? $data->subdistrict->nama_dagri : null,
-                $data->kelurahan ? $data->village->nama_dagri : null,
-                $data->kode_pos,
-                $data->alamat_sebelumnya,
                 $data->alamat,
                 $data->rt,
                 $data->rw,
-                $data->pendidikan,
-                $data->jenis_pekerjaan,
-                isset($statusPerkawinan[(int)trim($data->status_perkawinan)]) ? $statusPerkawinan[(int)trim($data->status_perkawinan)] : 'Status tidak diketahui',
-                isset($statusMapping[(int)trim($data->status_dalam_keluarga)]) ? $statusMapping[(int)trim($data->status_dalam_keluarga)] : 'Status tidak diketahui',
-                $data->kewarganegaraan,
-                $data->nama_ayah,
-                $data->pekerjaan_ayah,
-                $data->nama_ibu,
-                $data->pekerjaan_ibu,
-                isset($baseStatus[(int)trim($data->warga_pindahan)]) ? $baseStatus[(int)trim($data->warga_pindahan)] : 'Status tidak diketahui',
-                isset($baseStatus[(int)trim($data->bantuan_pemerintah)]) ? $baseStatus[(int)trim($data->bantuan_pemerintah)] : 'Status tidak diketahui',
-                isset($baseStatus[(int)trim($data->disabilitas)]) ? $baseStatus[(int)trim($data->disabilitas)] : 'Status tidak diketahui',
-                isset($baseStatus[(int)trim($data->verification)]) ? $baseStatus[(int)trim($data->verification)] : 'Status tidak diketahui',
             ];
         });
     }
@@ -94,29 +74,9 @@ class DataWargaPindahanExport implements FromCollection, WithHeadings
             'KATEGORI USIA',
             'JENIS KELAMIN',
             'NO TELP',
-            'AGAMA',
-            'PROVINSI',
-            'KABUPATEN',
-            'KECAMATAN',
-            'KELURAHAN',
-            'KODE POS',
-            'ALAMAT SEBELUMNYA',
             'ALAMAT SEKARANG',
             'RT',
             'RW',
-            'PENDIDIKAN',
-            'JENIS PEKERJAAN',
-            'STATUS PERKAWINAN',
-            'STATUS HUBUNGAN DALAM KELUARGA',
-            'KEWARGANEGARAAN',
-            'NAMA AYAH',
-            'PEKERJAAN AYAH',
-            'NAMA IBU',
-            'PEKERJAAN IBU',
-            'WARGA PINDAHAN',
-            'BANTUAN PEMERINTAH',
-            'DISABILITAS',
-            'VERIFIKASI'
         ];
     }
 }
