@@ -104,8 +104,6 @@ class DataWargaController extends Controller
             $today = new DateTime('today');
             $y = $today->diff($tanggal)->y;
 
-            // dd($y);
-
             if($y >= 0 && $y <= 6){
                 $data['kategori_usia'] = 'Balita';
             }elseif($y >= 7 && $y <= 12){
@@ -117,8 +115,6 @@ class DataWargaController extends Controller
             }elseif($y >= 60 && $y <= 100){
                 $data['kategori_usia'] = 'Lansia';
             }
-
-
 
             Data_warga::create($data);
             return redirect()->route('DataWarga.index')->with('success', 'Data Warga berhasil ditambahkan');
