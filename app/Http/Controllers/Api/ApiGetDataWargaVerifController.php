@@ -26,6 +26,14 @@ class ApiGetDataWargaVerifController extends Controller
                 ->where('nik', 'like', '%' . $keywoard . '%')
                 ->get();
 
+            if ($getWargaVerif->isEmpty()) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Warga belum terverifikasi',
+                    'data' => []
+                ]);
+            }
+
             return response()->json([
                 'status' => 'success',
                 'message' => 'Data Warga Verifikasi',
