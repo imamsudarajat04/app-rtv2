@@ -132,6 +132,18 @@
             </a>
           </li>
 
+        <li>
+            <a href="{{ route('DataWargaKategoriPria.export') }}">
+                <i class="bi bi-circle"></i><span>Data Kategori Pria</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ route('DataWargaKategoriPerempuan.export') }}">
+                <i class="bi bi-circle"></i><span>Data Kategori Perempuan</span>
+            </a>
+        </li>
+
           <li>
             <a href="{{ route('DataWargaPindahan.export') }}">
               <i class="bi bi-circle"></i><span>Data Warga Pindahan</span>

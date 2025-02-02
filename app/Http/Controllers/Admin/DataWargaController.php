@@ -9,18 +9,23 @@ use App\Kecamatan;
 use App\Kelurahan;
 use App\Religions;
 use App\Data_warga;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Exports\DataWargaExport;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\DataWargaRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Yajra\DataTables\Facades\DataTables;
 use App\Exports\DataWargaKategoriBalitaExport;
 use App\Exports\DataWargaKategoriLansiaExport;
 use App\Exports\DataWargaKategoriDisabilitasExport;
 use App\Exports\DataWargaKategoriBantuanPemerintahExport;
+use App\Exports\DataPriaExport;
+use App\Exports\DataPerempuanExport;
 
 class DataWargaController extends Controller
 {
@@ -232,9 +237,9 @@ class DataWargaController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function destroy($id)
+    public function destroy(int $id): JsonResponse
     {
         $cek = Data_warga::findOrFail($id);
         Storage::delete('public/' . $cek->foto_kk);
@@ -244,44 +249,90 @@ class DataWargaController extends Controller
         return response()->json($cek);
     }
 
-    public function getKabupaten($id) {
+    /**
+     * @param $id
+     * @return JsonResponse
+     */
+    public function getKabupaten($id): JsonResponse
+    {
         $kabupaten = Kabupaten::where('id_prov', $id)->pluck('nama_dagri', 'id');
         return response()->json($kabupaten);
     }
 
-    public function getKecamatan($id) {
+    /**
+     * @param $id
+     * @return JsonResponse
+     */
+    public function getKecamatan($id): JsonResponse
+    {
         $kecamatan = Kecamatan::where('id_kab', $id)->pluck('nama_bps', 'id');
         return response()->json($kecamatan);
     }
 
-    public function getKelurahan($id) {
+    /**
+     * @param $id
+     * @return JsonResponse
+     */
+    public function getKelurahan($id): JsonResponse
+    {
         $kelurahan = Kelurahan::where('id_kec', $id)->pluck('nama_bps', 'id');
         return response()->json($kelurahan);
     }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
+     */
     public function export()
     {
         return Excel::download(new DataWargaExport, 'DataWarga.xlsx');
     }
 
-    public function exportBalita()
+    /**
+     * @return BinaryFileResponse
+     */
+    public function exportBalita(): BinaryFileResponse
     {
         return Excel::download(new DataWargaKategoriBalitaExport, 'DataWargaKategoriBalita.xlsx');
     }
 
-    public function exportLansia()
+    /**
+     * @return BinaryFileResponse
+     */
+    public function exportLansia(): BinaryFileResponse
     {
         return Excel::download(new DataWargaKategoriLansiaExport, 'DataWargaKategoriLansia.xlsx');
     }
 
-    public function exportDisabilitas()
+    /**
+     * @return BinaryFileResponse
+     */
+    public function exportDisabilitas(): BinaryFileResponse
     {
         return Excel::download(new DataWargaKategoriDisabilitasExport, 'DataWargaKategoriDisabilitas.xlsx');
     }
 
-    public function exportBantuanPemerintah()
+    /**
+     * @return BinaryFileResponse
+     */
+    public function exportBantuanPemerintah(): BinaryFileResponse
     {
         return Excel::download(new DataWargaKategoriBantuanPemerintahExport, 'DataWargaKategoriBantuanPemerintah.xlsx');
+    }
+
+    /**
+     * @return BinaryFileResponse
+     */
+    public function exportKategoriPria(): BinaryFileResponse
+    {
+        return Excel::download(new DataPriaExport, 'DataWargaKategoriPria.xlsx');
+    }
+
+    /**
+     * @return BinaryFileResponse
+     */
+    public function exportKategoriPerempuan(): BinaryFileResponse
+    {
+        return Excel::download(new DataPerempuanExport, 'DataWargaKategoriPerempuan.xlsx');
     }
 
     /**

@@ -69,11 +69,14 @@ Route::group(['middleware' => ['auth','CekRole:superadmin,rt']], function() {
     Route::resource('/DataWarga', 'Admin\DataWargaController');
     Route::get('/Verification/DataWarga/{id}', 'Admin\DataWargaController@verification')->name('DataWarga.verification');
     Route::put('/Verification/DataWarga/{id}', 'Admin\DataWargaController@updateVerification')->name('DataWarga.UpdateVerification');
+
     Route::get('/DataWarga-export', 'Admin\DataWargaController@export')->name('DataWarga.export');
     Route::get('/DataWarga-exportBalita', 'Admin\DataWargaController@exportBalita')->name('DataWargaBalita.export');
     Route::get('/DataWarga-exportLansia', 'Admin\DataWargaController@exportLansia')->name('DataWargaLansia.export');
     Route::get('/DataWarga-exportDisabilitas', 'Admin\DataWargaController@exportDisabilitas')->name('DataWargaDisabilitas.export');
     Route::get('/DataWarga-exportBantuanPemerintah', 'Admin\DataWargaController@exportBantuanPemerintah')->name('DataWargaBantuanPemerintah.export');
+    Route::get('/DataWarga-exportKategoriPria', 'Admin\DataWargaController@exportKategoriPria')->name('DataWargaKategoriPria.export');
+    Route::get('/DataWArga-exportKategoriPerempuan', 'Admin\DataWargaController@exportKategoriPerempuan')->name('DataWargaKategoriPerempuan.export');
 
     //Khusus tujuan Data Warga Pindahan
     Route::resource('/DataWargaPindahan', 'Admin\DataWargaPindahanController');
