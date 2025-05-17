@@ -28,19 +28,19 @@
                     </ul>
                 </div>
             @endif
-                    
+
             <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Pengisian Data</h5>
-    
+
                   <form class="row g-3" action="{{ route('DataAkun.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
-                    <div class="col-12">
+                    <div class="col-6">
                       <label for="namaLengkap" class="form-label">Nama Lengkap</label>
                       <input type="text" class="form-control" name="name" id="name" placeholder="Masukkan Nama Lengkap.." value="{{ old('name') }}" required>
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                       <label for="username" class="form-label">Username</label>
                       <input type="text" class="form-control" name="username" id="username" placeholder="Masukkan Username.." value="{{ old('username') }}" required>
                     </div>
@@ -60,11 +60,11 @@
                         <label for="alamatLengkap" class="form-label">Alamat Lengkap</label>
                         <input type="text" class="form-control" name="address" id="address" placeholder="Masukkan Alamat Lengkap.." value="{{ old('address') }}" required>
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                       <label for="Password" class="form-label">Password</label>
                       <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password.." required>
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                         <label for="Password" class="form-label">Konfirmasi Password</label>
                         <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Konfirmasi Password.." required>
                     </div>
@@ -85,7 +85,7 @@
                       <a href="{{ route('DataAkun.index') }}" class="btn btn-danger">Kembali</a>
                     </div>
                   </form>
-    
+
                 </div>
             </div>
         </div>

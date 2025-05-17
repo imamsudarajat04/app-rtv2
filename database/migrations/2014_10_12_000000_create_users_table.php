@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('username');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('no_hp', 13);
+            $table->string('no_hp');
             $table->string('password');
             //Khusus RT dan RW wajib diisi untuk menentukan wilayah
             $table->string('rt')->nullable();
