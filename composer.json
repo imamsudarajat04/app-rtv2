@@ -16,6 +16,7 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "maatwebsite/excel": "^3.1",
+        "twilio/sdk": "^8.6",
         "yajra/laravel-datatables-oracle": "^9.19"
     },
     "require-dev": {
