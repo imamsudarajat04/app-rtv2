@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Services\SMS\TwilioService;
 use DateTime;
+use Exception;
 use App\Provinsi;
 use App\Kabupaten;
 use App\Kecamatan;
@@ -10,10 +12,12 @@ use App\Kelurahan;
 use App\Religions;
 use App\Data_warga;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Exports\DataWargaExport;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Http;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\DataWargaRequest;
 use Illuminate\Support\Facades\Storage;
@@ -353,16 +357,44 @@ class DataWargaController extends Controller
     /**
      * @param Request $request
      * @param $id
-     * @return void
+     * @return RedirectResponse
      */
-    public function updateVerification(Request $request, $id)
+    public function updateVerification(Request $request, $id): RedirectResponse
     {
-        $cek = Data_warga::findOrFail($id);
+        try {
+            $dataWarga = Data_warga::findOrFail($id);
 
-        $cek->update([
-            'verification' => $request['verification']
-        ]);
+            if ((int) $request->input('verification') === 1) {
+                $dataWarga->update([
+                    'verification' => $request->input('verification')
+                ]);
 
-        return Redirect::back()->with("success", 'Berhasil Verifikasi!');
+                if (!empty($dataWarga->no_telp)) {
+                    $userKey = env('ZENZIVA_USERKEY');
+                    $passKey = env('ZENZIVA_APIKEY');
+                    $message = "Hallo, $dataWarga->nama_lengkap kamu berhasil diverifikasi di SMART-RT.";
+                    $url = "https://console.zenziva.net/reguler/api/sendsms/";
+
+                    $response = Http::asForm()->post($url, [
+                        'userkey' => $userKey,
+                        'passkey' => $passKey,
+                        'to' => $dataWarga->no_telp,
+                        'message' => $message,
+                    ]);
+
+                    if ($response->successful()) {
+                        return Redirect::back()->with('success', 'Berhasil verifikasi dan mengirim SMS.');
+                    }
+
+                    return Redirect::back()->with('warning', 'Data diverifikasi, tapi gagal mengirim SMS.');
+                }
+
+                return Redirect::back()->with('success', 'Berhasil verifikasi, tapi tidak ada nomor HP.');
+            }
+
+            return Redirect::back()->with('info', 'Verifikasi tidak dilakukan karena nilai tidak valid.');
+        } catch (Exception $e) {
+            return Redirect::back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+        }
     }
 }
