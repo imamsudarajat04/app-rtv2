@@ -18,19 +18,19 @@
         </a>
       </li><!-- Data Akun  -->
 
-      <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataRT*')) ? '' : 'collapsed' }}" href="{{ route('DataRT.index') }}">
-          <i class="bi bi-person-badge-fill"></i>
-          <span>Data RT</span>
-        </a>
-      </li><!-- Data RT -->
+{{--      <li class="nav-item">--}}
+{{--        <a class="nav-link {{ (request()->routeIs('DataRT*')) ? '' : 'collapsed' }}" href="{{ route('DataRT.index') }}">--}}
+{{--          <i class="bi bi-person-badge-fill"></i>--}}
+{{--          <span>Data RT</span>--}}
+{{--        </a>--}}
+{{--      </li><!-- Data RT -->--}}
 
-      <li class="nav-item">
-        <a class="nav-link {{ (request()->routeIs('DataRW*')) ? '' : 'collapsed' }}" href="{{ route('DataRW.index') }}">
-          <i class="bi bi-people-fill"></i>
-          <span>Data RW</span>
-        </a>
-      </li><!-- Data RW -->
+{{--      <li class="nav-item">--}}
+{{--        <a class="nav-link {{ (request()->routeIs('DataRW*')) ? '' : 'collapsed' }}" href="{{ route('DataRW.index') }}">--}}
+{{--          <i class="bi bi-people-fill"></i>--}}
+{{--          <span>Data RW</span>--}}
+{{--        </a>--}}
+{{--      </li><!-- Data RW -->--}}
 
       <li class="nav-item">
         <a class="nav-link {{ (request()->routeIs('DataWarga*')) ? '' : 'collapsed' }}" href="{{ route('DataWarga.index') }}">

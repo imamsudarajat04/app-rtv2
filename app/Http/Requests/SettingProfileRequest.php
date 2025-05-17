@@ -27,7 +27,7 @@ class SettingProfileRequest extends FormRequest
         if (in_array($this->method(), ['PUT', 'PATCH'])) {
             $rules = [
                 'name'    => 'required|string',
-                'no_hp'   => 'required|numeric',
+                'no_hp'   => 'required|numeric|min:10',
                 'rw'      => 'required|string',
                 'rt'      => 'required|string',
                 'address' => 'required|string',
@@ -40,7 +40,7 @@ class SettingProfileRequest extends FormRequest
 //                'password'              => 'required|string|min:5|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{5,}$/',
                 'password'              => 'required|string|digits:8',
                 'password_confirmation' => 'required|same:password',
-                'no_hp'                 => 'required|numeric',
+                'no_hp'                 => 'required|numeric|min:10',
                 'rt'                    => 'required|string',
                 'rw'                    => 'required|string',
                 'address'               => 'required|string',
