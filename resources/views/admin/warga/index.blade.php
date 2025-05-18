@@ -55,6 +55,12 @@
 
                       <!-- Tombol Reset -->
                       <button class="btn btn-secondary" id="resetFilter">Reset</button>
+
+                      <form method="GET" action="{{ route('DataWarga.export') }}" id="exportForm">
+                          <input type="hidden" name="rt" id="exportRT">
+                          <input type="hidden" name="rw" id="exportRW">
+                          <button type="submit" class="btn btn-success">Export</button>
+                      </form>
                   </div>
               </div>
               <h5 class="card-title">Data Warga</h5>
@@ -114,6 +120,10 @@
                 const rt = $('#filterRT').val();
                 const rw = $('#filterRW').val();
 
+                // Set Export
+                $('#exportRT').val(rt);
+                $('#exportRW').val(rw);
+
                 table.column(4).search(rt ? '^' + rt + '$' : '', true, false); // Column 4 = RT
                 table.column(5).search(rw ? '^' + rw + '$' : '', true, false); // Column 5 = RW
                 table.draw();
@@ -122,6 +132,7 @@
             // Reset Filter
             $('#resetFilter').on('click', function () {
                 $('#filterRT, #filterRW').val('');
+                $('#exportRT, #exportRW').val('');
                 table.column(4).search('').column(5).search('').draw();
             });
 

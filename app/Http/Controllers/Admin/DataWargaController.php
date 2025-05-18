@@ -284,9 +284,12 @@ class DataWargaController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
-    public function export()
+    public function export(Request $request)
     {
-        return Excel::download(new DataWargaExport, 'DataWarga.xlsx');
+        $rt = $request->input('rt');
+        $rw = $request->input('rw');
+
+        return Excel::download(new DataWargaExport($rt, $rw), 'DataWarga.xlsx');
     }
 
     /**
