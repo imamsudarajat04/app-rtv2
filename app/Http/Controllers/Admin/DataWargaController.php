@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Services\SMS\TwilioService;
 use DateTime;
 use Exception;
 use App\Provinsi;
@@ -16,7 +15,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Exports\DataWargaExport;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Http;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\DataWargaRequest;
@@ -286,9 +284,12 @@ class DataWargaController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
-    public function export()
+    public function export(Request $request)
     {
-        return Excel::download(new DataWargaExport, 'DataWarga.xlsx');
+        $rt = $request->input('rt');
+        $rw = $request->input('rw');
+
+        return Excel::download(new DataWargaExport($rt, $rw), 'DataWarga.xlsx');
     }
 
     /**
