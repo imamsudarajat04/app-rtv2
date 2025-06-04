@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             GlobalSettingSeeder::class,
             HeaderSettingSeeder::class,
             FooterSettingsSeeder::class,
+            DataWargaSeeder::class,
         ]);
     }
 }
