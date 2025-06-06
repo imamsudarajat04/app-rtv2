@@ -38,8 +38,8 @@ class CreateDataWargasTable extends Migration
             $table->longText('alamat_sebelumnya')
                 ->nullable();
             $table->longText('alamat');
-            $table->string('rt');
-            $table->string('rw');
+            $table->string('rt')->nullable();
+            $table->string('rw')->nullable();
             $table->string('pendidikan');
             $table->string('jenis_pekerjaan')
                 ->nullable();
@@ -51,10 +51,10 @@ class CreateDataWargasTable extends Migration
             $table->string('foto_ktp')
                 ->nullable();
             //Data Orangtua
-            $table->string('nama_ayah');
-            $table->string('pekerjaan_ayah');
-            $table->string('nama_ibu');
-            $table->string('pekerjaan_ibu');
+            $table->string('nama_ayah')->nullable();
+            $table->string('pekerjaan_ayah')->nullable();
+            $table->string('nama_ibu')->nullable();
+            $table->string('pekerjaan_ibu')->nullable();
             $table->enum('warga_pindahan', ['0', '1'])
                 ->default('0');
             $table->enum('bantuan_pemerintah', ['0', '1'])
