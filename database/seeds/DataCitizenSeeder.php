@@ -35,10 +35,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Petani",
             "nama_ibu"              => "Siti Aminah",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 1
         ],
         [
@@ -70,10 +70,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pedagang",
             "nama_ibu"              => "Deliani Sitompul",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -105,10 +105,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "PNS",
             "nama_ibu"              => "Ami Dabukke",
             "pekerjaan_ibu"         => "Guru Honorer",
-            "warga_pindahan"        => 1,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "1",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -140,10 +140,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Petani",
             "nama_ibu"              => "Siti Rahayu",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 1,
-            "bantuan_pemerintah"    => 1,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "1",
+            "bantuan_pemerintah"    => "1",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -175,10 +175,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pensiunan",
             "nama_ibu"              => "Fatimah Suryani",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -210,10 +210,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Nelayan",
             "nama_ibu"              => "Kasiyah Halimah",
             "pekerjaan_ibu"         => "Penjahit", // Consistent with Kasiyah's profession
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -245,10 +245,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Nelayan",
             "nama_ibu"              => "Kasiyah Halimah",
             "pekerjaan_ibu"         => "Penjahit",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 1,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "1",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -280,10 +280,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Nelayan", // Consistent with previous entries for this family
             "nama_ibu"              => "Kasiyah Halimah", // Consistent with previous entries for this family
             "pekerjaan_ibu"         => "Penjahit", // Consistent with previous entries for this family
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 1,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "1",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -315,10 +315,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Petani",
             "nama_ibu"              => "Sri Mulyani",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -350,10 +350,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pensiunan",
             "nama_ibu"              => "Endah Lestari",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 1
         ],
         [
@@ -385,10 +385,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Nelayan",
             "nama_ibu"              => "Gina Suwarno",
             "pekerjaan_ibu"         => "Wiraswasta", // Consistent with Gina's profession
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -420,10 +420,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Nelayan",
             "nama_ibu"              => "Gina Suwarno",
             "pekerjaan_ibu"         => "Wiraswasta",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -455,10 +455,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Wiraswasta",
             "nama_ibu"              => "Siti Rahmawati",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -483,17 +483,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "19", // Consistent RT
             "rw"                    => "20", // Consistent RW
             "kode_pos"              => "10110",
-            "alamat"                => "Jl. Tanah Abang I No. 0, RT 19 RW 20, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta", // Adjusted address for consistency
+            "alamat"                => "Jl. Tanah Abang I No. 01, RT 19 RW 02, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta", // Adjusted address for consistency
             "foto_kk"               => "datawarga/foto_kk/family6_kk.jpg",
             "foto_ktp"              => "datawarga/foto_ktp/vera_hidayanto_ktp.jpg", // Adjusted filename
             "nama_ayah"             => "Sirait Hutabarat", // Added parent names
             "pekerjaan_ayah"        => "Pensiunan PNS",
             "nama_ibu"              => "Borubatak Siregar",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -518,17 +518,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "19", // Consistent RT
             "rw"                    => "20", // Consistent RW
             "kode_pos"              => "10110",
-            "alamat"                => "Jl. Tanah Abang I No. 0, RT 19 RW 20, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta",
+            "alamat"                => "Jl. Tanah Abang I No. 01, RT 19 RW 02, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta",
             "foto_kk"               => "datawarga/foto_kk/family6_kk.jpg",
             "foto_ktp"              => null, // Correct for a minor
             "nama_ayah"             => "Tina Hidayanto", // Consistent with parents
             "pekerjaan_ayah"        => "Pensiunan Pegawai Swasta",
             "nama_ibu"              => "Vera Hidayanto",
             "pekerjaan_ibu"         => "Wiraswasta", // Consistent with Vera's profession
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -553,17 +553,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "19", // Consistent RT
             "rw"                    => "20", // Consistent RW
             "kode_pos"              => "10110",
-            "alamat"                => "Jl. Tanah Abang I No. 0, RT 19 RW 20, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta",
+            "alamat"                => "Jl. Tanah Abang I No. 01, RT 19 RW 02, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta",
             "foto_kk"               => "datawarga/foto_kk/family6_kk.jpg",
             "foto_ktp"              => null, // Correct for Balita
             "nama_ayah"             => "Tina Hidayanto", // Consistent with parents
             "pekerjaan_ayah"        => "Pensiunan Pegawai Swasta",
             "nama_ibu"              => "Vera Hidayanto",
             "pekerjaan_ibu"         => "Wiraswasta",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -588,17 +588,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "29", // Consistent RT
             "rw"                    => "30", // Consistent RW
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
-            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 30, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
+            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
             "foto_ktp"              => "datawarga/foto_ktp/karya_adriansyah_s.gz_ktp.jpg",
             "nama_ayah"             => "Budi Adriansyah",
             "pekerjaan_ayah"        => "PNS",
             "nama_ibu"              => "Dewi Lestari",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -630,10 +630,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Wiraswasta",
             "nama_ibu"              => "Hotmauli Sianipar",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -665,10 +665,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pensiunan Guru",
             "nama_ibu"              => "Nurul Huda",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -700,10 +700,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -735,10 +735,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -770,10 +770,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -798,17 +798,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "29", // Consistent RT
             "rw"                    => "30", // Consistent RW
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
-            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 30, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
+            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
             "foto_ktp"              => "datawarga/foto_ktp/karya_adriansyah_s.gz_ktp.jpg",
             "nama_ayah"             => "Budi Adriansyah",
             "pekerjaan_ayah"        => "PNS",
             "nama_ibu"              => "Dewi Lestari",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 1
         ],
         [
@@ -840,10 +840,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Wiraswasta",
             "nama_ibu"              => "Hotmauli Sianipar",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -875,10 +875,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pensiunan Guru",
             "nama_ibu"              => "Nurul Huda",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -910,10 +910,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -945,10 +945,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -980,10 +980,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -1015,10 +1015,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pensiunan TNI",
             "nama_ibu"              => "Aminah Sari",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -1050,10 +1050,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Wiraswasta",
             "nama_ibu"              => "Siti Rahayu",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -1085,10 +1085,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Karyawan Swasta",
             "nama_ibu"              => "Puti Citra Puspasari",
             "pekerjaan_ibu"         => "Dosen",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -1120,10 +1120,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Karyawan Swasta",
             "nama_ibu"              => "Puti Citra Puspasari",
             "pekerjaan_ibu"         => "Dosen",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -1148,17 +1148,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "29", // Consistent RT
             "rw"                    => "30", // Consistent RW
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
-            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 30, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
+            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
             "foto_ktp"              => "datawarga/foto_ktp/karya_adriansyah_s.gz_ktp.jpg",
             "nama_ayah"             => "Budi Adriansyah",
             "pekerjaan_ayah"        => "PNS",
             "nama_ibu"              => "Dewi Lestari",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -1190,10 +1190,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Wiraswasta",
             "nama_ibu"              => "Hotmauli Sianipar",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"              => 0
         ],
         [
@@ -1225,10 +1225,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pensiunan Guru",
             "nama_ibu"              => "Nurul Huda",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1260,10 +1260,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1295,10 +1295,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1330,10 +1330,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Insinyur",
             "nama_ibu"              => "Langgeng Simbolon",
             "pekerjaan_ibu"         => "Pekerja Seni",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1365,10 +1365,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Pensiunan TNI",
             "nama_ibu"              => "Aminah Sari",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1400,10 +1400,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Wiraswasta",
             "nama_ibu"              => "Siti Rahayu",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1435,10 +1435,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Karyawan Swasta",
             "nama_ibu"              => "Puti Citra Puspasari",
             "pekerjaan_ibu"         => "Dosen",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1470,10 +1470,10 @@ class DataCitizenSeeder extends Seeder
             "pekerjaan_ayah"        => "Karyawan Swasta",
             "nama_ibu"              => "Puti Citra Puspasari",
             "pekerjaan_ibu"         => "Dosen",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1498,17 +1498,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "02", // Consistent RT for the family
             "rw"                    => "10", // Consistent RW for the family
             "kode_pos"              => "53213", // Adjusted to a Cilacap postcode
-            "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 10, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Adjusted address to match province/kabupaten/kecamatan
+            "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 01, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Adjusted address to match province/kabupaten/kecamatan
             "foto_kk"               => "datawarga/foto_kk/family10_kk.jpg",
             "foto_ktp"              => "datawarga/foto_ktp/cut_ika_hidayat_s.psi_ktp.jpg",
             "nama_ayah"             => "Teuku Amir Hidayat",
             "pekerjaan_ayah"        => "Pensiunan",
             "nama_ibu"              => "Siti Zulaikha",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1533,17 +1533,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "02", // Consistent RT
             "rw"                    => "10", // Consistent RW
             "kode_pos"              => "53213",
-            "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 10, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Consistent address
+            "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 01, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family10_kk.jpg",
             "foto_ktp"              => "datawarga/foto_ktp/ridwan_permana_ktp.jpg", // Adjusted filename
             "nama_ayah"             => "Ahmad Permana",
             "pekerjaan_ayah"        => "Petani",
             "nama_ibu"              => "Fatimah Lestari",
             "pekerjaan_ibu"         => "Ibu Rumah Tangga",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1568,17 +1568,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "02", // Consistent RT
             "rw"                    => "10", // Consistent RW
             "kode_pos"              => "53213",
-            "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 10, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Consistent address
+            "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 01, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family10_kk.jpg",
             "foto_ktp"              => null,
             "nama_ayah"             => "Cut Ika Hidayat", // Parent is female Head of Family
             "pekerjaan_ayah"        => "Psikolog",
             "nama_ibu"              => "Ridwan Permana", // Parent is male Spouse
             "pekerjaan_ibu"         => "PNS",
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ],
         [
@@ -1603,17 +1603,17 @@ class DataCitizenSeeder extends Seeder
             "rt"                    => "29", // Consistent RT for the family
             "rw"                    => "30", // Consistent RW for the family
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
-            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 30, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Consistent address for Karya Adriansyah's family
+            "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Consistent address for Karya Adriansyah's family
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
             "foto_ktp"              => null,
             "nama_ayah"             => "Karya Adriansyah",
             "pekerjaan_ayah"        => "Ahli Gizi",
             "nama_ibu"              => "Dewi Lestari", // Assuming spouse of Karya Adriansyah is Dewi Lestari. This needs to be added as an entry if not already present.
             "pekerjaan_ibu"         => "Ibu Rumah Tangga", // Assuming spouse of Karya Adriansyah is Dewi Lestari.
-            "warga_pindahan"        => 0,
-            "bantuan_pemerintah"    => 0,
-            "disabilitas"           => 0,
-            "verification"          => 1,
+            "warga_pindahan"        => "0",
+            "bantuan_pemerintah"    => "0",
+            "disabilitas"           => "0",
+            "verification"          => "1",
             "is_death"  => 0
         ]    
     ];
