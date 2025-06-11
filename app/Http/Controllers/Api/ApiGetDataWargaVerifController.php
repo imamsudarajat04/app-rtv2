@@ -24,9 +24,9 @@ class ApiGetDataWargaVerifController extends Controller
             $keywoard = $request->nik;
             $getWargaVerif = Data_warga::where('verification', '1')
                 ->where('nik', 'like', '%' . $keywoard . '%')
-                ->get();
+                ->first();
 
-            if ($getWargaVerif->isEmpty()) {
+            if (!$getWargaVerif) {
                 return response()->json([
                     'status' => 'error',
                     'message' => 'Warga belum terverifikasi',
