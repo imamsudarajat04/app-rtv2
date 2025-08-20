@@ -40,16 +40,22 @@
                       <!-- Filter RT -->
                       <select class="form-select" id="filterRT" style="width: 120px;">
                           <option selected disabled>Filter RT</option>
-                          @for($i=1;$i<10;$i++)
-                              <option value="0{{$i}}">RT 0{{$i}}</option>
+                          @for($i=1;$i<51;$i++)
+                              @php
+                                $rt = str_pad($i, 3, '0', STR_PAD_LEFT);
+                              @endphp
+                              <option value="{{$rt}}">RT {{$rt}}</option>
                           @endfor
                       </select>
 
                       <!-- Filter RW -->
                       <select class="form-select" id="filterRW" style="width: 120px;">
                           <option selected disabled>Filter RW</option>
-                          @for($a=1;$a<10;$a++)
-                              <option value="0{{$a}}">RW 0{{$a}}</option>
+                          @for($a=1;$a<51;$a++)
+                              @php
+                                $rw = str_pad($a, 2, '0', STR_PAD_LEFT);
+                              @endphp
+                              <option value="{{$rw}}">RW {{$rw}}</option>
                           @endfor
                       </select>
 
