@@ -53,6 +53,14 @@
                     </div>
                 @endif
 
+                <!-- Alert Warning -->
+                @if($message = Session::get('warning'))
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{ $message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Pengisian Data</h5>
@@ -263,11 +271,17 @@
 
                             <div class="col-12">
                                 <label for="verifikasi" class="form-label">Status Verikasi</label>
-                                <select class="form-select" name="verification" id="verification">
+                                <select class="form-select" name="verification" id="verification" required>
                                     <option value="" selected disabled>Pilih Status Verifikasi</option>
-                                    <option value="0" {{ old('verification', $data->verification) == '0' ? 'selected' : '' }}>Belum Verifikasi</option>
+                                    <option value="0" {{ old('verification', $data->verification) == '0' ? 'selected' : '' }}>Tolak / Belum Verifikasi</option>
                                     <option value="1" {{ old('verification', $data->verification) == '1' ? 'selected' : ''  }}>Verifikasi</option>
                                 </select>
+                            </div>
+
+                            <div class="col-12" id="notesField" style="display: none;">
+                                <label for="notes" class="form-label">Catatan Verifikasi</label>
+                                <textarea class="form-control" name="notes" id="notes" rows="3" placeholder="Masukkan catatan verifikasi (opsional)..." maxlength="500">{{ old('notes', $data->verification_notes) }}</textarea>
+                                <small class="form-text text-muted">Catatan akan dikirim ke warga jika status ditolak</small>
                             </div>
 
                             <div class="text-center">
@@ -329,6 +343,26 @@
         });
 
         $(document).ready(function() {
+            // Toggle notes field based on verification status
+            $('#verification').on('change', function() {
+                const status = $(this).val();
+                if (status === '0') {
+                    $('#notesField').show();
+                } else {
+                    $('#notesField').hide();
+                }
+            });
+
+            // Show notes field if already rejected
+            if ($('#verification').val() === '0') {
+                $('#notesField').show();
+            }
+            
+            // Show notes field if there are existing notes
+            if ($('#notes').val().trim() !== '') {
+                $('#notesField').show();
+            }
+
             const selectNameKabupaten = $('select[name="kabupaten"]');
             const selectNameKecamatan = $('select[name="kecamatan"]');
             const selectNameKelurahan = $('select[name="kelurahan"]');

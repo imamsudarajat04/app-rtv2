@@ -11,7 +11,7 @@ class DataCitizenSeeder extends Seeder
             "nik"                   => "9935781216018820",
             "nama_lengkap"          => "Asmuni Dabukke, S.Pt",
             "jenis_kelamin"         => "Laki-laki",
-            "no_telp"               => "083285462591",
+            "no_telp"               => "083183462191",
             "kategori_usia"         => "Dewasa",
             "tanggal_lahir"         => "1968-02-28",
             "tempat_lahir"          => "Bandar Lampung",
@@ -38,7 +38,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 1
         ],
         [
@@ -73,7 +73,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -108,7 +108,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "1",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -143,7 +143,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "1",
             "bantuan_pemerintah"    => "1",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -178,7 +178,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -213,7 +213,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -248,7 +248,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "1",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -283,7 +283,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "1",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -318,7 +318,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [

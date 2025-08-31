@@ -43,6 +43,9 @@ class Data_warga extends Model
         'bantuan_pemerintah',
         'disabilitas',
         'verification',
+        'verification_notes',
+        'verified_at',
+        'verified_by',
     ];
 
     public function religion(): BelongsTo
