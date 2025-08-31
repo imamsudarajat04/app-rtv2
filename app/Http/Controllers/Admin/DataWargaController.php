@@ -28,9 +28,16 @@ use App\Exports\DataWargaKategoriDisabilitasExport;
 use App\Exports\DataWargaKategoriBantuanPemerintahExport;
 use App\Exports\DataPriaExport;
 use App\Exports\DataPerempuanExport;
+use App\Services\WhatsAppNotificationService;
 
 class DataWargaController extends Controller
 {
+    protected $whatsappService;
+
+    public function __construct(WhatsAppNotificationService $whatsappService)
+    {
+        $this->whatsappService = $whatsappService;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -59,7 +66,8 @@ class DataWargaController extends Controller
                 })
                 ->editColumn('verification', function ($item) {
                     if ($item->verification == '0') {
-                        return '<span class="rounded-pill badge badge-danger">Belum Verifikasi Data</span>';
+                        $notes = !empty($item->verification_notes) ? '<br><small class="text-muted">Catatan: ' . $item->verification_notes . '</small>' : '';
+                        return '<span class="rounded-pill badge badge-danger">Belum Verifikasi Data</span>' . $notes;
                     }else{
                         return '<span class="rounded-pill badge badge-success">Sudah Verifikasi Data</span>';
                     }
@@ -367,30 +375,64 @@ class DataWargaController extends Controller
 
             if ((int) $request->input('verification') === 1) {
                 $dataWarga->update([
-                    'verification' => $request->input('verification')
+                    'verification' => $request->input('verification'),
+                    'verified_at' => now(),
+                    'verified_by' => auth()->id()
                 ]);
 
+                // Kirim notifikasi WhatsApp
                 if (!empty($dataWarga->no_telp)) {
-                    $userKey = env('ZENZIVA_USERKEY');
-                    $passKey = env('ZENZIVA_APIKEY');
-                    $message = "Hallo, $dataWarga->nama_lengkap kamu berhasil diverifikasi di SMART-RT.";
-                    $url = "https://console.zenziva.net/reguler/api/sendsms/";
-
-                    $response = Http::asForm()->post($url, [
-                        'userkey' => $userKey,
-                        'passkey' => $passKey,
-                        'to' => $dataWarga->no_telp,
-                        'message' => $message,
-                    ]);
-
-                    if ($response->successful()) {
-                        return Redirect::back()->with('success', 'Berhasil verifikasi dan mengirim SMS.');
+                    try {
+                        // Check if Twilio is configured
+                        if (empty(config('services.twilio.sid'))) {
+                            return Redirect::back()->with('success', 'Berhasil verifikasi. WhatsApp notification tidak dikirim karena konfigurasi Twilio belum lengkap.');
+                        }
+                        
+                        $whatsappResult = $this->whatsappService->sendVerificationNotification($dataWarga, 'verification');
+                        
+                        if ($whatsappResult['success']) {
+                            return Redirect::back()->with('success', 'Berhasil verifikasi dan mengirim notifikasi WhatsApp.');
+                        } else {
+                            return Redirect::back()->with('warning', 'Data diverifikasi, tapi gagal mengirim notifikasi WhatsApp: ' . ($whatsappResult['error'] ?? 'Unknown error'));
+                        }
+                    } catch (\Exception $e) {
+                        return Redirect::back()->with('warning', 'Data diverifikasi, tapi gagal mengirim notifikasi WhatsApp: ' . $e->getMessage());
                     }
-
-                    return Redirect::back()->with('warning', 'Data diverifikasi, tapi gagal mengirim SMS.');
                 }
 
                 return Redirect::back()->with('success', 'Berhasil verifikasi, tapi tidak ada nomor HP.');
+            } else if ((int) $request->input('verification') === 0) {
+                // Jika ditolak
+                $notes = $request->input('notes');
+                
+                $dataWarga->update([
+                    'verification' => $request->input('verification'),
+                    'verification_notes' => $notes,
+                    'verified_at' => null,
+                    'verified_by' => auth()->id()
+                ]);
+
+                // Kirim notifikasi WhatsApp untuk penolakan
+                if (!empty($dataWarga->no_telp)) {
+                    try {
+                        // Check if Twilio is configured
+                        if (empty(config('services.twilio.sid'))) {
+                            return Redirect::back()->with('success', 'Data ditolak. WhatsApp notification tidak dikirim karena konfigurasi Twilio belum lengkap.');
+                        }
+                        
+                        $whatsappResult = $this->whatsappService->sendVerificationNotification($dataWarga, 'rejection');
+                        
+                        if ($whatsappResult['success']) {
+                            return Redirect::back()->with('success', 'Data ditolak dan notifikasi WhatsApp berhasil dikirim.');
+                        } else {
+                            return Redirect::back()->with('warning', 'Data ditolak, tapi gagal mengirim notifikasi WhatsApp: ' . ($whatsappResult['error'] ?? 'Unknown error'));
+                        }
+                    } catch (\Exception $e) {
+                        return Redirect::back()->with('warning', 'Data ditolak, tapi gagal mengirim notifikasi WhatsApp: ' . $e->getMessage());
+                    }
+                }
+
+                return Redirect::back()->with('success', 'Data ditolak, tapi tidak ada nomor HP.');
             }
 
             return Redirect::back()->with('info', 'Verifikasi tidak dilakukan karena nilai tidak valid.');

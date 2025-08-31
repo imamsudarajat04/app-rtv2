@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             HeaderSettingSeeder::class,
             FooterSettingsSeeder::class,
             DataCitizenSeeder::class,
+
 //            DataWargaSeeder::class,
         ]);
     }

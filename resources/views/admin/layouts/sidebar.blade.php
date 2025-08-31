@@ -39,6 +39,8 @@
         </a>
       </li><!-- Data Warga -->
 
+
+
       <li class="nav-item">
           <a href="{{ route('DataKematian.index') }}" class="nav-link {{ (request()->routeIs('DataKematian*')) ? '' : 'collapsed' }}">
               <i class="bi bi-file-text"></i>

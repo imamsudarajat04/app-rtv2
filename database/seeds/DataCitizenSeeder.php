@@ -11,7 +11,7 @@ class DataCitizenSeeder extends Seeder
             "nik"                   => "9935781216018820",
             "nama_lengkap"          => "Asmuni Dabukke, S.Pt",
             "jenis_kelamin"         => "Laki-laki",
-            "no_telp"               => "083285462591",
+            "no_telp"               => "083183462191",
             "kategori_usia"         => "Dewasa",
             "tanggal_lahir"         => "1968-02-28",
             "tempat_lahir"          => "Bandar Lampung",
@@ -25,8 +25,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "34010101",
-            "rt"                    => "01",
-            "rw"                    => "02",
+            "rt"                    => "001",
+            "rw"                    => "002",
             "kode_pos"              => "55111",
             "alamat"                => "Gang Abdul Muis No. 743, RT 01 RW 02, Kel. Maju, Kec. Jaya, Kab. Lampung Selatan",
             "foto_kk"               => "datawarga/foto_kk/family3_kk.jpg",
@@ -38,7 +38,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 1
         ],
         [
@@ -60,8 +60,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "34010101",
-            "rt"                    => "01",
-            "rw"                    => "02",
+            "rt"                    => "001",
+            "rw"                    => "002",
             "kode_pos"              => "55111",
             "alamat"                => "Gang Abdul Muis No. 743, RT 01 RW 02, Kel. Maju, Kec. Jaya, Kab. Lampung Selatan",
             "foto_kk"               => "datawarga/foto_kk/family3_kk.jpg",
@@ -73,7 +73,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -95,8 +95,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "34010101",
-            "rt"                    => "01",
-            "rw"                    => "02",
+            "rt"                    => "001",
+            "rw"                    => "002",
             "kode_pos"              => "55111",
             "alamat"                => "Gang Abdul Muis No. 743, RT 01 RW 02, Kel. Maju, Kec. Jaya, Kab. Lampung Selatan",
             "foto_kk"               => "datawarga/foto_kk/family3_kk.jpg",
@@ -108,7 +108,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "1",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -130,8 +130,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3201", // Bogor
             "kecamatan"             => "320101", // Cibinong
             "kelurahan"             => "32010101", // Cirimekar (Using an actual Bogor sub-district code for consistency)
-            "rt"                    => "04", // Consistent RT for the family
-            "rw"                    => "05", // Consistent RW for the family
+            "rt"                    => "004", // Consistent RT for the family
+            "rw"                    => "005", // Consistent RW for the family
             "kode_pos"              => "16915", // Adjusted to a plausible Bogor postcode (Cibinong area)
             "alamat"                => "Jl. KH Amin Jasuta No. 124, RT 04 RW 05, Kel. Cirimekar, Kec. Cibinong, Kab. Bogor, Jawa Barat", // Adjusted address to match province/kabupaten/kecamatan/kelurahan
             "foto_kk"               => "datawarga/foto_kk/family4_kk.jpg",
@@ -143,7 +143,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "1",
             "bantuan_pemerintah"    => "1",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -165,8 +165,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3201",
             "kecamatan"             => "320101",
             "kelurahan"             => "32010101",
-            "rt"                    => "04", // Consistent RT
-            "rw"                    => "05", // Consistent RW
+            "rt"                    => "004", // Consistent RT
+            "rw"                    => "005", // Consistent RW
             "kode_pos"              => "16915",
             "alamat"                => "Jl. KH Amin Jasuta No. 124, RT 04 RW 05, Kel. Cirimekar, Kec. Cibinong, Kab. Bogor, Jawa Barat", // Adjusted address for consistency
             "foto_kk"               => "datawarga/foto_kk/family4_kk.jpg",
@@ -178,7 +178,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -200,8 +200,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3201",
             "kecamatan"             => "320101",
             "kelurahan"             => "32010101",
-            "rt"                    => "04", // Consistent RT
-            "rw"                    => "05", // Consistent RW
+            "rt"                    => "004", // Consistent RT
+            "rw"                    => "005", // Consistent RW
             "kode_pos"              => "16915",
             "alamat"                => "Jl. KH Amin Jasuta No. 124, RT 04 RW 05, Kel. Cirimekar, Kec. Cibinong, Kab. Bogor, Jawa Barat", // Adjusted address for consistency
             "foto_kk"               => "datawarga/foto_kk/family4_kk.jpg",
@@ -213,7 +213,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -235,8 +235,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3201",
             "kecamatan"             => "320101",
             "kelurahan"             => "32010101",
-            "rt"                    => "04", // Consistent RT
-            "rw"                    => "05", // Consistent RW
+            "rt"                    => "004", // Consistent RT
+            "rw"                    => "005", // Consistent RW
             "kode_pos"              => "16915",
             "alamat"                => "Jl. KH Amin Jasuta No. 124, RT 04 RW 05, Kel. Cirimekar, Kec. Cibinong, Kab. Bogor, Jawa Barat", // Adjusted address for consistency
             "foto_kk"               => "datawarga/foto_kk/family4_kk.jpg",
@@ -248,7 +248,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "1",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -270,8 +270,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3201",
             "kecamatan"             => "320101",
             "kelurahan"             => "32010101", // Adjusted to a plausible Bogor kelurahan code (Cirimekar)
-            "rt"                    => "04", // Consistent RT
-            "rw"                    => "05", // Consistent RW
+            "rt"                    => "004", // Consistent RT
+            "rw"                    => "005", // Consistent RW
             "kode_pos"              => "16915", // Adjusted to a plausible Bogor postcode (Cibinong area)
             "alamat"                => "Jl. KH Amin Jasuta No. 124, RT 04 RW 05, Kel. Cirimekar, Kec. Cibinong, Kab. Bogor, Jawa Barat", // Adjusted address to match province/kabupaten/kecamatan/kelurahan
             "foto_kk"               => "datawarga/foto_kk/family4_kk.jpg",
@@ -283,7 +283,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "1",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -305,8 +305,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3578", // Kota Surabaya
             "kecamatan"             => "357801", // Adjusted to a plausible Surabaya kecamatan code (Wonokromo)
             "kelurahan"             => "35780101", // Adjusted to a plausible Surabaya kelurahan code (Wonokromo)
-            "rt"                    => "11", // Consistent RT for the family
-            "rw"                    => "12", // Consistent RW for the family
+            "rt"                    => "011", // Consistent RT for the family
+            "rw"                    => "012", // Consistent RW for the family
             "kode_pos"              => "60242", // Adjusted to a plausible Surabaya postcode (Wonokromo area)
             "alamat"                => "Jalan Diponegoro No. 71, RT 11 RW 12, Kel. Wonokromo, Kec. Wonokromo, Kota Surabaya, Jawa Timur", // Adjusted address to match province/kabupaten/kecamatan/kelurahan and postcode
             "foto_kk"               => "datawarga/foto_kk/family5_kk.jpg",
@@ -318,7 +318,7 @@ class DataCitizenSeeder extends Seeder
             "warga_pindahan"        => "0",
             "bantuan_pemerintah"    => "0",
             "disabilitas"           => "0",
-            "verification"          => "1",
+            "verification"          => "0",
             "is_death"              => 0
         ],
         [
@@ -340,8 +340,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3578",
             "kecamatan"             => "357801",
             "kelurahan"             => "35780101",
-            "rt"                    => "11", // Consistent RT
-            "rw"                    => "12", // Consistent RW
+            "rt"                    => "011", // Consistent RT
+            "rw"                    => "012", // Consistent RW
             "kode_pos"              => "60242",
             "alamat"                => "Jalan Diponegoro No. 71, RT 11 RW 12, Kel. Wonokromo, Kec. Wonokromo, Kota Surabaya, Jawa Timur",
             "foto_kk"               => "datawarga/foto_kk/family5_kk.jpg",
@@ -375,8 +375,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3578",
             "kecamatan"             => "357801",
             "kelurahan"             => "35780101",
-            "rt"                    => "11", // Consistent RT
-            "rw"                    => "12", // Consistent RW
+            "rt"                    => "011", // Consistent RT
+            "rw"                    => "012", // Consistent RW
             "kode_pos"              => "60242",
             "alamat"                => "Jalan Diponegoro No. 71, RT 11 RW 12, Kel. Wonokromo, Kec. Wonokromo, Kota Surabaya, Jawa Timur",
             "foto_kk"               => "datawarga/foto_kk/family5_kk.jpg",
@@ -410,8 +410,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3578",
             "kecamatan"             => "357801",
             "kelurahan"             => "35780101",
-            "rt"                    => "11", // Consistent RT
-            "rw"                    => "12", // Consistent RW
+            "rt"                    => "011", // Consistent RT
+            "rw"                    => "012", // Consistent RW
             "kode_pos"              => "60242",
             "alamat"                => "Jalan Diponegoro No. 71, RT 11 RW 12, Kel. Wonokromo, Kec. Wonokromo, Kota Surabaya, Jawa Timur",
             "foto_kk"               => "datawarga/foto_kk/family5_kk.jpg",
@@ -445,8 +445,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171", // Kota Jakarta Pusat
             "kecamatan"             => "317101", // Using a real code for Gambir, Jakarta Pusat
             "kelurahan"             => "31710101", // Using a real code for Gambir, Jakarta Pusat
-            "rt"                    => "19", // Consistent RT for the family
-            "rw"                    => "20", // Consistent RW for the family
+            "rt"                    => "019", // Consistent RT for the family
+            "rw"                    => "020", // Consistent RW for the family
             "kode_pos"              => "10110", // Valid postcode for Gambir, Jakarta Pusat
             "alamat"                => "Jl. Tanah Abang I No. 0, RT 19 RW 20, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta", // Adjusted address to match location codes
             "foto_kk"               => "datawarga/foto_kk/family6_kk.jpg",
@@ -480,8 +480,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171",
             "kecamatan"             => "317101",
             "kelurahan"             => "31710101",
-            "rt"                    => "19", // Consistent RT
-            "rw"                    => "20", // Consistent RW
+            "rt"                    => "019", // Consistent RT
+            "rw"                    => "020", // Consistent RW
             "kode_pos"              => "10110",
             "alamat"                => "Jl. Tanah Abang I No. 01, RT 19 RW 02, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta", // Adjusted address for consistency
             "foto_kk"               => "datawarga/foto_kk/family6_kk.jpg",
@@ -515,8 +515,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171",
             "kecamatan"             => "317101",
             "kelurahan"             => "31710101",
-            "rt"                    => "19", // Consistent RT
-            "rw"                    => "20", // Consistent RW
+            "rt"                    => "019", // Consistent RT
+            "rw"                    => "020", // Consistent RW
             "kode_pos"              => "10110",
             "alamat"                => "Jl. Tanah Abang I No. 01, RT 19 RW 02, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta",
             "foto_kk"               => "datawarga/foto_kk/family6_kk.jpg",
@@ -550,8 +550,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171",
             "kecamatan"             => "317101",
             "kelurahan"             => "31710101",
-            "rt"                    => "19", // Consistent RT
-            "rw"                    => "20", // Consistent RW
+            "rt"                    => "019", // Consistent RT
+            "rw"                    => "020", // Consistent RW
             "kode_pos"              => "10110",
             "alamat"                => "Jl. Tanah Abang I No. 01, RT 19 RW 02, Kel. Gambir, Kec. Gambir, Kota Jakarta Pusat, DKI Jakarta",
             "foto_kk"               => "datawarga/foto_kk/family6_kk.jpg",
@@ -585,8 +585,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171", // Kota Jakarta Pusat
             "kecamatan"             => "317108", // Correct code for Tanah Abang
             "kelurahan"             => "3171081001", // Correct code for Kebon Kacang
-            "rt"                    => "29", // Consistent RT
-            "rw"                    => "30", // Consistent RW
+            "rt"                    => "029", // Consistent RT
+            "rw"                    => "030", // Consistent RW
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
             "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
@@ -620,8 +620,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277", // Correct code for Kota Cimahi
             "kecamatan"             => "327701", // Correct code for Cimahi Utara
             "kelurahan"             => "3277011002", // Correct code for Pasir Kaliki
-            "rt"                    => "02", // Consistent RT for the family
-            "rw"                    => "01", // Consistent RW for the family
+            "rt"                    => "002", // Consistent RT for the family
+            "rw"                    => "001", // Consistent RW for the family
             "kode_pos"              => "40514", // Correct postcode for Pasir Kaliki, Cimahi
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Adjusted address to align with Cimahi location
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -655,8 +655,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -690,8 +690,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -725,8 +725,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -760,8 +760,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -795,8 +795,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171", // Kota Jakarta Pusat
             "kecamatan"             => "317108", // Correct code for Tanah Abang
             "kelurahan"             => "3171081001", // Correct code for Kebon Kacang
-            "rt"                    => "29", // Consistent RT
-            "rw"                    => "30", // Consistent RW
+            "rt"                    => "029", // Consistent RT
+            "rw"                    => "030", // Consistent RW
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
             "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
@@ -830,8 +830,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277", // Correct code for Kota Cimahi
             "kecamatan"             => "327701", // Correct code for Cimahi Utara
             "kelurahan"             => "3277011002", // Correct code for Pasir Kaliki
-            "rt"                    => "02", // Consistent RT for the family
-            "rw"                    => "01", // Consistent RW for the family
+            "rt"                    => "002", // Consistent RT for the family
+            "rw"                    => "001", // Consistent RW for the family
             "kode_pos"              => "40514", // Correct postcode for Pasir Kaliki, Cimahi
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Adjusted address to align with Cimahi location
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -865,8 +865,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -900,8 +900,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "010", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -935,8 +935,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "010", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -970,8 +970,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "010", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -1005,8 +1005,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401", // Kabupaten Kulon Progo
             "kecamatan"             => "340101", // Kecamatan Temon
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT for the family
-            "rw"                    => "07", // Consistent RW for the family
+            "rt"                    => "002", // Consistent RT for the family
+            "rw"                    => "007", // Consistent RW for the family
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Adjusted address to match province/kabupaten/kecamatan
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1040,8 +1040,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "07", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "007", // Consistent RW
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1075,8 +1075,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "07", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "007", // Consistent RW
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1110,8 +1110,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "07", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "007", // Consistent RW
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1145,8 +1145,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171", // Kota Jakarta Pusat
             "kecamatan"             => "317108", // Correct code for Tanah Abang
             "kelurahan"             => "3171081001", // Correct code for Kebon Kacang
-            "rt"                    => "29", // Consistent RT
-            "rw"                    => "30", // Consistent RW
+            "rt"                    => "029", // Consistent RT
+            "rw"                    => "030", // Consistent RW
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
             "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Adjusted for Jakarta Pusat (Tanah Abang, Kebon Kacang)
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
@@ -1180,8 +1180,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277", // Correct code for Kota Cimahi
             "kecamatan"             => "327701", // Correct code for Cimahi Utara
             "kelurahan"             => "3277011002", // Correct code for Pasir Kaliki
-            "rt"                    => "02", // Consistent RT for the family
-            "rw"                    => "01", // Consistent RW for the family
+            "rt"                    => "002", // Consistent RT for the family
+            "rw"                    => "010", // Consistent RW for the family
             "kode_pos"              => "40514", // Correct postcode for Pasir Kaliki, Cimahi
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Adjusted address to align with Cimahi location
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -1215,8 +1215,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "010", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -1250,8 +1250,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -1285,8 +1285,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -1320,8 +1320,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3277",
             "kecamatan"             => "327701",
             "kelurahan"             => "3277011002",
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "01", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "001", // Consistent RW
             "kode_pos"              => "40514",
             "alamat"                => "Gang Cihampelas No. 6, RT 02 RW 01, Kel. Pasir Kaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family8_kk.jpg",
@@ -1355,8 +1355,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401", // Kabupaten Kulon Progo
             "kecamatan"             => "340101", // Kecamatan Temon
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT for the family
-            "rw"                    => "07", // Consistent RW for the family
+            "rt"                    => "002", // Consistent RT for the family
+            "rw"                    => "007", // Consistent RW for the family
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Adjusted address to match province/kabupaten/kecamatan
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1390,8 +1390,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "07", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "007", // Consistent RW
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1425,8 +1425,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "07", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "007", // Consistent RW
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1460,8 +1460,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3401",
             "kecamatan"             => "340101",
             "kelurahan"             => "340101001", // Corrected code for Kulur
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "07", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "007", // Consistent RW
             "kode_pos"              => "55661", // Corrected postcode for Kulur, Temon, Kulon Progo
             "alamat"                => "Gang Kebonjati No. 8, RT 02 RW 07, Kel. Kulur, Kec. Temon, Kab. Kulon Progo, DI Yogyakarta", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family9_kk.jpg",
@@ -1495,8 +1495,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3301", // Cilacap
             "kecamatan"             => "330101", // Cilacap Selatan
             "kelurahan"             => "330101001", // Corrected code for Tambakreja
-            "rt"                    => "02", // Consistent RT for the family
-            "rw"                    => "10", // Consistent RW for the family
+            "rt"                    => "002", // Consistent RT for the family
+            "rw"                    => "010", // Consistent RW for the family
             "kode_pos"              => "53213", // Adjusted to a Cilacap postcode
             "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 01, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Adjusted address to match province/kabupaten/kecamatan
             "foto_kk"               => "datawarga/foto_kk/family10_kk.jpg",
@@ -1530,8 +1530,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3301",
             "kecamatan"             => "330101",
             "kelurahan"             => "330101001", // Corrected code for Tambakreja
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "10", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "010", // Consistent RW
             "kode_pos"              => "53213",
             "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 01, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family10_kk.jpg",
@@ -1565,8 +1565,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3301",
             "kecamatan"             => "330101",
             "kelurahan"             => "330101001", // Corrected code for Tambakreja
-            "rt"                    => "02", // Consistent RT
-            "rw"                    => "10", // Consistent RW
+            "rt"                    => "002", // Consistent RT
+            "rw"                    => "010", // Consistent RW
             "kode_pos"              => "53213",
             "alamat"                => "Jl. W.R. Supratman No. 483, RT 02 RW 01, Kel. Tambakreja, Kec. Cilacap Selatan, Kab. Cilacap, Jawa Tengah", // Consistent address
             "foto_kk"               => "datawarga/foto_kk/family10_kk.jpg",
@@ -1600,8 +1600,8 @@ class DataCitizenSeeder extends Seeder
             "kabupaten"             => "3171", // Kota Jakarta Pusat
             "kecamatan"             => "317108", // Correct code for Tanah Abang
             "kelurahan"             => "3171081001", // Correct code for Kebon Kacang
-            "rt"                    => "29", // Consistent RT for the family
-            "rw"                    => "30", // Consistent RW for the family
+            "rt"                    => "029", // Consistent RT for the family
+            "rw"                    => "030", // Consistent RW for the family
             "kode_pos"              => "10240", // Correct postcode for Kebon Kacang
             "alamat"                => "Gg. Kutisari Selatan No. 007, RT 29 RW 03, Kel. Kebon Kacang, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta", // Consistent address for Karya Adriansyah's family
             "foto_kk"               => "datawarga/foto_kk/family7_kk.jpg",
@@ -1615,7 +1615,7 @@ class DataCitizenSeeder extends Seeder
             "disabilitas"           => "0",
             "verification"          => "1",
             "is_death"  => 0
-        ]    
+        ]
     ];
 
     /**

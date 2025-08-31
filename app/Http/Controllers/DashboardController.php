@@ -13,11 +13,14 @@ use Yajra\DataTables\Facades\DataTables;
 
 class DashboardController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Exception
+     */
     public function index()
     {
         if(Auth::user()->role == 'superadmin') {
             $user = User::count();
-            $rt = Data_rt::count();
             $warga = Data_warga::count();
             $warga_pindahan = Data_warga::where('warga_pindahan', '=', '1')
                 ->count();
@@ -29,7 +32,6 @@ class DashboardController extends Controller
                 ->count();
             $pria = Data_warga::where('jenis_kelamin', 'Laki-laki')
                 ->count();
-            $rw = Data_rw::count();
             $notVerification = Data_warga::where('verification', '0')
                 ->count();
             $disabilitas = Data_warga::where('disabilitas', '1')
@@ -62,7 +64,6 @@ class DashboardController extends Controller
                     ->make();
             }
             return view('admin.index', [
-                'rt'                => $rt,
                 'user'              => $user,
                 'pria'              => $pria,
                 'warga'             => $warga,
@@ -70,7 +71,6 @@ class DashboardController extends Controller
                 'lansia'            => $lansia,
                 'perempuan'         => $perempuan,
                 'warga_pindahan'    => $warga_pindahan,
-                'rw'                => $rw,
                 'notVerification'   => $notVerification,
                 'deathData'         => $deathData,
                 'disabilitas'       => $disabilitas,
