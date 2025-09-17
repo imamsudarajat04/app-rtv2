@@ -38,6 +38,7 @@ class DataWargaController extends Controller
     {
         $this->whatsappService = $whatsappService;
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -147,9 +148,22 @@ class DataWargaController extends Controller
         $data = Data_warga::findOrFail($id);
         $religions = Religions::where('id', $data->religions_id)->first();
         $provinces = Provinsi::where('id', $data->provinsi)->first();
-        $regencies = Kabupaten::where('id', $data->kabupaten)->first();
-        $districts = Kecamatan::where('id', $data->kecamatan)->first();
-        $villages = Kelurahan::where('id', $data->kelurahan)->first();
+        
+        // Handle data type mismatch - kabupaten is stored as string but we need to match against integer id
+        $regencies = null;
+        if (!empty($data->kabupaten)) {
+            $regencies = Kabupaten::where('id', (int)$data->kabupaten)->first();
+        }
+        
+        $districts = null;
+        if (!empty($data->kecamatan)) {
+            $districts = Kecamatan::where('id', (int)$data->kecamatan)->first();
+        }
+        
+        $villages = null;
+        if (!empty($data->kelurahan)) {
+            $villages = Kelurahan::where('id', (int)$data->kelurahan)->first();
+        }
 
         if($data->status_dalam_keluarga == 0) {
             $sdk = 'Kepala Keluarga';
@@ -387,9 +401,9 @@ class DataWargaController extends Controller
                         if (empty(config('services.twilio.sid'))) {
                             return Redirect::back()->with('success', 'Berhasil verifikasi. WhatsApp notification tidak dikirim karena konfigurasi Twilio belum lengkap.');
                         }
-                        
+
                         $whatsappResult = $this->whatsappService->sendVerificationNotification($dataWarga, 'verification');
-                        
+
                         if ($whatsappResult['success']) {
                             return Redirect::back()->with('success', 'Berhasil verifikasi dan mengirim notifikasi WhatsApp.');
                         } else {
@@ -404,7 +418,7 @@ class DataWargaController extends Controller
             } else if ((int) $request->input('verification') === 0) {
                 // Jika ditolak
                 $notes = $request->input('notes');
-                
+
                 $dataWarga->update([
                     'verification' => $request->input('verification'),
                     'verification_notes' => $notes,
@@ -419,9 +433,9 @@ class DataWargaController extends Controller
                         if (empty(config('services.twilio.sid'))) {
                             return Redirect::back()->with('success', 'Data ditolak. WhatsApp notification tidak dikirim karena konfigurasi Twilio belum lengkap.');
                         }
-                        
+
                         $whatsappResult = $this->whatsappService->sendVerificationNotification($dataWarga, 'rejection');
-                        
+
                         if ($whatsappResult['success']) {
                             return Redirect::back()->with('success', 'Data ditolak dan notifikasi WhatsApp berhasil dikirim.');
                         } else {

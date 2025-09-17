@@ -60,27 +60,27 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="title">Agama</div>
-                                <div class="subtitle">{{ $religions->name }}</div>
+                                <div class="subtitle">{{ $religions ? $religions->name : 'Data tidak tersedia' }}</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="title">Provinsi</div>
-                                <div class="subtitle">{{ $provinces->nama_bps }}</div>
+                                <div class="subtitle">{{ $provinces ? $provinces->nama_bps : 'Data tidak tersedia' }}</div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="title">Kabupaten / Kota</div>
-                                <div class="subtitle">{{ $regencies->nama_dagri }}</div>
+                                <div class="subtitle">{{ $regencies ? $regencies->nama_dagri : 'Data tidak tersedia' }}</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="title">Kecamatan</div>
-                                <div class="subtitle">{{ $districts->nama_bps }}</div>
+                                <div class="subtitle">{{ $districts ? $districts->nama_bps : 'Data tidak tersedia' }}</div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="title">Kelurahan</div>
-                                <div class="subtitle">{{ $villages->nama_bps }}</div>
+                                <div class="subtitle">{{ $villages ? $villages->nama_bps : 'Data tidak tersedia' }}</div>
                             </div>
                         </div>
                         <div class="row">

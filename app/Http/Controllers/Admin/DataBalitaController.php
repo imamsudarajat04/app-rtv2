@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Data_warga;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 
 class DataBalitaController extends Controller
@@ -17,7 +18,15 @@ class DataBalitaController extends Controller
     public function index(Request $request)
     {
         if (request()->ajax()) {
-            $query = Data_warga::where('kategori_usia',  'Balita')->get();
+            if (Auth::user()->role == 'superadmin') {
+                $query = Data_warga::where('kategori_usia',  'Balita')
+                    ->get();
+            } else {
+                $query = Data_warga::where('kategori_usia',  'Balita')
+                    ->where('rt', Auth::user()->rt)
+                    ->where('rw', Auth::user()->rw)
+                    ->get();
+            }
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
